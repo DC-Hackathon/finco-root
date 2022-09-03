@@ -5,9 +5,17 @@
 
 ## Requirements
 - Python
+```
+```
 - PIP
-- Virtual Env 
+```
+```
+- Spacy
 ``` 
+pip3 intsall spacy
+```
+- Virtual Env 
+```
 python3 -m venv venv
 . venv/bin/activate
 ```

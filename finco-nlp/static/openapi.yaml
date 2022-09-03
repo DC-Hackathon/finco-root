@@ -12,7 +12,7 @@ externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 servers:
-  - url: https://petstore3.swagger.io/api/v3
+  - url: http://127.0.0.1:5000/
 tags:
   - name: Finco-NLP Endpoints
     description: generated entity based model for unstructured text
@@ -20,7 +20,7 @@ tags:
       description: Find out more about our store
       url: http://swagger.io
 paths:
-  /nlp/generate:
+  /nlp/predict:
     post:
       tags:
         - Finco-NLP Endpoints
@@ -36,25 +36,6 @@ paths:
       responses:
         '200':
           description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
         '405':
           description: Invalid input
-components:
-  schemas:
-    Response:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-          example: 10
-        PROD:
-          type: string
-          example: DSTR
-        SERVICE:
-          type: string
-        ID:
-          type: string
+    
