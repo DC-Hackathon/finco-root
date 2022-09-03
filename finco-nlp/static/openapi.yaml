@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Finco - NLP 1.0
+  description: |-
+    This NLP does emtity mapping of unstructured text
+    
+    Some useful links:
+    - [NLP](https://en.wikipedia.org/wiki/Natural_language_processing)
+    - [Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition)
+  version: 1.0.11
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+tags:
+  - name: Finco-NLP Endpoints
+    description: generated entity based model for unstructured text
+    externalDocs:
+      description: Find out more about our store
+      url: http://swagger.io
+paths:
+  /nlp/generate:
+    post:
+      tags:
+        - Finco-NLP Endpoints
+      summary: Send a string to process
+      operationId: genString
+      parameters:
+        - name: text
+          in: query
+          description: Text that need to be processed
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '405':
+          description: Invalid input
+components:
+  schemas:
+    Response:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        PROD:
+          type: string
+          example: DSTR
+        SERVICE:
+          type: string
+        ID:
+          type: string
