@@ -1,0 +1,29 @@
+server:
+  port: ${PORT:8181}
+  cors:
+    enabled: true
+  servlet:
+    context-path: /finCo
+
+router:
+  static-resources:
+    default:
+        enabled: true
+        mapping: /views/**
+        paths: classpath:views
+    swagger:
+        paths: classpath:META-INF/swagger
+        mapping: ${app.api.swagger.path}/**
+    web:
+        paths: classpath:web
+        mapping: /**
+app:
+  api:
+    swagger:
+      path: /api/swagger
+      enable : true
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
