@@ -5,6 +5,10 @@ server:
   servlet:
     context-path: /finco
 
+springdoc:
+  swagger-ui:
+    path: /
+
 router:
   static-resources:
     default:
@@ -17,16 +21,6 @@ router:
     web:
         paths: classpath:web
         mapping: /**
-app:
-  api:
-    swagger:
-      path: /api/swagger
-      enable : true
-
-spring:
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
 
 nlp:
   url: ${NLP_URL:http://localhost:5000}

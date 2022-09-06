@@ -17,6 +17,8 @@
 		<mapstruct.version>1.5.2.Final</mapstruct.version>
 		<java.version>11</java.version>
 		<swagger.version>3.0.0</swagger.version>
+		<api.output.dir>${project.build.outputDirectory}</api.output.dir>
+		<api.fileName>finco-api-v1.0</api.fileName>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -24,21 +26,21 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>${swagger.version}</version>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-webflux-ui</artifactId>
+			<version>1.6.11</version>
 		</dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.11</version>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-maven-plugin -->
 		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-boot-starter</artifactId>
-			<version>${swagger.version}</version>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-maven-plugin</artifactId>
+			<version>1.4</version>
 		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>${swagger.version}</version>
-		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -90,7 +92,26 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-maven-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<apiDocsUrl>http://localhost:8181/finco/v3/api-docs</apiDocsUrl>
+					<outputFileName>${api.fileName}.yaml</outputFileName>
+					<outputDir>${project.build.directory}</outputDir>
+				</configuration>
+			</plugin>
 		</plugins>
+
 	</build>
 
 </project>

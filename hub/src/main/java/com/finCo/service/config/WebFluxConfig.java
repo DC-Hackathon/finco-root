@@ -1,4 +1,4 @@
-package com.finCo.hub.config;
+package com.finCo.service.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
