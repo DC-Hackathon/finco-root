@@ -1,12 +1,10 @@
 package com.finCo.hub.controller;
 
 import com.finCo.hub.service.NlpService;
-import com.google.gson.JsonObject;
 import io.swagger.annotations.Api;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.resource.HttpResource;
 
 import javax.websocket.server.PathParam;
 import java.util.function.Function;
