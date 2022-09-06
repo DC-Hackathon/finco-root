@@ -2,15 +2,12 @@ package com.finCo.hub.service.impls;
 
 import com.finCo.hub.exception.TechnicalException;
 import com.finCo.hub.service.NlpService;
-import com.google.gson.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
-
-import java.net.http.HttpClient;
 
 @Service
 public class NlpServiceImpl implements NlpService {
