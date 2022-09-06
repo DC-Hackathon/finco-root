@@ -25,15 +25,17 @@ public class NlpServiceImpl implements NlpService {
     }
 
     @Override
-    public JsonObject getNlp(String serchString) {
-        if (serchString == null)
+    public Object getNlp(String searchString) {
+        if (searchString == null)
             throw new TechnicalException("Search string is null", HttpStatus.BAD_REQUEST);
+
+        log.info("looking for results.");
 
         return webClient
                 .post()
-                .uri("/nlp/predict")
+                .uri("/nlp/predict"+"?text="+searchString)
                 .retrieve()
-                .bodyToMono(JsonObject.class)
+                .bodyToMono(Object.class)
                 .block();
     }
 }

@@ -29,4 +29,4 @@ spring:
       matching-strategy: ant_path_matcher
 
 nlp:
-  url: ${NLP_URL:localhost:5000}
+  url: ${NLP_URL:http://localhost:5000}

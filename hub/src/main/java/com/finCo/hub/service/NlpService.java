@@ -5,5 +5,5 @@ import lombok.NonNull;
 
 public interface NlpService {
 
-    JsonObject getNlp(@NonNull String serchString);
+    Object getNlp(@NonNull String serchString);
 }
