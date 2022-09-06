@@ -3,7 +3,7 @@ server:
   cors:
     enabled: true
   servlet:
-    context-path: /finCo
+    context-path: /finco
 
 router:
   static-resources:
@@ -27,3 +27,6 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+
+nlp:
+  url: ${NLP_URL:http://localhost:5000}
