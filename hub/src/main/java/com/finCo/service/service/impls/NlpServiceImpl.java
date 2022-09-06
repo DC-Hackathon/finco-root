@@ -1,7 +1,7 @@
-package com.finCo.hub.service.impls;
+package com.finCo.service.service.impls;
 
-import com.finCo.hub.exception.TechnicalException;
-import com.finCo.hub.service.NlpService;
+import com.finCo.service.exception.TechnicalException;
+import com.finCo.service.service.NlpService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

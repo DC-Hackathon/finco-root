@@ -1,4 +1,4 @@
-package com.finCo.hub.service;
+package com.finCo.service.service;
 
 import lombok.NonNull;
 
