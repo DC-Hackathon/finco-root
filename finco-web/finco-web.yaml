@@ -1,0 +1,47 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Finco APIs",
+    "description": "Apis for hit the NLP endpoints to get prediction of searched text.",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8181/finco",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/api/search": {
+      "post": {
+        "tags": [
+          "search-controller"
+        ],
+        "operationId": "postFromFlask",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}
