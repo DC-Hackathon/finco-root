@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @OpenAPIDefinition(
-		info = @Info(title = "Finco APIs",
+		info = @Info(title = "Finco",
 		version = "1.0",
-		description = "Apis for hit the NLP endpoints to get prediction of searched text.")
+		description = "Middleware between finco-nlp and finco-web")
 )
 public class FincoApplication {
 
