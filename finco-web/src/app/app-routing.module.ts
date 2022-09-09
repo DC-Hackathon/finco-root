@@ -6,6 +6,17 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
+        loadChildren: () => import('./screens/dashboard/dashboard.module').then(m => m.DashboardModule)
+      }
+    ]
   }
 ];
 

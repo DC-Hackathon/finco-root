@@ -4,7 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { MaterialModule } from '../material/material.module';
-
+import { Router, RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -16,7 +16,8 @@ import { MaterialModule } from '../material/material.module';
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
   exports:[    
     HeaderComponent,
