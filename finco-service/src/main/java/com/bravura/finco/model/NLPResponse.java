@@ -13,9 +13,9 @@ import java.io.Serializable;
 @Setter
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Schema(name = "Asset", description = "Asset Details")
+@Schema(name = "NLPResponse", description = "NLP Response Details")
 
-public class NlpResponse implements Serializable {
+public class NLPResponse implements Serializable {
     @Schema(
             format = "string",
             description = "key to uniquely identify a response.",

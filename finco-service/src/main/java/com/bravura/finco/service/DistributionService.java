@@ -1,7 +1,7 @@
 package com.bravura.finco.service;
 
-import com.bravura.finco.model.NlpResponse;
+import com.bravura.finco.model.NLPResponse;
 
 public interface DistributionService {
-    <T> T callDistributionProduct(NlpResponse nlpResponse);
+    Object callDistributionProduct(NLPResponse nlpResponse);
 }

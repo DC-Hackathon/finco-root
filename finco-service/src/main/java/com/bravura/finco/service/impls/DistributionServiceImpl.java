@@ -1,8 +1,7 @@
 package com.bravura.finco.service.impls;
 
 import com.bravura.finco.constant.DistributionServiceType;
-import com.bravura.finco.model.NlpResponse;
-import com.bravura.finco.model.asset.Asset;
+import com.bravura.finco.model.NLPResponse;
 import com.bravura.finco.service.DistributionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,20 +24,20 @@ public class DistributionServiceImpl implements DistributionService {
     }
 
     @Override
-    public <T> T callDistributionProduct(NlpResponse nlpResponse) {
+    public Object callDistributionProduct(NLPResponse nlpResponse) {
 
         /* Now getting services from nlpResponse
         *  Map it with correct service type
         * */
 
         if(nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.ASSET_DETAILS.getCode())) {
-            Asset assetDataBean = this.webClient
+            Object assetDataBean = this.webClient
                     .get()
                     .uri("/asset/GB00BFBFYK62")
                     .retrieve()
-                    .bodyToMono(Asset.class)
+                    .bodyToMono(Object.class)
                     .block();
-            return (T) assetDataBean;
+            return assetDataBean;
         }
 
         return null;

@@ -1,8 +1,8 @@
 package com.bravura.finco.service;
 
-import com.bravura.finco.model.NlpResponse;
+import com.bravura.finco.model.NLPResponse;
 
 public interface ProductService {
 
-    <T> T getProduct(NlpResponse nlpResponse);
+    Object getProduct(NLPResponse nlpResponse);
 }
