@@ -1,4 +1,7 @@
-import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { SearchControllerService } from 'generated/api';
+import { Subscription } from 'rxjs';
 declare var webkitSpeechRecognition: any;
 
 @Component({
@@ -10,11 +13,16 @@ export class DashboardComponent implements OnInit {
 
   /* Variables */
   value:any='';
-  
-  constructor() { }
+  userSearch = new FormControl(null, Validators.required);
+  private allSubscriptions = new Subscription();
+
+  constructor(
+    private searchService: SearchControllerService
+  ) { }
 
   ngOnInit(): void {
     console.log("Dashboard works");
+    console.log(this.userSearch);
   }
   
   textDetectionUsingVoice() {
@@ -36,6 +44,14 @@ export class DashboardComponent implements OnInit {
       };
     } else {
       console.log("Voice Recognition not supported by you Browser");
+    }
+  }
+
+  onSubmit(event: any){
+    if (event.key === "Enter") {
+      console.log(event.target.value);
+      const searchText = event.target.value;
+      this.allSubscriptions.add(this.searchService.postFromFlask(searchText).subscribe(response => console.log(response)));
     }
   }
 

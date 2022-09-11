@@ -1,3 +1,16 @@
-<div>
-    <button (click)="textDetectionUsingVoice()" mat-raised-button>Search</button>
+
+<div class="container">
+	<div class="logo">
+		<img src="./assets/images/logo2.png" alt="Italian Trulli" width="460" height="345">
+	</div>
+	<input  matInput class="search-input" placeholder="Search" [formControl]='userSearch' (keydown)="onSubmit($event)"/>
+	<mat-icon class="search-icon" matPrefix>search</mat-icon>
+	<button
+		mat-icon-button
+		matSuffix
+		(click)="textDetectionUsingVoice()"
+		type="button"
+	>
+	<mat-icon class="mic-icon">settings_voice</mat-icon>
+	</button>
 </div>

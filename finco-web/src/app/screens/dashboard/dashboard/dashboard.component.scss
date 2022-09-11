@@ -1,0 +1,46 @@
+.container {
+width:100%;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.search-input {
+  line-height: 3.5rem;
+  border-radius: 35px;
+  padding: 0.2rem 4rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 2px solid white;
+  position: relative;
+  min-height: 10px;
+  width: 35%;
+  caret-color: white;
+  display:absolute;
+  color:whitesmoke;
+}
+
+button {
+right: 30%;
+position: absolute;
+font-size: 30px;
+color: white;
+}
+
+.search-icon {
+right: 69%;
+position: absolute;
+font-size: 28px;
+}
+
+input:focus {
+  background-color: #747479;
+}
+
+.logo{
+  position: absolute;
+  max-width: 80%;
+  height: 75%;
+}
+
