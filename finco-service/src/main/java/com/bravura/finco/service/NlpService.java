@@ -4,5 +4,5 @@ import lombok.NonNull;
 
 public interface NlpService {
 
-    Object getNlp(@NonNull String serchString);
+    <T> T getNlp(@NonNull String serchString);
 }

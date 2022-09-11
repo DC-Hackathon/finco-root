@@ -1,5 +1,6 @@
 package com.bravura.finco.controller;
 
+import com.bravura.finco.model.NlpResponse;
 import com.bravura.finco.service.DistributionService;
 import com.bravura.finco.service.NlpService;
 //import io.swagger.annotations.Api;
@@ -11,8 +12,8 @@ import javax.websocket.server.PathParam;
 import java.util.function.Function;
 
 @RestController
-@RequestMapping("/api")
 @CrossOrigin("*")
+@RequestMapping("/api")
 public class SearchController {
 
     private final NlpService nlpService;
@@ -31,13 +32,13 @@ public class SearchController {
     }
 
     @PostMapping("/search")
-    public Object postFromFlask(@RequestBody String text){
+    public <T> T postFromFlask(@RequestBody String text){
         return nlpService.getNlp(text);
     }
 
     @GetMapping("/product/{product}")
     public ResponseEntity<Object> callDistribution(@PathVariable("product") String product){
-        return ResponseEntity.status(HttpStatus.OK).body(distributionService.callDistributionService(product));
+        return ResponseEntity.status(HttpStatus.OK).body(distributionService.callDistributionProduct(new NlpResponse()));
     }
 }
 
