@@ -1,5 +1,6 @@
 package com.bravura.finco.controller;
 
+import com.bravura.finco.service.DistributionService;
 import com.bravura.finco.service.NlpService;
 //import io.swagger.annotations.Api;
 import org.springframework.http.HttpStatus;
@@ -10,14 +11,15 @@ import javax.websocket.server.PathParam;
 import java.util.function.Function;
 
 @RestController
-//@Api(value = "Api test swagger.")
 @RequestMapping("/api")
 public class SearchController {
 
-    public final NlpService nlpService;
+    private final NlpService nlpService;
+    private final DistributionService distributionService;
 
-    public SearchController(NlpService nlpService) {
+    public SearchController(NlpService nlpService, DistributionService distributionService) {
         this.nlpService = nlpService;
+        this.distributionService = distributionService;
     }
 
     @GetMapping("/getTest/{id}")
@@ -31,6 +33,11 @@ public class SearchController {
     public ResponseEntity<Object> postFromFlask(@RequestBody String text){
         Object nlp = nlpService.getNlp(text);
         return ResponseEntity.status(HttpStatus.OK).body(nlp);
+    }
+
+    @GetMapping("/product/{product}")
+    public ResponseEntity<Object> callDistribution(@PathVariable("product") String product){
+        return ResponseEntity.status(HttpStatus.OK).body(distributionService.callDistributionService(product));
     }
 }
 
