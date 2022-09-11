@@ -7,6 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule} from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { SearchControllerService } from 'generated/api';
+import { HttpClientModule } from '@angular/common/http';
 
 export const routes: Routes = [
   {
@@ -27,7 +29,9 @@ export const routes: Routes = [
     MatIconModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
+  providers: [SearchControllerService]
 })
 export class DashboardModule { }

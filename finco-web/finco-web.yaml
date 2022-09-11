@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Finco APIs",
-    "description": "Apis for hit the NLP endpoints to get prediction of searched text.",
+    "title": "Finco",
+    "description": "Middleware between finco-nlp and finco-web",
     "version": "1.0"
   },
   "servers": [
@@ -35,6 +35,37 @@
               "*/*": {
                 "schema": {
                   "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/getTest/{id}": {
+      "get": {
+        "tags": [
+          "search-controller"
+        ],
+        "operationId": "getOddEven",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
                 }
               }
             }

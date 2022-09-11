@@ -12,6 +12,7 @@ import java.util.function.Function;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin("*")
 public class SearchController {
 
     private final NlpService nlpService;
@@ -30,9 +31,8 @@ public class SearchController {
     }
 
     @PostMapping("/search")
-    public ResponseEntity<Object> postFromFlask(@RequestBody String text){
-        Object nlp = nlpService.getNlp(text);
-        return ResponseEntity.status(HttpStatus.OK).body(nlp);
+    public Object postFromFlask(@RequestBody String text){
+        return nlpService.getNlp(text);
     }
 
     @GetMapping("/product/{product}")
