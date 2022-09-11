@@ -25,9 +25,9 @@ def predict():
     dockBin = DocBin()  # create a object of dockbin
     dockBin = nlp_ner(test_data) # predicting...
     for ent in dockBin.ents: # storing result in dictionary
-        dict[ent.label_] = ent.text
+        dict[str(ent.label_)] = ent.text
     dict["span"] = displacy.render(dockBin, style="ent") # creating a html span
-    dict["nerId"] = uuid.uuid1() #generating random uid
+    dict["nlpResponseId"] = uuid.uuid1() #generating random uid
     print("Here is what i generated", dict)
     return dict # returning dictionary
 

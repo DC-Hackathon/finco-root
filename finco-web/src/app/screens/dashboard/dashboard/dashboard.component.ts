@@ -17,7 +17,6 @@ export class DashboardComponent implements OnInit {
   private allSubscriptions = new Subscription();
 
   constructor(
-    private searchService: SearchControllerService
   ) { }
 
   ngOnInit(): void {
@@ -51,7 +50,6 @@ export class DashboardComponent implements OnInit {
     if (event.key === "Enter") {
       console.log(event.target.value);
       const searchText = event.target.value;
-      this.allSubscriptions.add(this.searchService.postFromFlask(searchText).subscribe(response => console.log(response)));
     }
   }
 
