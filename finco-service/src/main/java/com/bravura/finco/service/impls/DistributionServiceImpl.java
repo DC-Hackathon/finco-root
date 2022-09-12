@@ -55,11 +55,99 @@ public class DistributionServiceImpl implements DistributionService {
             token = systemCache.getIfPresent(DSTR_ACCESS_TOKEN);
         }
 
-        /*  calling asset details service */
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.ASSET_DETAILS.getCode())) {
+        /*  calling distribution details service */
+        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.ALL_DISTRIBUTIONS_DATA.getCode())) {
+            return this.webClient
+                    .get()
+                    .uri("account-details/report")
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                    .retrieve()
+                    .bodyToMono(Object.class)
+                    .block();
+        }
+
+        /*  calling distribution details service with voucher id */
+        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.DISTRIBUTION_DATA_WITH_ID.getCode())) {
+            return this.webClient
+                    .get()
+                    .uri("voucher/"+nlpResponse.getID()+"/entitlement-details?loadNomineeDetails=true&loadAccountDetails=true")
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                    .retrieve()
+                    .bodyToMono(Object.class)
+                    .block();
+        }
+
+        /*  calling nominee details service */
+        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.NOMINEE_DETAILS.getCode())) {
+            return this.webClient
+                    .get()
+                    .uri("/nominee")
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                    .retrieve()
+                    .bodyToMono(Object.class)
+                    .block();
+        }
+
+        /*  calling nominee details service with id*/
+        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.NOMINEE_DETAILS_WITH_ID.getCode())) {
+            return this.webClient
+                    .get()
+                    .uri("/nominee/"+ nlpResponse.getID())
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                    .retrieve()
+                    .bodyToMono(Object.class)
+                    .block();
+        }
+
+        /*  calling product details service */
+        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.PRODUCT_DETAILS.getCode())) {
+            return this.webClient
+                    .get()
+                    .uri("/product")
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                    .retrieve()
+                    .bodyToMono(Object.class)
+                    .block();
+        }
+
+        /*  calling product details service with id */
+        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.PRODUCT_DETAILS_WITH_ID.getCode())) {
+            return this.webClient
+                    .get()
+                    .uri("/product/"+ nlpResponse.getID())
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                    .retrieve()
+                    .bodyToMono(Object.class)
+                    .block();
+        }
+
+        /*  calling asset details service with id */
+        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.ASSET_DETAILS_WITH_ID.getCode())) {
             return this.webClient
                     .get()
                     .uri("/asset/GB00BP8Y4W80")
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                    .retrieve()
+                    .bodyToMono(Object.class)
+                    .block();
+        }
+
+        /*  calling all asset details service */
+        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.ALL_ASSET_DETAILS.getCode())) {
+            return this.webClient
+                    .get()
+                    .uri("/asset/")
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                    .retrieve()
+                    .bodyToMono(Object.class)
+                    .block();
+        }
+
+        /*  calling income stream details service */
+        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.INCOME_STREAM.getCode())) {
+            return this.webClient
+                    .get()
+                    .uri("/income-stream")
                     .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                     .retrieve()
                     .bodyToMono(Object.class)
