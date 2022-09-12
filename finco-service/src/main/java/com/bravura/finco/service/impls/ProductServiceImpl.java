@@ -18,8 +18,4 @@ public class ProductServiceImpl implements ProductService {
         }
         return null;
     }
-
-    private void modifyingNlpResponseByDecidingProductType(NLPResponse nlpResponse) {
-    }
-
 }

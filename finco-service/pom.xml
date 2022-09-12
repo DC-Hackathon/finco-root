@@ -19,6 +19,7 @@
 		<swagger.version>3.0.0</swagger.version>
 		<api.output.dir>${project.build.outputDirectory}</api.output.dir>
 		<api.fileName>finco-api-v1.0</api.fileName>
+		<guava.cache.version>31.0.1-jre</guava.cache.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,6 +41,18 @@
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-maven-plugin</artifactId>
 			<version>1.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.cache.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.checkerframework</groupId>
+					<artifactId>checker-compat-qual</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
