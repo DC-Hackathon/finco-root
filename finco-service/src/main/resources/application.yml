@@ -5,6 +5,7 @@ server:
   servlet:
     context-path: /finco
 
+
 springdoc:
   swagger-ui:
     path: /
