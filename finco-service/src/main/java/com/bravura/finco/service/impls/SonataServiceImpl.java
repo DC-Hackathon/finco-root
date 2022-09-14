@@ -1,12 +1,10 @@
 package com.bravura.finco.service.impls;
 
-import com.bravura.finco.constant.DistributionServiceType;
 import com.bravura.finco.model.NLPResponse;
 import com.bravura.finco.service.SonataService;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.BodyInserters;
@@ -30,7 +28,7 @@ public class SonataServiceImpl implements SonataService {
                 "\"email\":\"test@mail.com\",\n" +
                 "\"id\":1\n" +
                 "}";
-        Object data = this.webClient
+        return this.webClient
                 .post()
                 .uri("/accountService/getAccount")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -38,6 +36,5 @@ public class SonataServiceImpl implements SonataService {
                 .retrieve()
                 .bodyToMono(Object.class)
                 .block();
-        return data;
     }
 }

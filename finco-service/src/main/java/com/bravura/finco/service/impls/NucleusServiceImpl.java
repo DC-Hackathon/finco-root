@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Service
@@ -22,7 +21,7 @@ public class NucleusServiceImpl implements NucleusService {
 
     @Override
     public Object callNucleusProduct(NLPResponse nlpResponse){
-        Object data = this.webClient
+        return this.webClient
                 .post()
                 .uri("/client/getClient")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -30,7 +29,6 @@ public class NucleusServiceImpl implements NucleusService {
                 .retrieve()
                 .bodyToMono(Object.class)
                 .block();
-        return data;
     }
 
 }

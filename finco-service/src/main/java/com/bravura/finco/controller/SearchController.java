@@ -1,10 +1,8 @@
 package com.bravura.finco.controller;
 
 import com.bravura.finco.model.asset.FincoResponse;
-import com.bravura.finco.service.DistributionService;
 import com.bravura.finco.service.NLPService;
-//import io.swagger.annotations.Api;
-import com.bravura.finco.service.NucleusService;
+import com.bravura.finco.utils.JsonFlatner;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,10 +11,8 @@ import org.springframework.web.bind.annotation.*;
 public class SearchController {
 
     private final NLPService nlpService;
-    private final DistributionService distributionService;
-    public SearchController(NLPService nlpService, DistributionService distributionService) {
+    public SearchController(NLPService nlpService) {
         this.nlpService = nlpService;
-        this.distributionService = distributionService;
     }
 
     @PostMapping("/search")
@@ -24,5 +20,9 @@ public class SearchController {
         return nlpService.getNlp(text);
     }
 
+    @PostMapping("/flatMapToJson")
+    public Object mapToString(@RequestBody String jsonObject){
+        return JsonFlatner.mapToFlat(jsonObject);
+    }
 }
 
