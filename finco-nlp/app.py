@@ -21,6 +21,7 @@ def predict():
     dict = {}  # Initializing empty dictionary
     test_data = request.args.get("text")  # getting request string from Request
     print("Creating NER for :", test_data)
+    intent = train_intentData(test_data)
     nlp_ner = spacy.load("output/model-best") # loading trained model
     dockBin = DocBin()  # create a object of dockbin
     dockBin = nlp_ner(test_data) # predicting...
@@ -51,5 +52,18 @@ def train_nlp_model():
     # copying spacy file om desk
     dockBin.to_disk("finco-nlp/train_data/train_data.spacy")
     return '<h2>Trained Model</h1>'
+
+def train_intentData(test_data):
+    print(".......running intentData.............")
+    intent_result = { }
+    train_data = load_data('finco-nlp/train_data/intent_trainData.json')
+    trainer = Trainer(spacy.load("finco-nlp/config_spacy.yaml"))
+    trainer.train(train_data)
+    model_directory = trainer.persist('finco-nlp/output')
+    #nlp = spacy.load('en')
+    #docx = nlp(test_data)
+    interpreter = Interpreter.load(model_directory)
+    intent_result = interpreter.parse(test_data)
+    print("RESULT----", intent_result)
 
 app.run(use_reloader=True, debug=False)
