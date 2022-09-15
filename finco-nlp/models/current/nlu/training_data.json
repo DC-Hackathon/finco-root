@@ -1,0 +1,61 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "current_matches",
+        "text": "which cricket match is happening right now"
+      },
+      {
+        "intent": "current_matches",
+        "text": "which ipl match is next"
+      },
+      {
+        "intent": "current_matches",
+        "text": "which teams are playing next in ipl"
+      },
+      {
+        "intent": "getInvestorType",
+        "text": "fetch get Investoor Type"
+      },
+      {
+        "intent": "getInvestorType",
+        "text": "fetch investor type"
+      },
+      {
+        "intent": "getInvestorType",
+        "text": "get name of invetor type"
+      },
+      {
+        "intent": "getInvestorType",
+        "text": "nucleus get me account investor type in client for id 10000001"
+      },
+      {
+        "intent": "getInvestorType",
+        "text": "get investor"
+      },
+      {
+        "intent": "getContactName",
+        "text": "fetch get Contact Name"
+      },
+      {
+        "intent": "getContactName",
+        "text": "nucleus get me client name for id 1000001"
+      },
+      {
+        "intent": "getContactName",
+        "text": "contact name"
+      },
+      {
+        "intent": "getContactName",
+        "text": "get me contact name"
+      },
+      {
+        "intent": "getContactName",
+        "text": "nucleus get me contact name"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

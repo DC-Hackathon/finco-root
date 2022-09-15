@@ -32,7 +32,7 @@ public class SonataServiceImpl implements SonataService {
                 .post()
                 .uri("/accountService/getAccount")
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(BodyInserters.fromObject(body))
+                .body(BodyInserters.fromValue(body))
                 .retrieve()
                 .bodyToMono(Object.class)
                 .block();

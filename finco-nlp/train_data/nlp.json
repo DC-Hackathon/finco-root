@@ -1,0 +1,53 @@
+{
+    "classes": [
+        "SER",
+        "PROD",
+        "ID"
+    ],
+    "annotations": [
+        [
+            "nucleus get me account investor type in client for id 10000001",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "PROD"
+                    ],
+                    [
+                        40,
+                        46,
+                        "SER"
+                    ],
+                    [
+                        54,
+                        62,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "nucleus get me client name for id 1000001",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "PROD"
+                    ],
+                    [
+                        15,
+                        21,
+                        "SER"
+                    ],
+                    [
+                        34,
+                        41,
+                        "ID"
+                    ]
+                ]
+            }
+        ]
+    ]
+}

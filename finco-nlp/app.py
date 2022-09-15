@@ -6,6 +6,12 @@ from tqdm import tqdm
 from spacy.tokens import DocBin
 import json
 import uuid
+from rasa_nlu.training_data  import load_data
+from rasa_nlu.config import RasaNLUModelConfig
+from rasa_nlu.model import Trainer
+from rasa_nlu import config
+from rasa_nlu.model import Metadata, Interpreter
+nlp = spacy.load("en_core_web_sm")
 
 app = Flask(__name__)
 
@@ -21,7 +27,7 @@ def predict():
     dict = {}  # Initializing empty dictionary
     test_data = request.args.get("text")  # getting request string from Request
     print("Creating NER for :", test_data)
-    intent = train_intentData(test_data)
+    intent_dict=predict_intent(test_data)
     nlp_ner = spacy.load("output/model-best") # loading trained model
     dockBin = DocBin()  # create a object of dockbin
     dockBin = nlp_ner(test_data) # predicting...
@@ -29,6 +35,8 @@ def predict():
         dict[str(ent.label_)] = ent.text
     dict["span"] = displacy.render(dockBin, style="ent") # creating a html span
     dict["nlpResponseId"] = uuid.uuid1() #generating random uid
+    dict["intent"]= intent_dict["intent"]
+    dict["confidence"] = intent_dict["confidence"]
     print("Here is what i generated", dict)
     return dict # returning dictionary
 
@@ -36,7 +44,7 @@ def predict():
 def train_nlp_model():
     nlp = spacy.blank("en")  # load a new spacy model
     dockBin = DocBin()  # create a object of dockbin
-    file = open("finco-nlp/train_data/annotations.json") # opening file 
+    file = open("train_data/nlp.json") # opening file 
     train_data = json.load(file)
     for text, annot in tqdm(train_data["annotations"]):
         doc = nlp.make_doc(text)
@@ -50,20 +58,26 @@ def train_nlp_model():
         doc.ents = entities
         dockBin.add(doc)
     # copying spacy file om desk
-    dockBin.to_disk("finco-nlp/train_data/train_data.spacy")
+    dockBin.to_disk("train_data/nlp.spacy")
     return '<h2>Trained Model</h1>'
 
-def train_intentData(test_data):
-    print(".......running intentData.............")
-    intent_result = { }
-    train_data = load_data('finco-nlp/train_data/intent_trainData.json')
-    trainer = Trainer(spacy.load("finco-nlp/config_spacy.yaml"))
+@app.route("/intent/predict")
+def predict_intent(test_data):
+    intent_dict = {}
+    interpreter = Interpreter.load('models/current/nlu')
+    intent_data=interpreter.parse(test_data)
+    print(intent_data)
+    intent_dict["intent"] = intent_data.get('intent')['name']
+    intent_dict["confidence"] = intent_data.get('intent')['confidence']
+    return intent_dict
+
+@app.route("/intent/train")
+def train_intent_data():
+    spacy.load("en_core_web_sm")
+    train_data = load_data('train_data\intent_data.md')
+    trainer = Trainer(config.load("config_spacy.yaml"))
     trainer.train(train_data)
-    model_directory = trainer.persist('finco-nlp/output')
-    #nlp = spacy.load('en')
-    #docx = nlp(test_data)
-    interpreter = Interpreter.load(model_directory)
-    intent_result = interpreter.parse(test_data)
-    print("RESULT----", intent_result)
+    trainer.persist('output')
+    return "<h1>Trained Model</h1>"
 
 app.run(use_reloader=True, debug=False)
