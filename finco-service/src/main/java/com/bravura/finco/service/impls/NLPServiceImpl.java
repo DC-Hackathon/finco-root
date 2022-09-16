@@ -1,7 +1,7 @@
 package com.bravura.finco.service.impls;
 
 import com.bravura.finco.model.NLPResponse;
-import com.bravura.finco.model.asset.FincoResponse;
+import com.bravura.finco.model.FincoResponse;
 import com.bravura.finco.service.NLPService;
 import com.bravura.finco.service.ProductService;
 import com.bravura.finco.utils.JsonFlatner;
@@ -46,7 +46,7 @@ public class NLPServiceImpl implements NLPService {
             fincoResponse.setNlpResponse(nlpResponseBean);
             if(Objects.nonNull(fincoResponse.getNlpResponse())) {
                 Object product = this.productService.getProduct(fincoResponse.getNlpResponse());
-                fincoResponse.setData(JsonFlatner.mapToFlat(product.toString()));
+                fincoResponse.setData(product);
             }
         } catch (Exception e) {
             fincoResponse.setNlpResponse(null);

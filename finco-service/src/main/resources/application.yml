@@ -27,7 +27,7 @@ nlp:
   url: ${NLP_URL:http://localhost:5000}
 
 sonata:
-  url: ${SBS_URL:http://localhost:8080/sonata/rest/sbs"}
+  url: ${SBS_URL:http://localhost:8080/sonata/rest/sbs}
 
 nucleus:
   url: ${NUCLEUS_URL:http://localhost:8080/components/api}

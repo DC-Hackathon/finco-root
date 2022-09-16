@@ -3,18 +3,18 @@
 - which ipl match is next 
 - which teams are playing next in ipl 
 
-## intent:getInvestorType
+## intent:investorType
 - fetch get Investoor Type
 - fetch investor type
 - get name of invetor type
-- nucleus get me account investor type in client for id 10000001
+- sonata get me account investor type in client for id 10000001
 - get investor
 
 
 
-## intent:getContactName
+## intent:contactName
 - fetch get Contact Name
-- nucleus get me client name for id 1000001
+- sonata get me client name for id 1000001
 - contact name 
 - get me contact name
-- nucleus get me contact name
+- sonata get me contact name

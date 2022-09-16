@@ -56,5 +56,21 @@ public class NLPResponse implements Serializable {
     @JsonProperty("span")
     private String span;
 
+    @Schema(
+            format = "string",
+            description = "Identifier for a intent",
+            accessMode = Schema.AccessMode.READ_ONLY,
+            example = "Distribution Details")
+    @JsonProperty("intent")
+    private String intent;
+
+    @Schema(
+            format = "integer",
+            description = "Identifier for a intent confidence",
+            accessMode = Schema.AccessMode.READ_ONLY,
+            example = "68")
+    @JsonProperty("confidence")
+    private Integer intentConfidence;
+
 
 }

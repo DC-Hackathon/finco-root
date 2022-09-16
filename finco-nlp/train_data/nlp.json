@@ -6,44 +6,44 @@
     ],
     "annotations": [
         [
-            "nucleus get me account investor type in client for id 10000001",
+            "sonata get me client name for id 1000001\r",
             {
                 "entities": [
                     [
                         0,
-                        7,
+                        6,
                         "PROD"
                     ],
                     [
-                        40,
-                        46,
+                        14,
+                        20,
                         "SER"
                     ],
                     [
-                        54,
-                        62,
+                        33,
+                        40,
                         "ID"
                     ]
                 ]
             }
         ],
         [
-            "nucleus get me client name for id 1000001",
+            "sonata get me account investor type in client for id 10000001",
             {
                 "entities": [
                     [
                         0,
-                        7,
+                        6,
                         "PROD"
                     ],
                     [
-                        15,
-                        21,
+                        39,
+                        45,
                         "SER"
                     ],
                     [
-                        34,
-                        41,
+                        53,
+                        61,
                         "ID"
                     ]
                 ]

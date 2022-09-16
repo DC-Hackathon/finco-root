@@ -1,6 +1,6 @@
 package com.bravura.finco.service;
 
-import com.bravura.finco.model.asset.FincoResponse;
+import com.bravura.finco.model.FincoResponse;
 import lombok.NonNull;
 
 public interface NLPService {

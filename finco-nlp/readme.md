@@ -12,12 +12,18 @@
 ```
 - Spacy
 ``` 
-pip3 intsall spacy
+pip3 intsall spacy 
+```
+- rasa
+pip3 install rasa
+```
+- en_core_web_sm
+python -m spacy download en_core_web_sm
 ```
 - Virtual Env 
 ```
 python3 -m venv venv
-. venv/bin/activate
+venv\Scripts\activate 
 ```
 - Intall requirement.txt
 ## creating a config file
@@ -26,7 +32,12 @@ python3 -m spacy init config config.cfg --lang en --pipeline ner --optimize effi
 ```
 ## training the model with CPU
 ```
-python -m spacy train config.cfg --output ./output/ --paths.train train_data\nlp.spacy  --paths.dev train_data\nlp.spacy
+python -m spacy train config.cfg --output output/ --paths.train train_data\nlp.spacy  --paths.dev train_data\nlp.spacy
 ```
 
 python -m rasa_nlu.train -c config_spacy.yaml --data train_data\intent_data.md -o models --fixed_model_name nlu --project current --verbose
+
+## to ignore pakage to take from cache
+--no-cache-dir
+
+##

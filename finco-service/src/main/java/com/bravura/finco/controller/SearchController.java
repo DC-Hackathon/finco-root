@@ -1,6 +1,6 @@
 package com.bravura.finco.controller;
 
-import com.bravura.finco.model.asset.FincoResponse;
+import com.bravura.finco.model.FincoResponse;
 import com.bravura.finco.service.NLPService;
 import com.bravura.finco.utils.JsonFlatner;
 import org.springframework.web.bind.annotation.*;
