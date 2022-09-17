@@ -54,7 +54,7 @@ public class SonataServiceImpl implements SonataService {
                 String key = entry.getKey();
                 Object value = entry.getValue();
                 if (key.contains(fincoResponse.getNlpResponse().getIntent())) {
-                    fincoResponse.setIntentData(value);
+                    fincoResponse.setQueryResponse(value.toString());
                 }
             }
             return fincoResponse;
@@ -77,7 +77,7 @@ public class SonataServiceImpl implements SonataService {
                 String key = entry.getKey();
                 Object value = entry.getValue();
                 if (key.contains(fincoResponse.getNlpResponse().getIntent())) {
-                    fincoResponse.setIntentData(value);
+                    fincoResponse.setQueryResponse(value.toString());
                 }
             }
             return fincoResponse;
