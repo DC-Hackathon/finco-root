@@ -1,6 +1,7 @@
 package com.bravura.finco.service.impls;
 
 import com.bravura.finco.constant.DistributionServiceType;
+import com.bravura.finco.model.FincoResponse;
 import com.bravura.finco.model.NLPResponse;
 import com.bravura.finco.model.security.AuthToken;
 import com.bravura.finco.service.DistributionService;
@@ -38,7 +39,7 @@ public class DistributionServiceImpl implements DistributionService {
     }
 
     @Override
-    public Object callDistributionProduct(NLPResponse nlpResponse) {
+    public Object callDistributionProduct(FincoResponse fincoResponse) {
 
         /*  generating a token if not present in cache */
         String token;
@@ -56,7 +57,7 @@ public class DistributionServiceImpl implements DistributionService {
         }
 
         /*  calling distribution details service */
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.ALL_DISTRIBUTIONS_DATA.getCode())) {
+        if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.ALL_DISTRIBUTIONS_DATA.getCode())) {
             return this.webClient
                     .get()
                     .uri("account-details/report")
@@ -67,10 +68,10 @@ public class DistributionServiceImpl implements DistributionService {
         }
 
         /*  calling distribution details service with voucher id */
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.DISTRIBUTION_DATA_WITH_ID.getCode())) {
+        if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.DISTRIBUTION_DATA_WITH_ID.getCode())) {
             return this.webClient
                     .get()
-                    .uri("voucher/"+nlpResponse.getID()+"/entitlement-details?loadNomineeDetails=true&loadAccountDetails=true")
+                    .uri("voucher/"+fincoResponse.getNlpResponse().getID()+"/entitlement-details?loadNomineeDetails=true&loadAccountDetails=true")
                     .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                     .retrieve()
                     .bodyToMono(Object.class)
@@ -78,7 +79,7 @@ public class DistributionServiceImpl implements DistributionService {
         }
 
         /*  calling nominee details service */
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.NOMINEE_DETAILS.getCode())) {
+        if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.NOMINEE_DETAILS.getCode())) {
             return this.webClient
                     .get()
                     .uri("/nominee")
@@ -89,10 +90,10 @@ public class DistributionServiceImpl implements DistributionService {
         }
 
         /*  calling nominee details service with id*/
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.NOMINEE_DETAILS_WITH_ID.getCode())) {
+        if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.NOMINEE_DETAILS_WITH_ID.getCode())) {
             return this.webClient
                     .get()
-                    .uri("/nominee/"+ nlpResponse.getID())
+                    .uri("/nominee/"+ fincoResponse.getNlpResponse().getID())
                     .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                     .retrieve()
                     .bodyToMono(Object.class)
@@ -100,7 +101,7 @@ public class DistributionServiceImpl implements DistributionService {
         }
 
         /*  calling product details service */
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.PRODUCT_DETAILS.getCode())) {
+        if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.PRODUCT_DETAILS.getCode())) {
             return this.webClient
                     .get()
                     .uri("/product")
@@ -111,10 +112,10 @@ public class DistributionServiceImpl implements DistributionService {
         }
 
         /*  calling product details service with id */
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.PRODUCT_DETAILS_WITH_ID.getCode())) {
+        if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.PRODUCT_DETAILS_WITH_ID.getCode())) {
             return this.webClient
                     .get()
-                    .uri("/product/"+ nlpResponse.getID())
+                    .uri("/product/"+ fincoResponse.getNlpResponse().getID())
                     .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                     .retrieve()
                     .bodyToMono(Object.class)
@@ -122,7 +123,7 @@ public class DistributionServiceImpl implements DistributionService {
         }
 
         /*  calling asset details service with id */
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.ASSET_DETAILS_WITH_ID.getCode())) {
+        if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.ASSET_DETAILS_WITH_ID.getCode())) {
             return this.webClient
                     .get()
                     .uri("/asset/GB00BP8Y4W80")
@@ -133,7 +134,7 @@ public class DistributionServiceImpl implements DistributionService {
         }
 
         /*  calling all asset details service */
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.ALL_ASSET_DETAILS.getCode())) {
+        if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.ALL_ASSET_DETAILS.getCode())) {
             return this.webClient
                     .get()
                     .uri("/asset/")
@@ -144,7 +145,7 @@ public class DistributionServiceImpl implements DistributionService {
         }
 
         /*  calling income stream details service */
-        if (nlpResponse.getSER().equalsIgnoreCase(DistributionServiceType.INCOME_STREAM.getCode())) {
+        if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.INCOME_STREAM.getCode())) {
             return this.webClient
                     .get()
                     .uri("/income-stream")

@@ -32,12 +32,11 @@ public class SonataServiceImpl implements SonataService {
     }
 
     @Override
-    public FincoResponse callSonataProduct(NLPResponse nlpResponse) {
+    public FincoResponse callSonataProduct(FincoResponse fincoResponse) {
         /*  calling distribution details service */
-        String searchID = nlpResponse.getID();
+        String searchID = fincoResponse.getNlpResponse().getID();
         String response;
-        FincoResponse fincoResponse= new FincoResponse();
-        if(nlpResponse.getSER().equals("client")){
+        if(fincoResponse.getNlpResponse().getSER().equals("client")){
             val body =  "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"client\": { \"id\": " + searchID + " }, \"includeClientDetails\": true}";
             Optional<GetClientResponse> clientResponse = Optional.ofNullable(this.webClient
                     .post()
@@ -50,18 +49,18 @@ public class SonataServiceImpl implements SonataService {
             Map<String, Object> flattenClientResponse = getStringObjectMap
                     (clientResponse.orElseThrow(() -> new TechnicalException("client response is null")));
             fincoResponse.setData(flattenClientResponse);
-            fincoResponse.setNlpResponse(nlpResponse);
+            fincoResponse.setNlpResponse(fincoResponse.getNlpResponse());
             for (Map.Entry<String, Object> entry : flattenClientResponse.entrySet()) {
                 String key = entry.getKey();
                 Object value = entry.getValue();
-                if (key.contains(nlpResponse.getIntent())) {
+                if (key.contains(fincoResponse.getNlpResponse().getIntent())) {
                     fincoResponse.setIntentData(value);
                 }
             }
             return fincoResponse;
         }
 
-        if(nlpResponse.getSER().equals("account")){
+        if(fincoResponse.getNlpResponse().getSER().equals("account")){
             val body ="{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"accountIdentifier\": { \"accountNumber\": { \"accountNo\": " + searchID + "} }}";
             Optional<GetAccountDetailsResponse> accountDetailsResponse = Optional.ofNullable(this.webClient
                     .post()
@@ -77,7 +76,7 @@ public class SonataServiceImpl implements SonataService {
             for (Map.Entry<String, Object> entry : flattenClientResponse.entrySet()) {
                 String key = entry.getKey();
                 Object value = entry.getValue();
-                if (key.contains(nlpResponse.getIntent())) {
+                if (key.contains(fincoResponse.getNlpResponse().getIntent())) {
                     fincoResponse.setIntentData(value);
                 }
             }

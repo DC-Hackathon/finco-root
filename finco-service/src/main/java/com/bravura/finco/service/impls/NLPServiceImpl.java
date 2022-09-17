@@ -27,7 +27,7 @@ public class NLPServiceImpl implements NLPService {
     private final WebClient webClient;
 
     @Autowired
-    public NLPServiceImpl(WebClient webClient){
+    public NLPServiceImpl(WebClient webClient) {
         this.webClient = webClient;
     }
 
@@ -35,7 +35,7 @@ public class NLPServiceImpl implements NLPService {
     public FincoResponse getNlp(@NonNull String searchString) {
 
         log.info(" looking for results from nlp ...");
-        FincoResponse fincoResponse= new FincoResponse();
+        FincoResponse fincoResponse = new FincoResponse();
         try {
             NLPResponse nlpResponseBean = webClient
                     .post()
@@ -44,9 +44,16 @@ public class NLPServiceImpl implements NLPService {
                     .bodyToMono(NLPResponse.class)
                     .block();
             fincoResponse.setNlpResponse(nlpResponseBean);
-            if(Objects.nonNull(fincoResponse.getNlpResponse())) {
-                fincoResponse = this.productService.getProduct(fincoResponse.getNlpResponse());
+           
+        } catch (Exception e) {
+            fincoResponse.setNlpResponse(null);
+        }
+
+        try {
+            if (Objects.nonNull(fincoResponse.getNlpResponse())) {
+                  fincoResponse = this.productService.getProduct(fincoResponse);
             }
+
         } catch (Exception e) {
             fincoResponse.setNlpResponse(null);
             fincoResponse.setData(null);

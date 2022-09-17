@@ -20,16 +20,16 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private NucleusService nucleusService;
     @Override
-    public FincoResponse getProduct(NLPResponse nlpResponse) {
-        if(nlpResponse.getPROD().equalsIgnoreCase(ProductType.DISTRIBUTIONS.getCode())) {
-           //return distributionService.callDistributionProduct(nlpResponse);
+    public FincoResponse getProduct(FincoResponse fincoResponse) {
+//        if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.DISTRIBUTIONS.getCode())) {
+//           return distributionService.callDistributionProduct(fincoResponse);
+//        }
+        if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.SONATA.getCode())) {
+            return sbsService.callSonataProduct(fincoResponse);
         }
-        if(nlpResponse.getPROD().equalsIgnoreCase(ProductType.SONATA.getCode())) {
-            return sbsService.callSonataProduct(nlpResponse);
-        }
-        if(nlpResponse.getPROD().equalsIgnoreCase(ProductType.NUCLEUS.getCode())) {
-           // return nucleusService.callNucleusProduct(nlpResponse);
-        }
+//        if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.NUCLEUS.getCode())) {
+//            return nucleusService.callNucleusProduct(fincoResponse);
+//        }
 
         return null;
     }
