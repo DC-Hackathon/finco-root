@@ -52,6 +52,106 @@
       {
         "intent": "contactName",
         "text": "sonata get me contact name"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "hii"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "hey"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "hello"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "hi"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "hi sonata"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "hi distributions"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "hey sonata"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "hey distributions"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "hola"
+      },
+      {
+        "intent": "greet_gene",
+        "text": "howdy"
+      },
+      {
+        "intent": "greet_gm",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet_gm",
+        "text": "gm"
+      },
+      {
+        "intent": "greet_gm",
+        "text": "morning"
+      },
+      {
+        "intent": "greet_gev",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet_gev",
+        "text": "evening"
+      },
+      {
+        "intent": "greet_gev",
+        "text": "ge"
+      },
+      {
+        "intent": "greet_gev",
+        "text": "good evening finco"
+      },
+      {
+        "intent": "greet_af",
+        "text": "good afternoon"
+      },
+      {
+        "intent": "greet_af",
+        "text": "afternnon"
+      },
+      {
+        "intent": "greet_af",
+        "text": "good afternoon finco"
+      },
+      {
+        "intent": "greet_ques",
+        "text": "how are you ?"
+      },
+      {
+        "intent": "greet_ques",
+        "text": "how you are doing ?"
+      },
+      {
+        "intent": "greet_ques",
+        "text": "whatsapp"
+      },
+      {
+        "intent": "greet_ques",
+        "text": "wassap"
+      },
+      {
+        "intent": "greet_ques",
+        "text": "wassup"
       }
     ],
     "regex_features": [],

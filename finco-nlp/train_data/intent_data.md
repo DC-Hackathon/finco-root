@@ -18,3 +18,38 @@
 - contact name 
 - get me contact name
 - sonata get me contact name
+
+## intent:greet_gene
+- hii
+- hey
+- hello
+- hi
+- hi sonata
+- hi distributions
+- hey sonata
+- hey distributions
+- hola
+- howdy
+
+## intent: greet_gm
+- good morning
+- gm
+- morning
+
+## intent: greet_gev
+- good evening
+- evening
+- ge
+- good evening finco
+
+## intent: greet_af
+- good afternoon
+- afternnon
+- good afternoon finco
+## intent: greet_ques
+- how are you ?
+- how you are doing ?
+- whatsapp
+- wassap
+- wassup
+

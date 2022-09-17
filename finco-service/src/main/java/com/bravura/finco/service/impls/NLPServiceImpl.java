@@ -1,7 +1,9 @@
 package com.bravura.finco.service.impls;
 
+import com.bravura.finco.entity.QueryData;
 import com.bravura.finco.model.NLPResponse;
 import com.bravura.finco.model.FincoResponse;
+import com.bravura.finco.repository.QueryRepository;
 import com.bravura.finco.service.NLPService;
 import com.bravura.finco.service.ProductService;
 import com.bravura.finco.utils.JsonFlatner;
@@ -23,6 +25,9 @@ public class NLPServiceImpl implements NLPService {
     @Autowired
     private ProductService productService;
 
+    @Autowired
+    private QueryRepository queryRepository;
+
     @Qualifier("nlp")
     private final WebClient webClient;
 
@@ -33,9 +38,9 @@ public class NLPServiceImpl implements NLPService {
 
     @Override
     public FincoResponse getNlp(@NonNull String searchString) {
-
         log.info(" looking for results from nlp ...");
         FincoResponse fincoResponse = new FincoResponse();
+        /* Getting response from nlp */
         try {
             NLPResponse nlpResponseBean = webClient
                     .post()
@@ -44,13 +49,22 @@ public class NLPServiceImpl implements NLPService {
                     .bodyToMono(NLPResponse.class)
                     .block();
             fincoResponse.setNlpResponse(nlpResponseBean);
-           
+            if(checkForAutomatedQueryResponse(fincoResponse)) {
+                return fincoResponse;
+            }
         } catch (Exception e) {
             fincoResponse.setNlpResponse(null);
+            return fincoResponse;
         }
-
+        /* Getting response from service */
         try {
             if (Objects.nonNull(fincoResponse.getNlpResponse())) {
+                /* If nlp not able to label query then save it to database */
+                if(fincoResponse.getNlpResponse().getSER()==null || fincoResponse.getNlpResponse().getPROD()==null || fincoResponse.getNlpResponse().getID()==null) {
+                    QueryData queryData= new QueryData();
+                    queryData.setQuery(searchString);
+                    queryRepository.save(queryData);
+                }
                   fincoResponse = this.productService.getProduct(fincoResponse);
             }
 
@@ -61,5 +75,30 @@ public class NLPServiceImpl implements NLPService {
         }
         return fincoResponse;
 
+    }
+
+    /* Automated Response */
+    private boolean checkForAutomatedQueryResponse(FincoResponse fincoResponse) {
+        if(fincoResponse.getNlpResponse().getIntent().equals("greet_gene")) {
+            fincoResponse.setQueryResponse("hello you! How may I help you ?");
+            return true;
+        }
+        if(fincoResponse.getNlpResponse().getIntent().equals("greet_gm")) {
+            fincoResponse.setQueryResponse("good morning!");
+            return true;
+        }
+        if(fincoResponse.getNlpResponse().getIntent().equals("greet_gev")) {
+            fincoResponse.setQueryResponse("good evening!");
+            return true;
+        }
+        if(fincoResponse.getNlpResponse().getIntent().equals("greet_af")) {
+            fincoResponse.setQueryResponse("good afternoon!");
+            return true;
+        }
+        if(fincoResponse.getNlpResponse().getIntent().equals("greet_ques")) {
+            fincoResponse.setQueryResponse("I am doing fine :) hope you are doing well too! ");
+            return true;
+        }
+        return false;
     }
 }

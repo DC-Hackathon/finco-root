@@ -1,14 +1,13 @@
 package com.bravura.finco.service.impls;
 
+import com.bravura.finco.constant.SonataServiceType;
 import com.bravura.finco.exception.TechnicalException;
 import com.bravura.finco.model.FincoResponse;
 import com.bravura.finco.model.GetAccountDetailsResponse;
 import com.bravura.finco.model.GetClientResponse;
-import com.bravura.finco.model.NLPResponse;
 import com.bravura.finco.service.SonataService;
 import com.bravura.finco.utils.ConvertObjectToJson;
 import com.bravura.finco.utils.JsonFlatner;
-import com.google.gson.Gson;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -34,10 +33,8 @@ public class SonataServiceImpl implements SonataService {
     @Override
     public FincoResponse callSonataProduct(FincoResponse fincoResponse) {
         /*  calling distribution details service */
-        String searchID = fincoResponse.getNlpResponse().getID();
-        String response;
-        if(fincoResponse.getNlpResponse().getSER().equals("client")){
-            val body =  "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"client\": { \"id\": " + searchID + " }, \"includeClientDetails\": true}";
+        if (fincoResponse.getNlpResponse().getSER().equals(SonataServiceType.CLIENT.getCode())) {
+            val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"client\": { \"id\": " + fincoResponse.getNlpResponse().getID() + " }, \"includeClientDetails\": true}";
             Optional<GetClientResponse> clientResponse = Optional.ofNullable(this.webClient
                     .post()
                     .uri("/clientService/getClient")
@@ -60,8 +57,8 @@ public class SonataServiceImpl implements SonataService {
             return fincoResponse;
         }
 
-        if(fincoResponse.getNlpResponse().getSER().equals("account")){
-            val body ="{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"accountIdentifier\": { \"accountNumber\": { \"accountNo\": " + searchID + "} }}";
+        if (fincoResponse.getNlpResponse().getSER().equals(SonataServiceType.ACCOUNT.getCode())) {
+            val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"accountIdentifier\": { \"accountNumber\": { \"accountNo\": " + fincoResponse.getNlpResponse().getID() + "} }}";
             Optional<GetAccountDetailsResponse> accountDetailsResponse = Optional.ofNullable(this.webClient
                     .post()
                     .uri("/accountService/getAccount")
@@ -84,12 +81,11 @@ public class SonataServiceImpl implements SonataService {
         }
         return null;
     }
-
+    /* Utility methods  */
     private static Map<String, Object> getStringObjectMap(Object response) {
-        Map<String, Object> flattenClientResponse = JsonFlatner
+        return JsonFlatner
                 .mapToFlat(
                         ConvertObjectToJson.convertToJson(response
                         ));
-        return flattenClientResponse;
     }
 }
