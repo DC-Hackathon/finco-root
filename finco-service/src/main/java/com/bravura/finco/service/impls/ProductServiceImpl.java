@@ -1,6 +1,7 @@
 package com.bravura.finco.service.impls;
 
 import com.bravura.finco.constant.ProductType;
+import com.bravura.finco.model.FincoResponse;
 import com.bravura.finco.model.GetClientResponse;
 import com.bravura.finco.model.NLPResponse;
 import com.bravura.finco.service.DistributionService;
@@ -19,15 +20,15 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private NucleusService nucleusService;
     @Override
-    public Object getProduct(NLPResponse nlpResponse) {
+    public FincoResponse getProduct(NLPResponse nlpResponse) {
         if(nlpResponse.getPROD().equalsIgnoreCase(ProductType.DISTRIBUTIONS.getCode())) {
-           return distributionService.callDistributionProduct(nlpResponse);
+           //return distributionService.callDistributionProduct(nlpResponse);
         }
         if(nlpResponse.getPROD().equalsIgnoreCase(ProductType.SONATA.getCode())) {
             return sbsService.callSonataProduct(nlpResponse);
         }
         if(nlpResponse.getPROD().equalsIgnoreCase(ProductType.NUCLEUS.getCode())) {
-            return nucleusService.callNucleusProduct(nlpResponse);
+           // return nucleusService.callNucleusProduct(nlpResponse);
         }
 
         return null;

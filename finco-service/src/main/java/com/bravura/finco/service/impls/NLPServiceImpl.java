@@ -45,8 +45,7 @@ public class NLPServiceImpl implements NLPService {
                     .block();
             fincoResponse.setNlpResponse(nlpResponseBean);
             if(Objects.nonNull(fincoResponse.getNlpResponse())) {
-                Object product = this.productService.getProduct(fincoResponse.getNlpResponse());
-                fincoResponse.setData(product);
+                fincoResponse = this.productService.getProduct(fincoResponse.getNlpResponse());
             }
         } catch (Exception e) {
             fincoResponse.setNlpResponse(null);

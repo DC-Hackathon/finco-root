@@ -32,7 +32,7 @@ public class SonataServiceImpl implements SonataService {
     }
 
     @Override
-    public Object callSonataProduct(NLPResponse nlpResponse) {
+    public FincoResponse callSonataProduct(NLPResponse nlpResponse) {
         /*  calling distribution details service */
         String searchID = nlpResponse.getID();
         String response;
@@ -50,6 +50,7 @@ public class SonataServiceImpl implements SonataService {
             Map<String, Object> flattenClientResponse = getStringObjectMap
                     (clientResponse.orElseThrow(() -> new TechnicalException("client response is null")));
             fincoResponse.setData(flattenClientResponse);
+            fincoResponse.setNlpResponse(nlpResponse);
             for (Map.Entry<String, Object> entry : flattenClientResponse.entrySet()) {
                 String key = entry.getKey();
                 Object value = entry.getValue();
