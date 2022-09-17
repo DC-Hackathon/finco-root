@@ -26,4 +26,11 @@ public class FincoResponse {
             accessMode = Schema.AccessMode.READ_ONLY)
     @JsonProperty("data")
     private Object data;
+
+    @Schema(
+            description = "",
+            example = "2.0",
+            accessMode = Schema.AccessMode.READ_ONLY)
+    @JsonProperty("data")
+    private Object intentData;
 }

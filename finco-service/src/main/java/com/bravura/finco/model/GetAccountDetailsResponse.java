@@ -6,16 +6,8 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Data
-public class GetClientResponse {
+public class GetAccountDetailsResponse {
 
     @Schema(description = "")
-    private Object clientDetails;
-
-    @Schema(description = "")
-    private Object addresses;
-
-    @Schema(description = "")
-    private Object bankAccounts;
-
-
+    private Object accountDetails;
 }

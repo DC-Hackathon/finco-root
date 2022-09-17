@@ -17,4 +17,5 @@ public class FincoApplication {
 		SpringApplication.run(FincoApplication.class, args);
 	}
 
+
 }
