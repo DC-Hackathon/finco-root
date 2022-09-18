@@ -1,16 +1,9 @@
-## intent:current_matches
-- which cricket match is happening right now 
-- which ipl match is next 
-- which teams are playing next in ipl 
-
 ## intent:investorType
 - fetch get Investoor Type
 - fetch investor type
 - get name of invetor type
 - sonata get me account investor type in client for id 10000001
 - get investor
-
-
 
 ## intent:contactName
 - fetch get Contact Name
@@ -31,22 +24,27 @@
 - hola
 - howdy
 
-## intent: greet_gm
+## intent:greet_gm
 - good morning
-- gm
 - morning
+- good morning sonata
+- good morning finco
+- good morning distributions
 
-## intent: greet_gev
+## intent:greet_gev
 - good evening
 - evening
-- ge
+- good evening sonata
+- good evening distributions
 - good evening finco
 
-## intent: greet_af
+## intent:greet_af
 - good afternoon
-- afternnon
+- afternoon
 - good afternoon finco
-## intent: greet_ques
+- good afternoon distributions
+- good afternoon sonata
+## intent:greet_ques
 - how are you ?
 - how you are doing ?
 - whatsapp

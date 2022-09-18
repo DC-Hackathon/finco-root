@@ -2,18 +2,6 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "intent": "current_matches",
-        "text": "which cricket match is happening right now"
-      },
-      {
-        "intent": "current_matches",
-        "text": "which ipl match is next"
-      },
-      {
-        "intent": "current_matches",
-        "text": "which teams are playing next in ipl"
-      },
-      {
         "intent": "investorType",
         "text": "fetch get Investoor Type"
       },
@@ -99,11 +87,19 @@
       },
       {
         "intent": "greet_gm",
-        "text": "gm"
+        "text": "morning"
       },
       {
         "intent": "greet_gm",
-        "text": "morning"
+        "text": "good morning sonata"
+      },
+      {
+        "intent": "greet_gm",
+        "text": "good morning finco"
+      },
+      {
+        "intent": "greet_gm",
+        "text": "good morning distributions"
       },
       {
         "intent": "greet_gev",
@@ -115,7 +111,11 @@
       },
       {
         "intent": "greet_gev",
-        "text": "ge"
+        "text": "good evening sonata"
+      },
+      {
+        "intent": "greet_gev",
+        "text": "good evening distributions"
       },
       {
         "intent": "greet_gev",
@@ -127,11 +127,19 @@
       },
       {
         "intent": "greet_af",
-        "text": "afternnon"
+        "text": "afternoon"
       },
       {
         "intent": "greet_af",
         "text": "good afternoon finco"
+      },
+      {
+        "intent": "greet_af",
+        "text": "good afternoon distributions"
+      },
+      {
+        "intent": "greet_af",
+        "text": "good afternoon sonata"
       },
       {
         "intent": "greet_ques",

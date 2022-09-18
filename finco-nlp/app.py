@@ -11,7 +11,6 @@ from rasa_nlu.config import RasaNLUModelConfig
 from rasa_nlu.model import Trainer
 from rasa_nlu import config
 from rasa_nlu.model import Metadata, Interpreter
-nlp = spacy.load("en_core_web_sm")
 
 app = Flask(__name__)
 

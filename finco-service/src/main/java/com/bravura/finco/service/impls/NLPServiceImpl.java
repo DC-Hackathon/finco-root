@@ -69,12 +69,10 @@ public class NLPServiceImpl implements NLPService {
             }
 
         } catch (Exception e) {
-            fincoResponse.setNlpResponse(null);
             fincoResponse.setData(null);
             return fincoResponse;
         }
         return fincoResponse;
-
     }
 
     /* Automated Response */

@@ -1,8 +1,8 @@
 {
-    "language": "en_core_web_sm",
+    "language": "en_core_web_md",
     "pipeline": [
         {
-            "model": "en_core_web_sm",
+            "model": "en_core_web_md",
             "case_sensitive": false,
             "name": "SpacyNLP",
             "class": "rasa_nlu.utils.spacy_utils.SpacyNLP"
@@ -10,15 +10,6 @@
         {
             "name": "SpacyTokenizer",
             "class": "rasa_nlu.tokenizers.spacy_tokenizer.SpacyTokenizer"
-        },
-        {
-            "name": "SpacyFeaturizer",
-            "class": "rasa_nlu.featurizers.spacy_featurizer.SpacyFeaturizer"
-        },
-        {
-            "name": "RegexFeaturizer",
-            "file": "component_3_RegexFeaturizer.pkl",
-            "class": "rasa_nlu.featurizers.regex_featurizer.RegexFeaturizer"
         },
         {
             "BILOU_flag": true,
@@ -51,13 +42,12 @@
             "L1_c": 0.1,
             "L2_c": 0.1,
             "name": "CRFEntityExtractor",
-            "file": "component_4_CRFEntityExtractor.pkl",
+            "file": "component_2_CRFEntityExtractor.pkl",
             "class": "rasa_nlu.extractors.crf_entity_extractor.CRFEntityExtractor"
         },
         {
-            "name": "EntitySynonymMapper",
-            "file": null,
-            "class": "rasa_nlu.extractors.entity_synonyms.EntitySynonymMapper"
+            "name": "SpacyFeaturizer",
+            "class": "rasa_nlu.featurizers.spacy_featurizer.SpacyFeaturizer"
         },
         {
             "C": [
@@ -77,11 +67,16 @@
             "max_cross_validation_folds": 5,
             "scoring_function": "f1_weighted",
             "name": "SklearnIntentClassifier",
-            "file": "component_6_SklearnIntentClassifier.pkl",
+            "file": "component_4_SklearnIntentClassifier.pkl",
             "class": "rasa_nlu.classifiers.sklearn_intent_classifier.SklearnIntentClassifier"
+        },
+        {
+            "name": "EntitySynonymMapper",
+            "file": null,
+            "class": "rasa_nlu.extractors.entity_synonyms.EntitySynonymMapper"
         }
     ],
     "training_data": "training_data.json",
-    "trained_at": "20220918-012958",
+    "trained_at": "20220918-160227",
     "rasa_nlu_version": "0.15.1"
 }
