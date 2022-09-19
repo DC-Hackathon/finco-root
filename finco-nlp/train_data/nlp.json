@@ -48,6 +48,776 @@
                     ]
                 ]
             }
+        ],
+        [
+            "distributions fetch me account status for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        42,
+                        49,
+                        "SER"
+                    ],
+                    [
+                        51,
+                        57,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me account status for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        40,
+                        47,
+                        "SER"
+                    ],
+                    [
+                        49,
+                        55,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get account status from distributions for voucher 101012\r",
+            {
+                "entities": [
+                    [
+                        24,
+                        37,
+                        "PROD"
+                    ],
+                    [
+                        42,
+                        49,
+                        "SER"
+                    ],
+                    [
+                        50,
+                        56,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions account status for voucher 123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        33,
+                        40,
+                        "SER"
+                    ],
+                    [
+                        41,
+                        47,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch account status for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        39,
+                        46,
+                        "SER"
+                    ],
+                    [
+                        48,
+                        54,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch me product identifer for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        45,
+                        52,
+                        "SER"
+                    ],
+                    [
+                        54,
+                        60,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me product identifier for voucher  34432432432\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        44,
+                        51,
+                        "SER"
+                    ],
+                    [
+                        53,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get product identifier from distributions for voucher 101012\r",
+            {
+                "entities": [
+                    [
+                        28,
+                        41,
+                        "PROD"
+                    ],
+                    [
+                        46,
+                        53,
+                        "SER"
+                    ],
+                    [
+                        54,
+                        60,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions product identifierfor voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        36,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        45,
+                        51,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch product identifier for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        43,
+                        50,
+                        "SER"
+                    ],
+                    [
+                        52,
+                        58,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch me total units for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        39,
+                        46,
+                        "SER"
+                    ],
+                    [
+                        48,
+                        54,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me total units for voucher  34432432432\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        37,
+                        44,
+                        "SER"
+                    ],
+                    [
+                        46,
+                        57,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get product identifier from distributions voucher 101012\r",
+            {
+                "entities": [
+                    [
+                        28,
+                        41,
+                        "PROD"
+                    ],
+                    [
+                        42,
+                        49,
+                        "SER"
+                    ],
+                    [
+                        50,
+                        56,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions total unit for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        29,
+                        36,
+                        "SER"
+                    ],
+                    [
+                        38,
+                        44,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch total unit for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        35,
+                        42,
+                        "SER"
+                    ],
+                    [
+                        44,
+                        50,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch me grosss distribution amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        54,
+                        61,
+                        "SER"
+                    ],
+                    [
+                        63,
+                        69,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me gross distribution amount for voucher 34432432432\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        51,
+                        58,
+                        "SER"
+                    ],
+                    [
+                        59,
+                        70,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get gross distribution amount from distributions voucher 101012\r",
+            {
+                "entities": [
+                    [
+                        35,
+                        48,
+                        "SER"
+                    ],
+                    [
+                        49,
+                        56,
+                        "SER"
+                    ],
+                    [
+                        57,
+                        63,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions gross distribution amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        44,
+                        51,
+                        "SER"
+                    ],
+                    [
+                        53,
+                        59,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch gross distribution amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        50,
+                        57,
+                        "SER"
+                    ],
+                    [
+                        59,
+                        65,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch me equalization amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        47,
+                        54,
+                        "SER"
+                    ],
+                    [
+                        56,
+                        62,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me equalization amount for voucher 34432432432\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        45,
+                        52,
+                        "SER"
+                    ],
+                    [
+                        53,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get equalization amount from distributions voucher 101012\r",
+            {
+                "entities": [
+                    [
+                        29,
+                        42,
+                        "SER"
+                    ],
+                    [
+                        43,
+                        50,
+                        "SER"
+                    ],
+                    [
+                        51,
+                        57,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions equalization amount amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        45,
+                        52,
+                        "SER"
+                    ],
+                    [
+                        54,
+                        60,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch equalization amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        44,
+                        51,
+                        "SER"
+                    ],
+                    [
+                        53,
+                        59,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch me tax amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        38,
+                        45,
+                        "SER"
+                    ],
+                    [
+                        47,
+                        53,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me tax amount for voucher 34432432432\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        36,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        44,
+                        55,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get tax amount from distributions voucher 101012\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        48,
+                        55,
+                        "SER"
+                    ],
+                    [
+                        56,
+                        62,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions tax amount amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        36,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        45,
+                        51,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch tax amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        35,
+                        42,
+                        "SER"
+                    ],
+                    [
+                        44,
+                        50,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch me net distribution amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        51,
+                        58,
+                        "SER"
+                    ],
+                    [
+                        60,
+                        66,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me net distribution amount for voucher 34432432432\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        49,
+                        56,
+                        "SER"
+                    ],
+                    [
+                        57,
+                        68,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get net distribution amount from distributions voucher 101012\r",
+            {
+                "entities": [
+                    [
+                        33,
+                        46,
+                        "PROD"
+                    ],
+                    [
+                        47,
+                        54,
+                        "SER"
+                    ],
+                    [
+                        55,
+                        61,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions net distribution amount for voucher  123456\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        42,
+                        49,
+                        "SER"
+                    ],
+                    [
+                        51,
+                        57,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch net distribution amount for voucher  123456",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        48,
+                        55,
+                        "SER"
+                    ],
+                    [
+                        57,
+                        63,
+                        "ID"
+                    ]
+                ]
+            }
         ]
     ]
 }

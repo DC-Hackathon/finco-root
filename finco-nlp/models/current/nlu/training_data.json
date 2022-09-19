@@ -42,6 +42,146 @@
         "text": "sonata get me contact name"
       },
       {
+        "intent": "status",
+        "text": "distributions fetch me account status"
+      },
+      {
+        "intent": "status",
+        "text": "distributions get me account status for voucher  123456"
+      },
+      {
+        "intent": "status",
+        "text": "get account status from distributions for voucher 101012"
+      },
+      {
+        "intent": "status",
+        "text": "account status"
+      },
+      {
+        "intent": "status",
+        "text": "fetch account status"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "distributions fetch me product identifer"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "distributions get me product identifier for voucher  34432432432"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "get product identifier from distributions for voucher 101012"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "product identifier"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "fetch product identifier"
+      },
+      {
+        "intent": "totalUnit",
+        "text": "distributions fetch me total units"
+      },
+      {
+        "intent": "totalUnit",
+        "text": "distributions get me total units for voucher  34432432432"
+      },
+      {
+        "intent": "totalUnit",
+        "text": "get product identifier from distributions voucher 101012"
+      },
+      {
+        "intent": "totalUnit",
+        "text": "total unit"
+      },
+      {
+        "intent": "totalUnit",
+        "text": "fetch total unit"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "distributions fetch me grosss distribution amount"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "distributions get me gross distribution amount for voucher 34432432432"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "get gross distribution amount from distributions voucher 101012"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "gross distribution amount"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "fetch gross distribution amount"
+      },
+      {
+        "intent": "equalizationAmount",
+        "text": "distributions fetch me equalization amount"
+      },
+      {
+        "intent": "equalizationAmount",
+        "text": "distributions get me equalization amount for voucher 34432432432"
+      },
+      {
+        "intent": "equalizationAmount",
+        "text": "get equalization amount from distributions voucher 101012"
+      },
+      {
+        "intent": "equalizationAmount",
+        "text": "equalization amount amount"
+      },
+      {
+        "intent": "equalizationAmount",
+        "text": "fetch equalization amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "distributions fetch me tax amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "distributions get me tax amount for voucher 34432432432"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "get tax amount from distributions voucher 101012"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "tax amount amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "fetch tax amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "distributions fetch me net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "distributions get me net distribution amount for voucher 34432432432"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "get net distribution amount from distributions voucher 101012"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "fetch net distribution amount"
+      },
+      {
         "intent": "greet_gene",
         "text": "hii"
       },
