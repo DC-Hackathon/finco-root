@@ -9,6 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { SearchControllerService } from 'generated/api';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatService } from './chat.service';
+import { MatCardModule } from '@angular/material/card';
 
 export const routes: Routes = [
   {
@@ -30,8 +32,9 @@ export const routes: Routes = [
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
-  providers: [SearchControllerService]
+  providers: [SearchControllerService, ChatService]
 })
 export class DashboardModule { }

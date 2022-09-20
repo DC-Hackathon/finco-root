@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { SearchControllerService } from 'generated/api';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { ChatService, Message } from '../chat.service';
 declare var webkitSpeechRecognition: any;
 
 @Component({
@@ -14,15 +15,23 @@ export class DashboardComponent implements OnInit {
   /* Variables */
   value:any='';
   userSearch = new FormControl(null, Validators.required);
+  userQuery: string ='';
   private allSubscriptions = new Subscription();
+  messages: Message[] = [];
 
   constructor(
-    private searchController:SearchControllerService
+    private searchController: SearchControllerService,
+    private chatService: ChatService
   ) { }
 
   ngOnInit(): void {
-    console.log("Dashboard works");
+
+    this.chatService.conversation.subscribe((val) => {
+      this.messages = this.messages.concat(val);
+    });
+
     console.log(this.userSearch);
+    console.log(this.messages);
   }
   
   textDetectionUsingVoice() {
@@ -50,11 +59,10 @@ export class DashboardComponent implements OnInit {
   onSubmit(event: any){
     if (event.key === "Enter") {
       console.log(event.target.value);
-      const searchText = event.target.value;
-      this.searchController.postFromFlask(searchText).subscribe(
-        (data)=>
-        console.log(data)
-      );
+      this.userQuery = event.target.value;
+      this.userSearch.patchValue('');
+      this.chatService.getBotAnswer(this.userQuery);
+      
     }
   }
 

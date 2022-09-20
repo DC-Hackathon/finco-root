@@ -1,16 +1,99 @@
+<!-- 
 
-<div class="container">
-	<div class="logo">
-		<img src="./assets/images/logo.png" alt="Italian Trulli" width="460" height="345">
+<div class="wrapper">
+	<div class="box">
+		<ng-container *ngFor="let message of messages">
+			<div class="message"
+				[ngClass]="{ 'from': message.author === 'bot',
+				'to': message.author === 'user' }">
+				{{ message.content }}
+			</div>
+		</ng-container>
 	</div>
-	<input  matInput class="search-input" placeholder="Search" [formControl]='userSearch' (keydown)="onSubmit($event)"/>
-	<mat-icon class="search-icon" matPrefix>search</mat-icon>
-	<button
-		mat-icon-button
-		matSuffix
-		(click)="textDetectionUsingVoice()"
-		type="button"
-	>
-	<mat-icon class="mic-icon">settings_voice</mat-icon>
-	</button>
+	<div class="typing-area">
+		<div class="input-field">
+			<input type="text" placeholder="Type your query" [formControl]='userSearch' (keydown)="onSubmit($event)"> 
+			<button>Send</button>
+			<button
+				mat-icon-button
+				matSuffix
+				(click)="textDetectionUsingVoice()"
+				type="button"
+			>
+			<mat-icon class="mic-icon">settings_voice</mat-icon>
+			</button>
+		</div>
+	</div>
+</div> -->
+<!----------------------------------------------------------------------------------!-->
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="left col-sm-7">
+			<img src="./assets/images/Chatbot.png" alt="Italian Trulli" />
+		</div>
+		<div class="right col-sm-5">
+			<mat-card class="example-card">
+				<mat-card-header style="border-bottom: 2px solid white">
+					<div mat-card-avatar class="example-header-image"></div>
+					<mat-card-title>Finco Chatbot</mat-card-title>
+					<mat-card-subtitle>online</mat-card-subtitle>
+				</mat-card-header>
+				
+				<mat-card-content>
+					<div *ngFor="let message of messages">
+						<!-- <div class="message">
+							<div *ngIf="message.author === 'bot'" class="from">
+								{{message.intent}} for {{message.id}} is {{ message.content }}
+							</div>
+							<div *ngIf="message.author === 'user'" class="to">
+								{{ message.content }}
+							</div>
+						</div>  -->
+						<div
+						[ngClass]="{ 'from1': message.author === 'bot',
+								'to1': message.author === 'user' }">
+						{{message.content}}  
+						</div>
+					</div>
+				</mat-card-content>
+				<mat-card-actions>
+					<input type="text" placeholder="Type your query" [formControl]='userSearch' (keydown)="onSubmit($event)"/>
+					<button mat-icon-button matSuffix (click)="textDetectionUsingVoice()" type="button">
+						<mat-icon class="mic-icon">mic</mat-icon>
+					</button>
+				</mat-card-actions>
+			</mat-card>
+		</div>
+	</div>
 </div>
+
+
+	<!-- <mat-card class="example-card mat-elevation-z0">
+		<div *ngFor="let message of messages"> -->
+			<!-- <div class="message">
+							<div *ngIf="message.author === 'bot'" class="from">
+								{{message.intent}} for {{message.id}} is {{ message.content }}
+							</div>
+							<div *ngIf="message.author === 'user'" class="to">
+								{{ message.content }}
+							</div>
+						</div> -->
+			<!-- <div class="message" [ngClass]="{ 'from': message.author === 'bot',
+												'to': message.author === 'user' }">
+				*ngIf="message.author === 'bot' ? "{{message.intent}} + "for" + {{message.ID}} + "is " + {{ message.content
+				}}
+			</div>  -->
+			<!-- [ngClass]="{ 'from': message.author === 'bot',
+							'to': message.author === 'user' }">
+							 ({{message.author}}d== 'bot') ? {{message.intent}} for {{message.id}} is {{ message.content }} : {{message.content}}  -->
+		<!-- </div>
+		<div class="input-field">
+			<input type="text" placeholder="Type your query" [formControl]='userSearch' (keydown)="onSubmit($event)"> -->
+			<!-- <button>Send</button> -->
+			<!-- <button mat-icon-button matSuffix (click)="textDetectionUsingVoice()" type="button">
+				<mat-icon class="mic-icon">settings_voice</mat-icon>
+			</button>
+		</div>
+	</mat-card> -->

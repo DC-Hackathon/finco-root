@@ -1,46 +1,128 @@
-.container {
-width:100%;
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
+
+.container-fluid {
+    height:100%;
+    background-color: #f6e2fa;
+ }
+
+.left {
+    margin-top:10%;
 }
 
-.search-input {
-  line-height: 3.5rem;
-  border-radius: 35px;
-  padding: 0.2rem 4rem;
-  font-size: 1.2rem;
-  background-color: transparent;
-  border: 2px solid white;
-  position: relative;
-  min-height: 10px;
-  width: 35%;
-  caret-color: white;
-  display:absolute;
-  color:whitesmoke;
+img{
+    max-width:100%;
+    max-height:100%;
 }
 
-button {
-right: 30%;
-position: absolute;
-font-size: 30px;
-color: white;
+.right {
+    margin-top: 10%;
 }
 
-.search-icon {
-right: 69%;
-position: absolute;
-font-size: 28px;
+.example-card {
+  max-width: 400px;
+  border-color: grey;
+  border-radius: 18px;
+//   top: 90%;
 }
+mat-card-content{
+    max-height: 500px;
+    height:400px;
+    vertical-align: bottom;
+    overflow-x: auto;
+
+}
+
+.from1{
+    background-color: blue;
+    color: white;
+    margin-right: 100px;
+    border-radius: 10px 10px 0px 10px;
+    padding-left: 10px;
+}
+
+.to1{
+    background-color: white;
+    color:black;
+    margin-left: 100px;
+    text-align: right;
+    border-radius: 10px 10px 0px 10px;
+    padding-right: 10px;
+}
+.typing-area {
+    width: 100%;
+    background: #efefef;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+input {
+       width: 85%;
+    position: relative;
+    border: none;
+  
+    height: 40px;
+    background-color: white;
+    margin: 0px 0px 6px 6px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
 
 input:focus {
-  background-color: #747479;
+    outline: none !important;
 }
 
-.logo{
-  position: absolute;
-  max-width: 80%;
-  height: 75%;
+mat-icon {
+    color:white;
 }
 
+.typing-area .input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+    padding-right: 70px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s all ease;
+}
+
+.message {
+  margin: 0 15px 20px;
+  padding: 10px 20px;
+  position: relative;
+  font-family: "Times New Roman", Times, serif;
+  font-size:15px;
+
+  .to {
+  background-color: #2095fe;
+  color: #fff;
+  margin-left: 100px;
+  text-align: right;
+  border-radius: 10px 10px 0px 10px;
+  padding-right: 10px;
+}
+.from {
+  background-color: #e5e4e9;
+  color: #363636;
+  margin-right: 100px;
+  border-radius: 10px 10px 0px 10px;
+  padding-left: 10px;
+}
+}
+
+.message.to + .message.to,
+.message.from + .message.from {
+  margin-top: -10px;
+}
+
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
