@@ -1,100 +1,33 @@
-<!-- 
-
-<div class="wrapper">
-	<div class="box">
-		<ng-container *ngFor="let message of messages">
-			<div class="message"
-				[ngClass]="{ 'from': message.author === 'bot',
-				'to': message.author === 'user' }">
-				{{ message.content }}
-			</div>
-		</ng-container>
-	</div>
-	<div class="typing-area">
-		<div class="input-field">
-			<input type="text" placeholder="Type your query" [formControl]='userSearch' (keydown)="onSubmit($event)"> 
-			<button>Send</button>
-			<button
-				mat-icon-button
-				matSuffix
-				(click)="textDetectionUsingVoice()"
-				type="button"
-			>
-			<mat-icon class="mic-icon">settings_voice</mat-icon>
-			</button>
+<div class="main">
+	<div style="height: 100vh;" fxLayout="row" fxFlex="100">
+		<div class="child-1 mt-5" fxFlex="calc(50%)">
+			<img style="position: relative; right: 80px;" src="./assets/images/test1.jpg" alt="Italian Trulli" />
 		</div>
-	</div>
-</div> -->
-<!----------------------------------------------------------------------------------!-->
-
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="left col-sm-7">
-			<img src="./assets/images/Chatbot.png" alt="Italian Trulli" />
-		</div>
-		<div class="right col-sm-5">
-			<mat-card class="example-card" *ngIf="showgChatBox">
-				<mat-card-header style="border-bottom: 2px solid white; color: white;">
+		<div class="child-2" fxFlex="calc(50%)">
+			<mat-card style="border-radius: none; background-color: #E2F3FD;" fxFlex="100">
+				<mat-card-header style="border-bottom: 1px solid gray; color: black;">
 					<div mat-card-avatar class="example-header-image"></div>
-					<mat-card-title>Finco Chatbot</mat-card-title>
-					<mat-card-subtitle>online</mat-card-subtitle>
+					<mat-card-title style="color: black;">Finco Chatbot</mat-card-title>
+					<mat-card-subtitle style="color: black;">
+						<mat-icon style=" font-size:15px;color:green;">fiber_manual_record</mat-icon><span
+							style="position: relative; top:-3px ; left:-2px">online</span>
+					</mat-card-subtitle>
 				</mat-card-header>
-				<mat-card-content  #scrollContainer [scrollTop]="scrollContainer.scrollHeight" >
-						<div *ngFor="let message of messages">
-							<!-- <div class="message">
-													<div *ngIf="message.author === 'bot'" class="from">
-														{{message.intent}} for {{message.id}} is {{ message.content }}
-													</div>
-													<div *ngIf="message.author === 'user'" class="to">
-														{{ message.content }}
-													</div>
-												</div>  -->
-							<div [ngClass]="{ 'from1': message.author === 'bot',
-														'to1': message.author === 'user' }">
-								{{message.content}}
-							</div>
+				<mat-card-content #scrollContainer [scrollTop]="scrollContainer.scrollHeight">
+					<div *ngFor="let message of messages">
+						<div [ngClass]="{ 'fromBot': message.author === 'bot','toBot': message.author === 'user' }">
+							{{message.content}}
 						</div>
+					</div>
 				</mat-card-content>
 				<mat-card-actions>
-					<input type="text" placeholder="Type your query" [formControl]='userSearch' (keydown)="onSubmit($event)"/>
-					<button mat-icon-button matSuffix (click)="textDetectionUsingVoice()" type="button">
-						<mat-icon class="mic-icon">mic</mat-icon>
+					<input type="text" placeholder="Type your query" [formControl]='userSearch'
+						(keydown)="onSubmit($event)" />
+					<button mat-icon-button matPrefix (click)="textDetectionUsingVoice()" type="button">
+						<mat-icon style="color: black;" class="mic-icon">mic</mat-icon>
 					</button>
 				</mat-card-actions>
 			</mat-card>
-			<button mat-icon-button matSuffix (click)="openChat()" type="button" class="chat">
-				<mat-icon class="mic-icon">chat</mat-icon>
-			</button>
 		</div>
 	</div>
 </div>
-
-
-	<!-- <mat-card class="example-card mat-elevation-z0">
-		<div *ngFor="let message of messages"> -->
-			<!-- <div class="message">
-							<div *ngIf="message.author === 'bot'" class="from">
-								{{message.intent}} for {{message.id}} is {{ message.content }}
-							</div>
-							<div *ngIf="message.author === 'user'" class="to">
-								{{ message.content }}
-							</div>
-						</div> -->
-			<!-- <div class="message" [ngClass]="{ 'from': message.author === 'bot',
-												'to': message.author === 'user' }">
-				*ngIf="message.author === 'bot' ? "{{message.intent}} + "for" + {{message.ID}} + "is " + {{ message.content
-				}}
-			</div>  -->
-			<!-- [ngClass]="{ 'from': message.author === 'bot',
-							'to': message.author === 'user' }">
-							 ({{message.author}}d== 'bot') ? {{message.intent}} for {{message.id}} is {{ message.content }} : {{message.content}}  -->
-		<!-- </div>
-		<div class="input-field">
-			<input type="text" placeholder="Type your query" [formControl]='userSearch' (keydown)="onSubmit($event)"> -->
-			<!-- <button>Send</button> -->
-			<!-- <button mat-icon-button matSuffix (click)="textDetectionUsingVoice()" type="button">
-				<mat-icon class="mic-icon">settings_voice</mat-icon>
-			</button>
-		</div>
-	</mat-card> -->

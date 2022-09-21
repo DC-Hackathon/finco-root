@@ -11,6 +11,7 @@ import { SearchControllerService } from 'generated/api';
 import { HttpClientModule } from '@angular/common/http';
 import { ChatService } from './chat.service';
 import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 export const routes: Routes = [
   {
@@ -27,6 +28,7 @@ export const routes: Routes = [
     CommonModule,
     FormsModule,
     MaterialModule,
+    FlexLayoutModule,
     RouterModule.forChild(routes),
     MatIconModule,
     MatFormFieldModule,

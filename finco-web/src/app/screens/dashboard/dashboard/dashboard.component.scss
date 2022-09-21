@@ -1,9 +1,3 @@
-
-.container-fluid {
-    height:100%;
-    background-color: #f6e2fa;
- }
-
 .left {
     margin-top:10%;
 }
@@ -18,25 +12,20 @@ img{
     margin-top: 10%;
 }
 
-.example-card {
-  max-width: 400px;
-  border-color: grey;
-  border-radius: 18px;
-  left:20%;
-}
 mat-card-content{
-    max-height: 500px;
-    height:400px;
+    max-height: 530px;
+    height:530px;
     overflow-x: hidden;
     display:block;
 }
+
 mat-card-content::-webkit-scrollbar { 
     display: none; 
 }
 
-.from1{
-    background-color: #79499D;
-    color: white;
+.fromBot{
+    background-color: #FAADA3;
+    color: black;
     margin-right: 100px;
     border-radius: 10px 10px 10px 0px;
     padding-left: 10px;
@@ -44,8 +33,8 @@ mat-card-content::-webkit-scrollbar {
     margin-top: 10px;
 }
 
-.to1{
-    background-color: white;
+.toBot{
+    background-color: #94B9D4;
     color:black;
     margin-left: 100px;
     text-align: right;
@@ -54,17 +43,8 @@ mat-card-content::-webkit-scrollbar {
     margin-top: 10px;
     padding: 12px;
 }
-.typing-area {
-    width: 100%;
-    background: #efefef;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
 input {
-       width: 85%;
+    width: 93%;
     position: relative;
     border: none;
   
@@ -75,67 +55,12 @@ input {
     border-radius: 8px;
 }
 
-
 input:focus {
     outline: none !important;
 }
 
 mat-icon {
     color:white;
-}
-.chat {
-  //  position: absolute;
-  //  bottom: 0;
-  //  right: 0;
-  position: fixed;
-  bottom: 20px;
-  right: 40px;
-  background-color:green;
-}
-
-.typing-area .input-field input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    outline: none;
-    padding-right: 70px;
-    font-family: 'Poppins', sans-serif;
-    transition: 0.3s all ease;
-}
-
-.message {
-  margin: 0 15px 20px;
-  padding: 10px 20px;
-  position: relative;
-  font-family: "Times New Roman", Times, serif;
-  font-size:15px;
-
-  .to {
-  background-color: #2095fe;
-  color: #fff;
-  margin-left: 100px;
-  text-align: right;
-  border-radius: 10px 10px 0px 10px;
-  padding-right: 10px;
-}
-.from {
-  background-color: #e5e4e9;
-  color: #363636;
-  margin-right: 100px;
-  border-radius: 10px 10px 0px 10px;
-  padding-left: 10px;
-}
-}
-
-.message.to + .message.to,
-.message.from + .message.from {
-  margin-top: -10px;
-}
-
-
-.example-card {
-  max-width: 400px;
 }
 
 .example-header-image {
