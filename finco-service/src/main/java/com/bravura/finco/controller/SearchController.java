@@ -34,9 +34,5 @@ public class SearchController {
         return nlpService.getNlp(text);
     }
 
-    @PostMapping("/flatMapToJson")
-    public Object mapToString(@RequestBody String jsonObject){
-        return JsonFlatner.mapToFlat(jsonObject);
-    }
 }
 

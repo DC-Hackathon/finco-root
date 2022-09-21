@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { SearchControllerService } from 'generated/api';
 import { Observable, Subscription } from 'rxjs';
@@ -18,6 +18,8 @@ export class DashboardComponent implements OnInit {
   userQuery: string ='';
   private allSubscriptions = new Subscription();
   messages: Message[] = [];
+  messageBody = document.querySelector('#align');
+  @ViewChild('align') align:any; 
 
   constructor(
     private searchController: SearchControllerService,
@@ -25,9 +27,10 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
     this.chatService.conversation.subscribe((val) => {
       this.messages = this.messages.concat(val);
+      console.log(this.align)
+      this.align.nativeElement.scrollTop = this.align.nativeElement.scrollHeight - this.align.nativeElement.clientHeight;
     });
 
     console.log(this.userSearch);
