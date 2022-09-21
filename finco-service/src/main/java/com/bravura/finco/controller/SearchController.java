@@ -20,15 +20,20 @@ public class SearchController {
         this.nlpService = nlpService;
     }
 
+    /**
+     * Search api takes the user text data which can be typed or spoken by the user
+     * and forwards it to the NLP API.
+     * @param text is a message typed of spoken by the user.
+     * @return <b>FincoResponse</b> which holds the nlp data and the data coming from different services like sonata, distributions etc.
+     */
 
     @ApiResponse(
             responseCode = "200",
-            description = "SuccessfulOperation",
+            description = "Takes string which can be typed or spoken by the user",
             content = {
                     @Content(mediaType = "application/json")
             }
     )
-    @Produces("application/json")
     @PostMapping("/search")
     public FincoResponse postFromFlask(@RequestBody String text){
         return nlpService.getNlp(text);
