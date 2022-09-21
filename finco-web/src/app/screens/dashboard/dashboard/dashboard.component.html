@@ -34,29 +34,27 @@
 			<img src="./assets/images/Chatbot.png" alt="Italian Trulli" />
 		</div>
 		<div class="right col-sm-5">
-			<mat-card class="example-card">
+			<mat-card class="example-card" *ngIf="showgChatBox">
 				<mat-card-header style="border-bottom: 2px solid white; color: white;">
 					<div mat-card-avatar class="example-header-image"></div>
 					<mat-card-title>Finco Chatbot</mat-card-title>
 					<mat-card-subtitle>online</mat-card-subtitle>
 				</mat-card-header>
-				
-				<mat-card-content>
-					<div #align *ngFor="let message of messages">
-						<!-- <div class="message">
-							<div *ngIf="message.author === 'bot'" class="from">
-								{{message.intent}} for {{message.id}} is {{ message.content }}
+				<mat-card-content  #scrollContainer [scrollTop]="scrollContainer.scrollHeight" >
+						<div *ngFor="let message of messages">
+							<!-- <div class="message">
+													<div *ngIf="message.author === 'bot'" class="from">
+														{{message.intent}} for {{message.id}} is {{ message.content }}
+													</div>
+													<div *ngIf="message.author === 'user'" class="to">
+														{{ message.content }}
+													</div>
+												</div>  -->
+							<div [ngClass]="{ 'from1': message.author === 'bot',
+														'to1': message.author === 'user' }">
+								{{message.content}}
 							</div>
-							<div *ngIf="message.author === 'user'" class="to">
-								{{ message.content }}
-							</div>
-						</div>  -->
-						<div
-						[ngClass]="{ 'from1': message.author === 'bot',
-								'to1': message.author === 'user' }">
-						{{message.content}}  
 						</div>
-					</div>
 				</mat-card-content>
 				<mat-card-actions>
 					<input type="text" placeholder="Type your query" [formControl]='userSearch' (keydown)="onSubmit($event)"/>
@@ -65,6 +63,9 @@
 					</button>
 				</mat-card-actions>
 			</mat-card>
+			<button mat-icon-button matSuffix (click)="openChat()" type="button" class="chat">
+				<mat-icon class="mic-icon">chat</mat-icon>
+			</button>
 		</div>
 	</div>
 </div>

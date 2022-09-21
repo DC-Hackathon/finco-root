@@ -22,14 +22,16 @@ img{
   max-width: 400px;
   border-color: grey;
   border-radius: 18px;
-//   top: 90%;
+  left:20%;
 }
 mat-card-content{
     max-height: 500px;
     height:400px;
-    vertical-align: bottom;
-    overflow-y: hidden;
-
+    overflow-x: hidden;
+    display:block;
+}
+mat-card-content::-webkit-scrollbar { 
+    display: none; 
 }
 
 .from1{
@@ -80,6 +82,15 @@ input:focus {
 
 mat-icon {
     color:white;
+}
+.chat {
+  //  position: absolute;
+  //  bottom: 0;
+  //  right: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  background-color:green;
 }
 
 .typing-area .input-field input {

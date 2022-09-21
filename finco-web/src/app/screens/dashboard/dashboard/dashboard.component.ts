@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
   messages: Message[] = [];
   messageBody = document.querySelector('#align');
   @ViewChild('align') align:any; 
+  showgChatBox: boolean = false;
 
   constructor(
     private searchController: SearchControllerService,
@@ -30,7 +31,9 @@ export class DashboardComponent implements OnInit {
     this.chatService.conversation.subscribe((val) => {
       this.messages = this.messages.concat(val);
       console.log(this.align)
-      this.align.nativeElement.scrollTop = this.align.nativeElement.scrollHeight - this.align.nativeElement.clientHeight;
+      var out = this.align.nativeElement.scrollHeight - this.align.nativeElement.clientHeight <= this.align.nativeElement.scrollTop + 1;
+      if (!out)
+        this.align.nativeElement.nativeElement = this.align.nativeElement.scrollHeight - this.align.nativeElement.clientHeight;
     });
 
     console.log(this.userSearch);
@@ -67,6 +70,10 @@ export class DashboardComponent implements OnInit {
       this.chatService.getBotAnswer(this.userQuery);
       
     }
+  }
+
+  openChat(){
+    this.showgChatBox = true;
   }
 
 }
