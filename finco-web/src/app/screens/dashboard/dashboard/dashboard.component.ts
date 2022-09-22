@@ -19,7 +19,6 @@ export class DashboardComponent implements OnInit {
   private allSubscriptions = new Subscription();
   messages: Message[] = [];
   messageBody = document.querySelector('#align');
-  @ViewChild('align') align:any; 
   showgChatBox: boolean = false;
 
   constructor(
@@ -30,16 +29,12 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.chatService.conversation.subscribe((val) => {
       this.messages = this.messages.concat(val);
-      console.log(this.align)
-      var out = this.align.nativeElement.scrollHeight - this.align.nativeElement.clientHeight <= this.align.nativeElement.scrollTop + 1;
-      if (!out)
-        this.align.nativeElement.nativeElement = this.align.nativeElement.scrollHeight - this.align.nativeElement.clientHeight;
     });
 
     console.log(this.userSearch);
     console.log(this.messages);
   }
-  
+
   textDetectionUsingVoice() {
     console.log("inside");
     if ('webkitSpeechRecognition' in window) {
@@ -68,7 +63,7 @@ export class DashboardComponent implements OnInit {
       this.userQuery = event.target.value;
       this.userSearch.patchValue('');
       this.chatService.getBotAnswer(this.userQuery);
-      
+
     }
   }
 

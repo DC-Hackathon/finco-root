@@ -31,6 +31,6 @@ public class ProductServiceImpl implements ProductService {
 //            return nucleusService.callNucleusProduct(fincoResponse);
 //        }
 
-        return null;
+        return FincoResponse.builder().build();
     }
 }
