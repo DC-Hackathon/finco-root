@@ -22,6 +22,10 @@ pip install flask
 ```
 pip install spacy
 ```
+#### Install Sklearn CRF
+```
+pip install sklearn_crfsuite
+```
 #### Install English Model From Spacy
 ```
 python -m spacy download en_core_web_md
