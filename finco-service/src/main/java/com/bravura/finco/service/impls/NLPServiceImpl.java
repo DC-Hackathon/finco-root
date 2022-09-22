@@ -7,6 +7,7 @@ import com.bravura.finco.repository.QueryRepository;
 import com.bravura.finco.service.NLPService;
 import com.bravura.finco.service.ProductService;
 import com.bravura.finco.utils.JsonFlatner;
+import com.vdurmont.emoji.EmojiParser;
 import lombok.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,7 +50,7 @@ public class NLPServiceImpl implements NLPService {
                     .bodyToMono(NLPResponse.class)
                     .block();
             fincoResponse.setNlpResponse(nlpResponseBean);
-            if(checkForAutomatedQueryResponse(fincoResponse)) {
+            if(Objects.isNull(fincoResponse.getNlpResponse().getPROD()) && checkForAutomatedQueryResponse(fincoResponse)) {
                 return fincoResponse;
             }
         } catch (Exception e) {
@@ -66,10 +67,14 @@ public class NLPServiceImpl implements NLPService {
                     queryRepository.save(queryData);
                 }
                   fincoResponse = this.productService.getProduct(fincoResponse);
+                if(Objects.isNull(fincoResponse.getQueryResponse()))  {
+                    fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("Sorry :disappointed_relieved: we couldn't find data you are asking."));
+                }
             }
 
         } catch (Exception e) {
             fincoResponse.setData(null);
+            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("Sorry :disappointed_relieved: we couldn't find data you are asking."));
             return fincoResponse;
         }
         return fincoResponse;
@@ -78,23 +83,23 @@ public class NLPServiceImpl implements NLPService {
     /* Automated Response */
     private boolean checkForAutomatedQueryResponse(FincoResponse fincoResponse) {
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_gene")) {
-            fincoResponse.setQueryResponse("hello you! How may I help you ?");
+            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("Hello user :wave: welcome to <b>Finco</b>. how may I help you :information_desk_person:"));
             return true;
         }
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_gm")) {
-            fincoResponse.setQueryResponse("good morning!");
+            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good morning :high_brightness:"));
             return true;
         }
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_gev")) {
-            fincoResponse.setQueryResponse("good evening!");
+            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon :sun_with_face:"));
             return true;
         }
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_af")) {
-            fincoResponse.setQueryResponse("good afternoon!");
+            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon :sun_with_face:"));
             return true;
         }
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_ques")) {
-            fincoResponse.setQueryResponse("I am doing fine :) hope you are doing well too! ");
+            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("I am doing fine. What about you :female_bow:"));
             return true;
         }
         return false;

@@ -21,9 +21,9 @@ public class ProductServiceImpl implements ProductService {
     private NucleusService nucleusService;
     @Override
     public FincoResponse getProduct(FincoResponse fincoResponse) {
-//        if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.DISTRIBUTIONS.getCode())) {
-//           return distributionService.callDistributionProduct(fincoResponse);
-//        }
+        if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.DISTRIBUTIONS.getCode())) {
+           return distributionService.callDistributionProduct(fincoResponse);
+        }
         if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.SONATA.getCode())) {
             return sbsService.callSonataProduct(fincoResponse);
         }
