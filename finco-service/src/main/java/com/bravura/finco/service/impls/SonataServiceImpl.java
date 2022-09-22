@@ -45,18 +45,8 @@ public class SonataServiceImpl implements SonataService {
                     .block());
             Map<String, Object> flattenClientResponse = getStringObjectMap
                     (clientResponse.orElseThrow(() -> new TechnicalException("client response is null")));
-            fincoResponse.setData(flattenClientResponse);
-            fincoResponse.setNlpResponse(fincoResponse.getNlpResponse());
-            for (Map.Entry<String, Object> entry : flattenClientResponse.entrySet()) {
-                String key = entry.getKey();
-                Object value = entry.getValue();
-                if (key.contains(fincoResponse.getNlpResponse().getIntent())) {
-                    fincoResponse.setQueryResponse(value.toString());
-                }
-            }
-            return fincoResponse;
+            return JsonFlatner.getDataResponse(fincoResponse,flattenClientResponse);
         }
-
         if (fincoResponse.getNlpResponse().getSER().equals(SonataServiceType.ACCOUNT.getCode())) {
             val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"accountIdentifier\": { \"accountNumber\": { \"accountNo\": " + fincoResponse.getNlpResponse().getID() + "} }}";
             Optional<GetAccountDetailsResponse> accountDetailsResponse = Optional.ofNullable(this.webClient
@@ -69,18 +59,11 @@ public class SonataServiceImpl implements SonataService {
                     .block());
             Map<String, Object> flattenClientResponse = getStringObjectMap
                     (accountDetailsResponse.orElseThrow(() -> new TechnicalException("client response is null")));
-            fincoResponse.setData(flattenClientResponse);
-            for (Map.Entry<String, Object> entry : flattenClientResponse.entrySet()) {
-                String key = entry.getKey();
-                Object value = entry.getValue();
-                if (key.contains(fincoResponse.getNlpResponse().getIntent())) {
-                    fincoResponse.setQueryResponse(value.toString());
-                }
-            }
-            return fincoResponse;
+            return JsonFlatner.getDataResponse(fincoResponse,flattenClientResponse);
         }
         return null;
     }
+
     /* Utility methods  */
     private static Map<String, Object> getStringObjectMap(Object response) {
         return JsonFlatner

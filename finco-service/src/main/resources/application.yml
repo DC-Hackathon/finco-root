@@ -11,7 +11,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/finco-db
     username: postgres
-    password: Morning123 # Write password as you want
+    password: password # Write password as you want
   # JPA properties
   jpa:
     hibernate:
