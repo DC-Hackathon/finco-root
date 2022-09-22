@@ -1,6 +1,7 @@
 package com.bravura.finco.utils;
 
 import com.bravura.finco.exception.TechnicalException;
+import com.bravura.finco.model.FincoResponse;
 import com.github.wnameless.json.flattener.JsonFlattener;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -21,5 +22,17 @@ public class JsonFlatner {
         stringObjectMap.forEach((k,v) -> log.info(k.concat(":".concat(v.toString()))));
 
         return stringObjectMap;
+    }
+    public static FincoResponse getDataResponse(FincoResponse fincoResponse, Map<String, Object> flattenClientResponse) {
+        fincoResponse.setData(flattenClientResponse);
+        fincoResponse.setNlpResponse(fincoResponse.getNlpResponse());
+        for (Map.Entry<String, Object> entry : flattenClientResponse.entrySet()) {
+            String key = entry.getKey();
+            Object value = entry.getValue();
+            if (key.contains(fincoResponse.getNlpResponse().getIntent())) {
+                fincoResponse.setQueryResponse(value.toString());
+            }
+        }
+        return fincoResponse;
     }
 }
