@@ -1,7 +1,7 @@
 <div class="main">
 	<div style="height: 100vh;" fxLayout="row" fxFlex="100">
 		<div class="child-1 mt-5" fxFlex="calc(50%)">
-			<img style="position: relative; right: 80px;" src="./assets/images/test1.jpg" alt="Italian Trulli" />
+			<img class="left-img" style="position: relative; right: 80px;" src="./assets/images/test1.jpg" alt="Italian Trulli" />
 		</div>
 		<div class="child-2" fxFlex="calc(50%)">
 			<mat-card style="border-radius: none; background-color: #E2F3FD;" fxFlex="100">
@@ -19,7 +19,7 @@
 						</div>
 					</div>
 				</mat-card-content>
-				<mat-card-actions>
+				<mat-card-actions fxLayout="row">
 					<input type="text" placeholder="Type your query" [formControl]='userSearch'
 						(keydown)="onSubmit($event)" />
 					<button mat-icon-button matPrefix (click)="textDetectionUsingVoice()" type="button">

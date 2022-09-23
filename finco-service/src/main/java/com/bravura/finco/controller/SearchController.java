@@ -31,7 +31,7 @@ public class SearchController {
     )
     @Produces("application/json")
     @GetMapping("/search")
-    public FincoResponse postFromFlask(@QueryParam("text") String text){
+    public FincoResponse postFromFlask(@RequestParam("text") String text){
         return nlpService.getNlp(text);
     }
 
