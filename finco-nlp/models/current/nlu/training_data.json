@@ -182,6 +182,126 @@
         "text": "fetch net distribution amount"
       },
       {
+        "intent": "name",
+        "text": "distributions what is asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "distributions get me name of asset for isin GB123323123"
+      },
+      {
+        "intent": "name",
+        "text": "distributions fetch asset name for isin GB123323123"
+      },
+      {
+        "intent": "name",
+        "text": "distributions send asst name for isin 1321GHTY"
+      },
+      {
+        "intent": "name",
+        "text": "distributions fetch name of asset given isin 12345GHY"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "distributions what is last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "distributions get me last distribution date of asset for isin GB123323123"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "distributions fetch asset last distribution date for isin GB123323123"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "distributions send asst last distribution date for isin 1321GHTY"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "distributions fetch last distribution date of asset given isin 12345GHY"
+      },
+      {
+        "intent": "incomeStream",
+        "text": "distributions what is asset income stream for isin GB123455"
+      },
+      {
+        "intent": "incomeStream",
+        "text": "distributions get me income stream of asset for isin GB123323123"
+      },
+      {
+        "intent": "incomeStream",
+        "text": "distributions fetch asset income stream for isin GB123323123"
+      },
+      {
+        "intent": "incomeStream",
+        "text": "distributions send asst income stream for isin 1321GHTY"
+      },
+      {
+        "intent": "incomeStream",
+        "text": "distributions fetch income stream of asset given isin 12345GHY"
+      },
+      {
+        "intent": "distributionIncomeType",
+        "text": "distributions what is distribution income type for isin GB123455"
+      },
+      {
+        "intent": "distributionIncomeType",
+        "text": "distributions get me distribution income type of asset for isin GB123323123"
+      },
+      {
+        "intent": "distributionIncomeType",
+        "text": "distributions fetch distribution income type for isin GB123323123"
+      },
+      {
+        "intent": "distributionIncomeType",
+        "text": "distributions send asst distribution income type for isin 1321GHTY"
+      },
+      {
+        "intent": "distributionIncomeType",
+        "text": "distributions fetch distribution income type of asset given isin 12345GHY"
+      },
+      {
+        "intent": "nomineeExternalReference",
+        "text": "distributions what is nominee external reference for nominee 101"
+      },
+      {
+        "intent": "nomineeExternalReference",
+        "text": "distributions get me nominee external reference for nominee 100002"
+      },
+      {
+        "intent": "nomineeExternalReference",
+        "text": "distributions fetch nominee external reference for nominee 103"
+      },
+      {
+        "intent": "nomineeExternalReference",
+        "text": "distributions send nominee external reference for nominee 100023"
+      },
+      {
+        "intent": "nomineeExternalReference",
+        "text": "distributions fetch nominee external reference for nominee 12343"
+      },
+      {
+        "intent": "productDescription",
+        "text": "distributions what is product description for product 101"
+      },
+      {
+        "intent": "productDescription",
+        "text": "distributions get me product description for product 100002"
+      },
+      {
+        "intent": "productDescription",
+        "text": "distributions fetch product description for product 103"
+      },
+      {
+        "intent": "productDescription",
+        "text": "distributions send product description for p 100023"
+      },
+      {
+        "intent": "productDescription",
+        "text": "distributions fetch product description for nominee 12343"
+      },
+      {
         "intent": "greet_gene",
         "text": "hii"
       },

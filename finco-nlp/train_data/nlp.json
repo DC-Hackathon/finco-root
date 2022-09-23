@@ -818,6 +818,665 @@
                     ]
                 ]
             }
+        ],
+        [
+            "distributions get me name of asset for isin GB123323123\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        39,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        44,
+                        55,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch asset name for isin GB123323123\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        35,
+                        39,
+                        "SER"
+                    ],
+                    [
+                        40,
+                        51,
+                        "ID"
+                    ]
+                ]
+            }
+        ],  [
+            "distributions what is asset name for isin GB123455\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        37,
+                        41,
+                        "SER"
+                    ],
+                    [
+                        42,
+                        50,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions send asst name for isin 1321GHTY\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        33,
+                        37,
+                        "SER"
+                    ],
+                    [
+                        38,
+                        46,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch name of asset given isin 12345GHY\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        40,
+                        44,
+                        "SER"
+                    ],
+                    [
+                        45,
+                        53,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions what is last distribution date for isin GB123455\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        49,
+                        53,
+                        "SER"
+                    ],
+                    [
+                        54,
+                        62,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me last distribution date of asset for isin GB123323123\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        57,
+                        61,
+                        "SER"
+                    ],
+                    [
+                        62,
+                        73,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch asset last distribution date for isin GB123323123\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        53,
+                        57,
+                        "SER"
+                    ],
+                    [
+                        58,
+                        69,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions send asst last distribution date for isin 1321GHTY\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        51,
+                        55,
+                        "SER"
+                    ],
+                    [
+                        56,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch last distribution date of asset given isin 12345GHY\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        58,
+                        62,
+                        "SER"
+                    ],
+                    [
+                        63,
+                        71,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions what is asset income stream for isin GB123455\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        46,
+                        50,
+                        "SER"
+                    ],
+                    [
+                        51,
+                        59,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me income stream of asset for isin GB123323123\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        48,
+                        52,
+                        "SER"
+                    ],
+                    [
+                        53,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch asset income stream for isin GB123323123\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        44,
+                        48,
+                        "SER"
+                    ],
+                    [
+                        49,
+                        60,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions send asst income stream for isin 1321GHTY\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        42,
+                        46,
+                        "SER"
+                    ],
+                    [
+                        47,
+                        55,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch income stream of asset given isin 12345GHY\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        49,
+                        53,
+                        "SER"
+                    ],
+                    [
+                        54,
+                        62,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions what is distribution income type for isin GB123455\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        51,
+                        55,
+                        "SER"
+                    ],
+                    [
+                        56,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me distribution income type of asset for isin GB123323123\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        59,
+                        63,
+                        "SER"
+                    ],
+                    [
+                        64,
+                        75,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch distribution income type for isin GB123323123\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        49,
+                        53,
+                        "SER"
+                    ],
+                    [
+                        54,
+                        65,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions send asst distribution income type for isin 1321GHTY\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        53,
+                        57,
+                        "SER"
+                    ],
+                    [
+                        58,
+                        66,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch distribution income type of asset given isin 12345GHY\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        60,
+                        64,
+                        "SER"
+                    ],
+                    [
+                        65,
+                        73,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions what is nominee external reference for nominee 101\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        53,
+                        60,
+                        "SER"
+                    ],
+                    [
+                        61,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me nominee external reference for nominee 100002\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        52,
+                        59,
+                        "SER"
+                    ],
+                    [
+                        60,
+                        66,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch nominee external reference for nominee 103\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        51,
+                        58,
+                        "SER"
+                    ],
+                    [
+                        59,
+                        62,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions send nominee external reference for nominee 100023\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        50,
+                        57,
+                        "SER"
+                    ],
+                    [
+                        58,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch nominee external reference for nominee 12343\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        51,
+                        58,
+                        "SER"
+                    ],
+                    [
+                        59,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions what is product description for product 101\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        46,
+                        53,
+                        "SER"
+                    ],
+                    [
+                        54,
+                        57,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions get me product description for product 100002\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        45,
+                        52,
+                        "SER"
+                    ],
+                    [
+                        53,
+                        59,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch product description for product 103\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        44,
+                        51,
+                        "SER"
+                    ],
+                    [
+                        52,
+                        55,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions send product description for product 100023\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        43,
+                        50,
+                        "SER"
+                    ],
+                    [
+                        51,
+                        57,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch product description for product 12343\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        44,
+                        51,
+                        "SER"
+                    ],
+                    [
+                        52,
+                        57,
+                        "ID"
+                    ]
+                ]
+            }
         ]
     ]
 }

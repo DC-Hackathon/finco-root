@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 
 @RestController
 @CrossOrigin("*")
@@ -29,8 +30,8 @@ public class SearchController {
             }
     )
     @Produces("application/json")
-    @PostMapping("/search")
-    public FincoResponse postFromFlask(@RequestBody String text){
+    @GetMapping("/search")
+    public FincoResponse postFromFlask(@QueryParam("text") String text){
         return nlpService.getNlp(text);
     }
 

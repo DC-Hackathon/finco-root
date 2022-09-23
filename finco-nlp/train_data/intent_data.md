@@ -60,6 +60,48 @@
 - net distribution amount
 - fetch net distribution amount 
 
+## intent:name
+- distributions what is asset name for isin GB123455
+- distributions get me name of asset for isin GB123323123
+- distributions fetch asset name for isin GB123323123
+- distributions send asst name for isin 1321GHTY
+- distributions fetch name of asset given isin 12345GHY
+
+## intent:lastExecutedDate
+- distributions what is last distribution date for isin GB123455
+- distributions get me last distribution date of asset for isin GB123323123
+- distributions fetch asset last distribution date for isin GB123323123
+- distributions send asst last distribution date for isin 1321GHTY
+- distributions fetch last distribution date of asset given isin 12345GHY
+
+## intent:incomeStream
+- distributions what is asset income stream for isin GB123455
+- distributions get me income stream of asset for isin GB123323123
+- distributions fetch asset income stream for isin GB123323123
+- distributions send asst income stream for isin 1321GHTY
+- distributions fetch income stream of asset given isin 12345GHY
+
+## intent:distributionIncomeType
+- distributions what is distribution income type for isin GB123455
+- distributions get me distribution income type of asset for isin GB123323123
+- distributions fetch distribution income type for isin GB123323123
+- distributions send asst distribution income type for isin 1321GHTY
+- distributions fetch distribution income type of asset given isin 12345GHY
+
+## intent:nomineeExternalReference
+- distributions what is nominee external reference for nominee 101
+- distributions get me nominee external reference for nominee 100002
+- distributions fetch nominee external reference for nominee 103
+- distributions send nominee external reference for nominee 100023
+- distributions fetch nominee external reference for nominee 12343
+
+## intent:productDescription
+- distributions what is product description for product 101
+- distributions get me product description for product 100002
+- distributions fetch product description for product 103
+- distributions send product description for p 100023
+- distributions fetch product description for nominee 12343
+
 ## intent:greet_gene
 - hii
 - hey
