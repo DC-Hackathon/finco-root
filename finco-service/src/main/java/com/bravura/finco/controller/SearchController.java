@@ -2,18 +2,22 @@ package com.bravura.finco.controller;
 
 import com.bravura.finco.model.FincoResponse;
 import com.bravura.finco.service.NLPService;
-import com.bravura.finco.utils.JsonFlatner;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import org.springframework.http.MediaType;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+
+/**
+ * <b>Search Controller</b> handle the interaction between
+ * frontend and service providers.
+ */
 
 @RestController
 @CrossOrigin("*")
 @RequestMapping(value="/api",produces="application/json")
+@Slf4j
 public class SearchController {
 
     private final NLPService nlpService;
@@ -21,6 +25,13 @@ public class SearchController {
         this.nlpService = nlpService;
     }
 
+    /**
+     * Search api takes the user text data which can be typed or spoken by the user
+     * and forwards it to the  python NLP API to filter the tags and then forward it to the service providers such as.
+     * <b>Sonata, Distributions, etc...</b>
+     * @param text is a message typed of spoken by the user.
+     * @return <b>FincoResponse</b> which holds the nlp data and the data coming from different services like sonata, distributions etc.
+     */
 
     @ApiResponse(
             responseCode = "200",
