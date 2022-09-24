@@ -38,7 +38,7 @@ public class NLPServiceImpl implements NLPService {
     }
 
     @Override
-    public FincoResponse getNlp(@NonNull String searchString) {
+    public FincoResponse getNlp(@NonNull String searchString, Boolean isAlexa) {
         log.info(" looking for results from nlp ...");
         FincoResponse fincoResponse = new FincoResponse();
         /* Getting response from nlp */
@@ -50,7 +50,7 @@ public class NLPServiceImpl implements NLPService {
                     .bodyToMono(NLPResponse.class)
                     .block();
             fincoResponse.setNlpResponse(nlpResponseBean);
-            if(Objects.isNull(fincoResponse.getNlpResponse().getPROD()) && checkForAutomatedQueryResponse(fincoResponse)) {
+            if(Objects.isNull(fincoResponse.getNlpResponse().getPROD()) && checkForAutomatedQueryResponse(fincoResponse, isAlexa)) {
                 return fincoResponse;
             }
         } catch (Exception e) {
@@ -81,25 +81,45 @@ public class NLPServiceImpl implements NLPService {
     }
 
     /* Automated Response */
-    private boolean checkForAutomatedQueryResponse(FincoResponse fincoResponse) {
+    private boolean checkForAutomatedQueryResponse(FincoResponse fincoResponse , Boolean isAlexa) {
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_gene")) {
-            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("Hello user :wave: welcome to <b>Finco</b>. how may I help you :information_desk_person:"));
+            if (isAlexa) {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("Hello user welcome to Finco. how may I help you?"));
+            } else {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("Hello user :wave: welcome to <b>Finco</b>. how may I help you :information_desk_person:"));
+            }
             return true;
         }
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_gm")) {
-            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good morning :high_brightness:"));
+            if (isAlexa) {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good morning"));
+            } else {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good morning :high_brightness:"));
+            }
             return true;
         }
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_gev")) {
-            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon :sun_with_face:"));
+            if (isAlexa) {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon"));
+            } else {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon :high_brightness:"));
+            }
             return true;
         }
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_af")) {
-            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon :sun_with_face:"));
+            if (isAlexa) {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon"));
+            } else {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon :sun_with_face:"));
+            }
             return true;
         }
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_ques")) {
-            fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("I am doing fine. What about you :female_bow:"));
+            if (isAlexa) {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("I am doing fine. What about you?"));
+            } else {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("I am doing fine. What about you :female_bow:"));
+            }
             return true;
         }
         return false;

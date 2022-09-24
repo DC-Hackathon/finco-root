@@ -5,5 +5,5 @@ import lombok.NonNull;
 
 public interface NLPService {
 
-    FincoResponse getNlp(@NonNull String serchString);
+    FincoResponse getNlp(@NonNull String serchString, Boolean isAlexa);
 }

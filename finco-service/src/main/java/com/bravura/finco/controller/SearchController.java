@@ -5,6 +5,8 @@ import com.bravura.finco.service.NLPService;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.properties.bind.DefaultValue;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.Produces;
@@ -42,8 +44,8 @@ public class SearchController {
     )
     @Produces("application/json")
     @GetMapping("/search")
-    public FincoResponse postFromFlask(@RequestParam("text") String text){
-        return nlpService.getNlp(text);
+    public FincoResponse postFromFlask(@RequestParam("text") String text, @RequestParam(value = "isAlexa", required = false,defaultValue = "false") Boolean isAlexa){
+        return nlpService.getNlp(text,isAlexa);
     }
 
 }
