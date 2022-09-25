@@ -43,6 +43,11 @@ mat-card-content::-webkit-scrollbar {
     margin-top: 10px;
     padding: 12px;
 }
+
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+stroke: #524b48 !important;
+}
+
 input {
     width: 93%;
     position: relative;
@@ -64,6 +69,6 @@ mat-icon {
 }
 
 .example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-image: url("/assets/images/chatBot.jpg");
   background-size: cover;
 }

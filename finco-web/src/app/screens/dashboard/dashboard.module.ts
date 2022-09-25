@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ChatService } from './chat.service';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 export const routes: Routes = [
   {
@@ -35,7 +36,8 @@ export const routes: Routes = [
     ReactiveFormsModule,
     MatInputModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [SearchControllerService, ChatService]
 })

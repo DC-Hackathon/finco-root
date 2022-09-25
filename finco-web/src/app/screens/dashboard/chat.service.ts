@@ -21,15 +21,11 @@ export class ChatService {
     const userMessage = new Message('user', msg);
     this.conversation.next([userMessage]);
     this.getBotMessage(msg);
-    // const botMessage = new Message('bot', this.getBotMessage(msg));
-    // this.conversation.next([botMessage]);
   }
 
   getBotMessage(question: string) {
     this.searchController.postFromFlask(question).subscribe(response => {
-      console.log(response);
       const botMessage = new Message('bot', response.queryResponse, response.nlpResponse?.intent, response.nlpResponse?.ID);
-      console.log(botMessage);
       this.conversation.next([botMessage]);
     });
   }

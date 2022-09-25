@@ -14,25 +14,23 @@ export class DashboardComponent implements OnInit {
 
   /* Variables */
   value:any='';
-  userSearch = new FormControl(null, Validators.required);
+  userSearch = new FormControl(' ');
   userQuery: string ='';
-  private allSubscriptions = new Subscription();
   messages: Message[] = [];
   messageBody = document.querySelector('#align');
-  showgChatBox: boolean = false;
+  showLoading: boolean = false;
 
   constructor(
-    private searchController: SearchControllerService,
     private chatService: ChatService
   ) { }
 
   ngOnInit(): void {
     this.chatService.conversation.subscribe((val) => {
+      if(val[0].author === 'bot'){
+        this.showLoading = false;
+      }
       this.messages = this.messages.concat(val);
     });
-
-    console.log(this.userSearch);
-    console.log(this.messages);
   }
 
   textDetectionUsingVoice() {
@@ -43,9 +41,10 @@ export class DashboardComponent implements OnInit {
       search.interimResults= false;
       search.lang='en-US';
       search.start();
+      let speechInput = this.userSearch;
       search.onresult = function(data:any) {
         this.value = data.results[0][0].transcript;
-        console.log(this.value);
+        speechInput.patchValue(this.value);
         search.stop();
       };
       search.onerror= function(error:any) {
@@ -59,16 +58,12 @@ export class DashboardComponent implements OnInit {
 
   onSubmit(event: any){
     if (event.key === "Enter") {
-      console.log(event.target.value);
       this.userQuery = event.target.value;
       this.userSearch.patchValue('');
+      this.showLoading= true;
       this.chatService.getBotAnswer(this.userQuery);
 
     }
-  }
-
-  openChat(){
-    this.showgChatBox = true;
   }
 
 }

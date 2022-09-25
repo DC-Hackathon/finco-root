@@ -15,8 +15,12 @@
 				</mat-card-header>
 				<mat-card-content #scrollContainer [scrollTop]="scrollContainer.scrollHeight">
 					<div *ngFor="let message of messages">
-						<div [innerHTML]="message.content" [ngClass]="{ 'fromBot': message.author === 'bot','toBot': message.author === 'user' }">
+						<div [innerHTML]="message.content"
+							[ngClass]="{ 'fromBot': message.author === 'bot','toBot': message.author === 'user' }">
 						</div>
+					</div>
+					<div *ngIf="showLoading" class="fromBot">
+						<mat-spinner [diameter]="20"></mat-spinner>
 					</div>
 				</mat-card-content>
 				<mat-card-actions fxLayout="row">

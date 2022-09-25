@@ -1,16 +1,110 @@
 ## intent:investorType
-- fetch get Investoor Type
-- fetch investor type
-- get name of invetor type
+- get investor type
 - sonata get me account investor type in client for id 10000001
-- get investor
+- sonata get me investor type for client 100257612
+- sonata get me investor type for client with id 100257612
+- get investor type for client 100257612 from sonata
+- from sonata get me investor type for client 100257612
+- get investor type from sonata for client id 100257612
 
 ## intent:contactName
-- fetch get Contact Name
-- sonata get me client name for id 1000001
-- contact name 
-- get me contact name
-- sonata get me contact name
+- get contact name
+- sonata get me client name for id 100252507
+- sonata get me client name with id 100252507
+- get contact name for client 100257612 from sonata
+- from sonata get me contact name for client 100257612
+- get contact name from sonata for client id 100257612
+
+## intent:mailingName
+- fetch mailing name
+- get mailing name
+- sonata get me mailing name for client with id 10000001
+- sonata give me mailing name for client with id 10000001
+- sonata fetch mailing name for client 10000001
+- get mailing name for client 100257612 from sonata
+- from sonata get me mailing name for client 100257612
+- get mailing name from sonata for client id 100257612
+
+## intent:nationality
+- get nationality
+- sonata get me nationality client for id 10000001
+- sonata give me nationality for client 100257612
+- sonata fetch nationality with client id 100257612
+- get nationality for client 100257612 from sonata
+- from sonata get me nationality for client 100257612
+- get nationality from sonata for client id 100257612
+
+## intent:mobilePhone
+- get me mobile number
+- mobile number
+- mobile no.
+- mobile no
+- sonata get me mobile number for client with id 10000001
+- sonata get me mobile number for client 100257612
+- sonata fetch mobile no for client 100257612
+- get mobile number for client 100257612 from sonata
+- from sonata get me mobile number for client 100257612
+- get mobile no. from sonata for client id 100257612
+
+## intent:statusCode
+- sonata get status for account number N325434
+- sonata fetch status for my account N325291
+- sonata fetch status for account N325291
+- get status for account N325291 from sonata
+- from sonata get me status for account N325291
+- get status from sonata for account id N325291
+
+## intent:accountNumber
+- sonata get bank account number for account number N325434
+- sonata fetch bank account number for my account N325291
+- sonata fetch bank account number for account N325291
+- get bank account number for account N325291 from sonata
+- from sonata get me bank account number for account N325291
+- get bank account number from sonata for account id N325291
+
+## intent:bankName
+- sonata get bank name for account number N325434
+- sonata fetch bank name for my account N325291
+- sonata fetch bank name for account N325291
+- get bank name for account N325291 from sonata
+- from sonata get me bank name for account N325291
+- get bank name from sonata for account id N325291
+
+## intent:bsbNumber
+- sonata get bsb number for account number N325434
+- sonata fetch bsb number for my account N325291
+- sonata fetch bsb number for account N325291
+- get bsb number for account N325291 from sonata
+- from sonata get me bsb number for account N325291
+- get bsb number from sonata for account id N325291
+
+## intent:commencementDate
+- sonata get commencement date for account number N325291
+- sonata fetch commencement date for my account N325291
+- sonata fetch commencement date for account N325291
+- get commencement date for account N325291 from sonata
+- from sonata get me commencement date for account N325291
+- get commencement date from sonata for account id N325291
+- get date of commencement from sonata for account id N325291
+
+## intent:productName
+- sonata get product name for account number N325291
+- sonata fetch product name for my account N325291
+- sonata fetch product name for account N325291
+- get product name for account N325291 from sonata
+- from sonata get me product name for account N325291
+- get product name from sonata for account id N325291
+
+## intent:accountBalance
+- get balance
+- get account balance
+- sonata get account balance for account number N325291
+- sonata fetch account balance for my account N325291
+- sonata fetch account balance for account N325291
+- get account balance for account N325291 from sonata
+- from sonata get me account balance for account N325291
+- get account balance from sonata for account id N325291
+- get balance from sonata for account id N325291
 
 ## intent:status
 - distributions fetch me account status

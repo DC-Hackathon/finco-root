@@ -34,7 +34,7 @@ public class SonataServiceImpl implements SonataService {
     public FincoResponse callSonataProduct(FincoResponse fincoResponse) {
         /*  calling distribution details service */
         if (fincoResponse.getNlpResponse().getSER().equals(SonataServiceType.CLIENT.getCode())) {
-            val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"client\": { \"id\": " + fincoResponse.getNlpResponse().getID() + " }, \"includeClientDetails\": true}";
+            val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"client\": { \"id\": " + fincoResponse.getNlpResponse().getID() + " }, \"includeClientDetails\": true, \"includeAddress\": true, \"includeBankAccount\": true}";
             Optional<GetClientResponse> clientResponse = Optional.ofNullable(this.webClient
                     .post()
                     .uri("/clientService/getClient")
@@ -48,10 +48,10 @@ public class SonataServiceImpl implements SonataService {
             return JsonFlatner.getDataResponse(fincoResponse,flattenClientResponse);
         }
         if (fincoResponse.getNlpResponse().getSER().equals(SonataServiceType.ACCOUNT.getCode())) {
-            val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"accountIdentifier\": { \"accountNumber\": { \"accountNo\": " + fincoResponse.getNlpResponse().getID() + "} }}";
+            val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"accountDetails\": [ { \"account\": { \"accountNumber\": { \"accountNo\":" + fincoResponse.getNlpResponse().getID().toString() + "} } } ], \"includeAccountDetail\": true, \"includeProduct\": true, \"includeInvestmentProfile\": true, \"includeAdvisorGroup\": true, \"includeEmploymentDetails\": true, \"includeBalance\": true}";
             Optional<GetAccountDetailsResponse> accountDetailsResponse = Optional.ofNullable(this.webClient
                     .post()
-                    .uri("/accountService/getAccount")
+                    .uri("/accountService/getAccountDetails")
                     .contentType(MediaType.APPLICATION_JSON)
                     .body(BodyInserters.fromValue(body))
                     .retrieve()
