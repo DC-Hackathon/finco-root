@@ -996,6 +996,754 @@
             }
         ],
         [
+            "sonata get bank name for client number 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        25,
+                        31,
+                        "SER"
+                    ],
+                    [
+                        39,
+                        48,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch bank name for client id 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        27,
+                        33,
+                        "SER"
+                    ],
+                    [
+                        37,
+                        46,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch bank name for client 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        27,
+                        33,
+                        "SER"
+                    ],
+                    [
+                        34,
+                        43,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get bank name for client 100257612 from sonata\r",
+            {
+                "entities": [
+                    [
+                        18,
+                        24,
+                        "SER"
+                    ],
+                    [
+                        25,
+                        34,
+                        "ID"
+                    ],
+                    [
+                        40,
+                        46,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from sonata get me bank name for client 100257612\r",
+            {
+                "entities": [
+                    [
+                        5,
+                        11,
+                        "PROD"
+                    ],
+                    [
+                        33,
+                        39,
+                        "SER"
+                    ],
+                    [
+                        40,
+                        49,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get bank name from sonata for client id 100257612\r",
+            {
+                "entities": [
+                    [
+                        19,
+                        25,
+                        "PROD"
+                    ],
+                    [
+                        30,
+                        36,
+                        "SER"
+                    ],
+                    [
+                        40,
+                        49,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get bank account number for client number 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        35,
+                        41,
+                        "SER"
+                    ],
+                    [
+                        49,
+                        58,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch bank account number for client id 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        37,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        47,
+                        56,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch bank account number for client 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        37,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        44,
+                        53,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get bank account number for client 100257612 from sonata\r",
+            {
+                "entities": [
+                    [
+                        28,
+                        34,
+                        "SER"
+                    ],
+                    [
+                        35,
+                        44,
+                        "ID"
+                    ],
+                    [
+                        50,
+                        56,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from sonata get me bank account number for client 100257612\r",
+            {
+                "entities": [
+                    [
+                        5,
+                        11,
+                        "PROD"
+                    ],
+                    [
+                        43,
+                        49,
+                        "SER"
+                    ],
+                    [
+                        50,
+                        59,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get bank account number from sonata for client id 100257612\r",
+            {
+                "entities": [
+                    [
+                        29,
+                        35,
+                        "PROD"
+                    ],
+                    [
+                        40,
+                        46,
+                        "SER"
+                    ],
+                    [
+                        50,
+                        59,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get bsb number for client number 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        26,
+                        32,
+                        "SER"
+                    ],
+                    [
+                        40,
+                        49,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch bsb number for my client 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        31,
+                        37,
+                        "SER"
+                    ],
+                    [
+                        38,
+                        47,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch bsb number for client 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        28,
+                        34,
+                        "SER"
+                    ],
+                    [
+                        35,
+                        44,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get bsb number for client 100257612 from sonata\r",
+            {
+                "entities": [
+                    [
+                        19,
+                        25,
+                        "SER"
+                    ],
+                    [
+                        26,
+                        35,
+                        "ID"
+                    ],
+                    [
+                        41,
+                        47,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from sonata get me bsb number for client 100257612\r",
+            {
+                "entities": [
+                    [
+                        5,
+                        11,
+                        "PROD"
+                    ],
+                    [
+                        34,
+                        40,
+                        "SER"
+                    ],
+                    [
+                        41,
+                        50,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get bsb number from sonata for client id 100257612",
+            {
+                "entities": [
+                    [
+                        20,
+                        26,
+                        "PROD"
+                    ],
+                    [
+                        31,
+                        37,
+                        "SER"
+                    ],
+                    [
+                        41,
+                        50,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch address for my client 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        28,
+                        34,
+                        "SER"
+                    ],
+                    [
+                        35,
+                        44,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get address for client id 100257612\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        23,
+                        29,
+                        "SER"
+                    ],
+                    [
+                        33,
+                        42,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get address for client 100257612 from sonata\r",
+            {
+                "entities": [
+                    [
+                        16,
+                        22,
+                        "SER"
+                    ],
+                    [
+                        23,
+                        32,
+                        "ID"
+                    ],
+                    [
+                        38,
+                        44,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from sonata get me address for client 100257612\r",
+            {
+                "entities": [
+                    [
+                        5,
+                        11,
+                        "PROD"
+                    ],
+                    [
+                        31,
+                        37,
+                        "SER"
+                    ],
+                    [
+                        38,
+                        47,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get address from sonata for client id 100257612\r",
+            {
+                "entities": [
+                    [
+                        17,
+                        23,
+                        "PROD"
+                    ],
+                    [
+                        28,
+                        34,
+                        "SER"
+                    ],
+                    [
+                        38,
+                        47,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get advisor for account number N325434\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        23,
+                        30,
+                        "SER"
+                    ],
+                    [
+                        38,
+                        45,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch advisor name for my account N325291\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        33,
+                        40,
+                        "SER"
+                    ],
+                    [
+                        41,
+                        48,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch advisor for account N325291\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        25,
+                        32,
+                        "SER"
+                    ],
+                    [
+                        33,
+                        40,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get status for advisor from account N325291 from sonata\r",
+            {
+                "entities": [
+                    [
+                        28,
+                        35,
+                        "SER"
+                    ],
+                    [
+                        36,
+                        43,
+                        "ID"
+                    ],
+                    [
+                        49,
+                        55,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from sonata get me advisor for account N325291\r",
+            {
+                "entities": [
+                    [
+                        5,
+                        11,
+                        "PROD"
+                    ],
+                    [
+                        31,
+                        38,
+                        "SER"
+                    ],
+                    [
+                        39,
+                        46,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get advisor name from sonata for account id N325291\r",
+            {
+                "entities": [
+                    [
+                        22,
+                        28,
+                        "PROD"
+                    ],
+                    [
+                        33,
+                        40,
+                        "SER"
+                    ],
+                    [
+                        44,
+                        51,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get default investment profile for account number N325434\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        42,
+                        49,
+                        "SER"
+                    ],
+                    [
+                        57,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch default investment plan for my account N325291\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        44,
+                        51,
+                        "SER"
+                    ],
+                    [
+                        52,
+                        59,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch investment profile for account N325291\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        36,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        44,
+                        51,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from sonata get me default investment profile for account N325291\r",
+            {
+                "entities": [
+                    [
+                        5,
+                        11,
+                        "PROD"
+                    ],
+                    [
+                        50,
+                        57,
+                        "SER"
+                    ],
+                    [
+                        58,
+                        65,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get default investment profile from sonata for account id N325291",
+            {
+                "entities": [
+                    [
+                        36,
+                        42,
+                        "PROD"
+                    ],
+                    [
+                        47,
+                        54,
+                        "SER"
+                    ],
+                    [
+                        58,
+                        65,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
             "sonata get product name for account number N325291\r",
             {
                 "entities": [
@@ -1276,402 +2024,6 @@
                     [
                         39,
                         46,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "sonata get bank account number for account number N325434\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "PROD"
-                    ],
-                    [
-                        35,
-                        42,
-                        "SER"
-                    ],
-                    [
-                        50,
-                        57,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "sonata fetch bank account number for my account N325291\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "PROD"
-                    ],
-                    [
-                        40,
-                        47,
-                        "SER"
-                    ],
-                    [
-                        48,
-                        55,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "sonata fetch bank account number for account N325291\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "PROD"
-                    ],
-                    [
-                        37,
-                        44,
-                        "SER"
-                    ],
-                    [
-                        45,
-                        52,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "get bank account number for account N325291 from sonata\r",
-            {
-                "entities": [
-                    [
-                        28,
-                        35,
-                        "SER"
-                    ],
-                    [
-                        36,
-                        43,
-                        "ID"
-                    ],
-                    [
-                        49,
-                        55,
-                        "PROD"
-                    ]
-                ]
-            }
-        ],
-        [
-            "from sonata get me bank account number for account N325291\r",
-            {
-                "entities": [
-                    [
-                        5,
-                        11,
-                        "PROD"
-                    ],
-                    [
-                        43,
-                        50,
-                        "SER"
-                    ],
-                    [
-                        51,
-                        58,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "get bank account number from sonata for account id N325291\r",
-            {
-                "entities": [
-                    [
-                        29,
-                        35,
-                        "PROD"
-                    ],
-                    [
-                        40,
-                        47,
-                        "SER"
-                    ],
-                    [
-                        51,
-                        58,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "sonata get bank name for account number N325434\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "PROD"
-                    ],
-                    [
-                        25,
-                        32,
-                        "SER"
-                    ],
-                    [
-                        40,
-                        47,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "sonata fetch bank name for my account N325291\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "PROD"
-                    ],
-                    [
-                        30,
-                        37,
-                        "SER"
-                    ],
-                    [
-                        38,
-                        45,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "sonata fetch bank name for account N325291\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "PROD"
-                    ],
-                    [
-                        27,
-                        34,
-                        "SER"
-                    ],
-                    [
-                        35,
-                        42,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "get bank name for account N325291 from sonata\r",
-            {
-                "entities": [
-                    [
-                        18,
-                        25,
-                        "SER"
-                    ],
-                    [
-                        26,
-                        33,
-                        "ID"
-                    ],
-                    [
-                        39,
-                        45,
-                        "PROD"
-                    ]
-                ]
-            }
-        ],
-        [
-            "from sonata get me bank name for account N325291\r",
-            {
-                "entities": [
-                    [
-                        5,
-                        11,
-                        "PROD"
-                    ],
-                    [
-                        33,
-                        40,
-                        "SER"
-                    ],
-                    [
-                        41,
-                        48,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "get bank name from sonata for account id N325291\r",
-            {
-                "entities": [
-                    [
-                        19,
-                        25,
-                        "PROD"
-                    ],
-                    [
-                        30,
-                        37,
-                        "SER"
-                    ],
-                    [
-                        41,
-                        48,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "sonata get bsb number for account number N325434\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "PROD"
-                    ],
-                    [
-                        26,
-                        33,
-                        "SER"
-                    ],
-                    [
-                        41,
-                        48,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "sonata fetch bsb number for my account N325291\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "PROD"
-                    ],
-                    [
-                        31,
-                        38,
-                        "SER"
-                    ],
-                    [
-                        39,
-                        46,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "sonata fetch bsb number for account N325291\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "PROD"
-                    ],
-                    [
-                        28,
-                        35,
-                        "SER"
-                    ],
-                    [
-                        36,
-                        43,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "get bsb number for account N325291 from sonata\r",
-            {
-                "entities": [
-                    [
-                        19,
-                        26,
-                        "SER"
-                    ],
-                    [
-                        27,
-                        34,
-                        "ID"
-                    ],
-                    [
-                        40,
-                        46,
-                        "PROD"
-                    ]
-                ]
-            }
-        ],
-        [
-            "from sonata get me bsb number for account N325291\r",
-            {
-                "entities": [
-                    [
-                        5,
-                        11,
-                        "PROD"
-                    ],
-                    [
-                        34,
-                        41,
-                        "SER"
-                    ],
-                    [
-                        42,
-                        49,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "get bsb number from sonata for account id N325291",
-            {
-                "entities": [
-                    [
-                        20,
-                        26,
-                        "PROD"
-                    ],
-                    [
-                        31,
-                        38,
-                        "SER"
-                    ],
-                    [
-                        42,
-                        49,
                         "ID"
                     ]
                 ]

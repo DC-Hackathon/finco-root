@@ -48,7 +48,7 @@ public class SonataServiceImpl implements SonataService {
             return JsonFlatner.getDataResponse(fincoResponse,flattenClientResponse);
         }
         if (fincoResponse.getNlpResponse().getSER().equals(SonataServiceType.ACCOUNT.getCode())) {
-            val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"accountDetails\": [ { \"account\": { \"accountNumber\": { \"accountNo\":" + fincoResponse.getNlpResponse().getID().toString() + "} } } ], \"includeAccountDetail\": true, \"includeProduct\": true, \"includeInvestmentProfile\": true, \"includeAdvisorGroup\": true, \"includeEmploymentDetails\": true, \"includeBalance\": true}";
+            val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"accountDetails\": [ { \"account\": { \"accountNumber\": { \"accountNo\":" + "\""  + fincoResponse.getNlpResponse().getID() + "\""  + "} } } ], \"includeAccountDetail\": true, \"includeProduct\": true, \"includeInvestmentProfile\": true, \"includeAdvisorGroup\": true, \"includeEmploymentDetails\": true, \"includeBalance\": true}";
             Optional<GetAccountDetailsResponse> accountDetailsResponse = Optional.ofNullable(this.webClient
                     .post()
                     .uri("/accountService/getAccountDetails")

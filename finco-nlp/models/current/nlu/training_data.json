@@ -154,100 +154,124 @@
         "text": "get mobile no. from sonata for client id 100257612"
       },
       {
-        "intent": "statusCode",
+        "intent": "bankName",
+        "text": "sonata get bank name for client number 100257612"
+      },
+      {
+        "intent": "bankName",
+        "text": "sonata fetch bank name for client id 100257612"
+      },
+      {
+        "intent": "bankName",
+        "text": "sonata fetch bank name for client 100257612"
+      },
+      {
+        "intent": "bankName",
+        "text": "get bank name for client 100257612 from sonata"
+      },
+      {
+        "intent": "bankName",
+        "text": "from sonata get me bank name for client 100257612"
+      },
+      {
+        "intent": "bankName",
+        "text": "get bank name from sonata for client id 100257612"
+      },
+      {
+        "intent": "accountNumber",
+        "text": "sonata get bank account number for client number 100257612"
+      },
+      {
+        "intent": "accountNumber",
+        "text": "sonata fetch bank account number for client id 100257612"
+      },
+      {
+        "intent": "accountNumber",
+        "text": "sonata fetch bank account number for client 100257612"
+      },
+      {
+        "intent": "accountNumber",
+        "text": "get bank account number for client 100257612 from sonata"
+      },
+      {
+        "intent": "accountNumber",
+        "text": "from sonata get me bank account number for client 100257612"
+      },
+      {
+        "intent": "accountNumber",
+        "text": "get bank account number from sonata for client id 100257612"
+      },
+      {
+        "intent": "bsbNumber",
+        "text": "sonata get bsb number for client number 100257612"
+      },
+      {
+        "intent": "bsbNumber",
+        "text": "sonata fetch bsb number for my client 100257612"
+      },
+      {
+        "intent": "bsbNumber",
+        "text": "sonata fetch bsb number for client 100257612"
+      },
+      {
+        "intent": "bsbNumber",
+        "text": "get bsb number for client 100257612 from sonata"
+      },
+      {
+        "intent": "bsbNumber",
+        "text": "from sonata get me bsb number for client 100257612"
+      },
+      {
+        "intent": "bsbNumber",
+        "text": "get bsb number from sonata for client id 100257612"
+      },
+      {
+        "intent": "line1",
+        "text": "sonata get address for client number 100257612"
+      },
+      {
+        "intent": "line1",
+        "text": "sonata fetch address for my client 100257612"
+      },
+      {
+        "intent": "line1",
+        "text": "sonata get address for client id 100257612"
+      },
+      {
+        "intent": "line1",
+        "text": "get address for client 100257612 from sonata"
+      },
+      {
+        "intent": "line1",
+        "text": "from sonata get me address for client 100257612"
+      },
+      {
+        "intent": "line1",
+        "text": "get address from sonata for client id 100257612"
+      },
+      {
+        "intent": "account.statusCode",
         "text": "sonata get status for account number N325434"
       },
       {
-        "intent": "statusCode",
+        "intent": "account.statusCode",
         "text": "sonata fetch status for my account N325291"
       },
       {
-        "intent": "statusCode",
+        "intent": "account.statusCode",
         "text": "sonata fetch status for account N325291"
       },
       {
-        "intent": "statusCode",
+        "intent": "account.statusCode",
         "text": "get status for account N325291 from sonata"
       },
       {
-        "intent": "statusCode",
+        "intent": "account.statusCode",
         "text": "from sonata get me status for account N325291"
       },
       {
-        "intent": "statusCode",
+        "intent": "account.statusCode",
         "text": "get status from sonata for account id N325291"
-      },
-      {
-        "intent": "accountNumber",
-        "text": "sonata get bank account number for account number N325434"
-      },
-      {
-        "intent": "accountNumber",
-        "text": "sonata fetch bank account number for my account N325291"
-      },
-      {
-        "intent": "accountNumber",
-        "text": "sonata fetch bank account number for account N325291"
-      },
-      {
-        "intent": "accountNumber",
-        "text": "get bank account number for account N325291 from sonata"
-      },
-      {
-        "intent": "accountNumber",
-        "text": "from sonata get me bank account number for account N325291"
-      },
-      {
-        "intent": "accountNumber",
-        "text": "get bank account number from sonata for account id N325291"
-      },
-      {
-        "intent": "bankName",
-        "text": "sonata get bank name for account number N325434"
-      },
-      {
-        "intent": "bankName",
-        "text": "sonata fetch bank name for my account N325291"
-      },
-      {
-        "intent": "bankName",
-        "text": "sonata fetch bank name for account N325291"
-      },
-      {
-        "intent": "bankName",
-        "text": "get bank name for account N325291 from sonata"
-      },
-      {
-        "intent": "bankName",
-        "text": "from sonata get me bank name for account N325291"
-      },
-      {
-        "intent": "bankName",
-        "text": "get bank name from sonata for account id N325291"
-      },
-      {
-        "intent": "bsbNumber",
-        "text": "sonata get bsb number for account number N325434"
-      },
-      {
-        "intent": "bsbNumber",
-        "text": "sonata fetch bsb number for my account N325291"
-      },
-      {
-        "intent": "bsbNumber",
-        "text": "sonata fetch bsb number for account N325291"
-      },
-      {
-        "intent": "bsbNumber",
-        "text": "get bsb number for account N325291 from sonata"
-      },
-      {
-        "intent": "bsbNumber",
-        "text": "from sonata get me bsb number for account N325291"
-      },
-      {
-        "intent": "bsbNumber",
-        "text": "get bsb number from sonata for account id N325291"
       },
       {
         "intent": "commencementDate",
@@ -275,11 +299,11 @@
       },
       {
         "intent": "commencementDate",
-        "text": "get date of commencement from sonata for account id N325291"
+        "text": "get date of commencement from sonata for account id N325434"
       },
       {
         "intent": "productName",
-        "text": "sonata get product name for account number N325291"
+        "text": "sonata get product name for account number N325434"
       },
       {
         "intent": "productName",
@@ -311,7 +335,7 @@
       },
       {
         "intent": "accountBalance",
-        "text": "sonata get account balance for account number N325291"
+        "text": "sonata get account balance for account number N325434"
       },
       {
         "intent": "accountBalance",
@@ -335,7 +359,47 @@
       },
       {
         "intent": "accountBalance",
-        "text": "get balance from sonata for account id N325291"
+        "text": "get balance from sonata for account id N325434"
+      },
+      {
+        "intent": "advisor.name",
+        "text": "sonata get advisor for account number N325434"
+      },
+      {
+        "intent": "advisor.name",
+        "text": "sonata fetch advisor name for my account N325291"
+      },
+      {
+        "intent": "advisor.name",
+        "text": "sonata fetch advisor for account N325291"
+      },
+      {
+        "intent": "advisor.name",
+        "text": "from sonata get me advisor for account N325291"
+      },
+      {
+        "intent": "advisor.name",
+        "text": "get advisor name from sonata for account id N325291"
+      },
+      {
+        "intent": "patternTemplate.name",
+        "text": "sonata get default investment profile for account number N325434"
+      },
+      {
+        "intent": "patternTemplate.name",
+        "text": "sonata fetch default investment plan for my account N325291"
+      },
+      {
+        "intent": "patternTemplate.name",
+        "text": "sonata fetch investment profile for account N325291"
+      },
+      {
+        "intent": "patternTemplate.name",
+        "text": "from sonata get me default investment profile for account N325291"
+      },
+      {
+        "intent": "patternTemplate.name",
+        "text": "get default investment profile from sonata for account id N325291"
       },
       {
         "intent": "status",
