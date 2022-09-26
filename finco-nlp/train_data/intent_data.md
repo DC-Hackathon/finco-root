@@ -46,37 +46,45 @@
 - from sonata get me mobile number for client 100257612
 - get mobile no. from sonata for client id 100257612
 
-## intent:statusCode
+## intent:bankName
+- sonata get bank name for client number 100257612
+- sonata fetch bank name for client id 100257612
+- sonata fetch bank name for client 100257612
+- get bank name for client 100257612 from sonata
+- from sonata get me bank name for client 100257612
+- get bank name from sonata for client id 100257612
+
+## intent:accountNumber
+- sonata get bank account number for client number 100257612
+- sonata fetch bank account number for client id 100257612
+- sonata fetch bank account number for client 100257612
+- get bank account number for client 100257612 from sonata
+- from sonata get me bank account number for client 100257612
+- get bank account number from sonata for client id 100257612
+
+## intent:bsbNumber
+- sonata get bsb number for client number 100257612
+- sonata fetch bsb number for my client 100257612
+- sonata fetch bsb number for client 100257612
+- get bsb number for client 100257612 from sonata
+- from sonata get me bsb number for client 100257612
+- get bsb number from sonata for client id 100257612
+
+## intent:line1
+- sonata get address for client number 100257612
+- sonata fetch address for my client 100257612
+- sonata get address for client id 100257612
+- get address for client 100257612 from sonata
+- from sonata get me address for client 100257612
+- get address from sonata for client id 100257612
+
+## intent:account.statusCode
 - sonata get status for account number N325434
 - sonata fetch status for my account N325291
 - sonata fetch status for account N325291
 - get status for account N325291 from sonata
 - from sonata get me status for account N325291
 - get status from sonata for account id N325291
-
-## intent:accountNumber
-- sonata get bank account number for account number N325434
-- sonata fetch bank account number for my account N325291
-- sonata fetch bank account number for account N325291
-- get bank account number for account N325291 from sonata
-- from sonata get me bank account number for account N325291
-- get bank account number from sonata for account id N325291
-
-## intent:bankName
-- sonata get bank name for account number N325434
-- sonata fetch bank name for my account N325291
-- sonata fetch bank name for account N325291
-- get bank name for account N325291 from sonata
-- from sonata get me bank name for account N325291
-- get bank name from sonata for account id N325291
-
-## intent:bsbNumber
-- sonata get bsb number for account number N325434
-- sonata fetch bsb number for my account N325291
-- sonata fetch bsb number for account N325291
-- get bsb number for account N325291 from sonata
-- from sonata get me bsb number for account N325291
-- get bsb number from sonata for account id N325291
 
 ## intent:commencementDate
 - sonata get commencement date for account number N325291
@@ -85,10 +93,10 @@
 - get commencement date for account N325291 from sonata
 - from sonata get me commencement date for account N325291
 - get commencement date from sonata for account id N325291
-- get date of commencement from sonata for account id N325291
+- get date of commencement from sonata for account id N325434
 
 ## intent:productName
-- sonata get product name for account number N325291
+- sonata get product name for account number N325434
 - sonata fetch product name for my account N325291
 - sonata fetch product name for account N325291
 - get product name for account N325291 from sonata
@@ -98,13 +106,27 @@
 ## intent:accountBalance
 - get balance
 - get account balance
-- sonata get account balance for account number N325291
+- sonata get account balance for account number N325434
 - sonata fetch account balance for my account N325291
 - sonata fetch account balance for account N325291
 - get account balance for account N325291 from sonata
 - from sonata get me account balance for account N325291
 - get account balance from sonata for account id N325291
-- get balance from sonata for account id N325291
+- get balance from sonata for account id N325434
+
+## intent:advisor.name
+- sonata get advisor for account number N325434
+- sonata fetch advisor name for my account N325291
+- sonata fetch advisor for account N325291
+- from sonata get me advisor for account N325291
+- get advisor name from sonata for account id N325291
+
+## intent:patternTemplate.name
+- sonata get default investment profile for account number N325434
+- sonata fetch default investment plan for my account N325291
+- sonata fetch investment profile for account N325291
+- from sonata get me default investment profile for account N325291
+- get default investment profile from sonata for account id N325291
 
 ## intent:status
 - distributions fetch me account status
