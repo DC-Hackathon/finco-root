@@ -27,9 +27,6 @@ public class ProductServiceImpl implements ProductService {
         if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.SONATA.getCode())) {
             return sbsService.callSonataProduct(fincoResponse);
         }
-//        if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.NUCLEUS.getCode())) {
-//            return nucleusService.callNucleusProduct(fincoResponse);
-//        }
 
         return FincoResponse.builder().build();
     }

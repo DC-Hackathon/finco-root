@@ -27,7 +27,7 @@ The Components feature:
 ### 1. Architecture
 The following is the high level architecture for Distributions Micro-service and its integration with Other Systems.
 
-![img.png](/readme.images/img.png)
+![img.png](/readme.images/archi_dia.jpg)
 
 ### 2. Workspace setup
 

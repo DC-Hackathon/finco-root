@@ -65,9 +65,12 @@ def train_nlp_model():
     dockBin.to_disk("train_data/nlp.spacy")
     return '<h2>Trained Model</h1>'
 
-@app.route("/intent/predict")
-def predict_intent(test_data):
+@app.route("/intent/predict",methods=["POST"])
+def predict_intent(test_data="test"):
     intent_dict = {}
+    if(test_data=="test"):
+        test_data= cleanData(request.args.get("text"))
+        print("classifying intent for: ",test_data)
     interpreter = Interpreter.load('models/current/nlu')
     intent_data=interpreter.parse(test_data)
     intent_dict["intent"] = intent_data.get('intent')['name']
