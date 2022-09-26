@@ -13,17 +13,11 @@ externalDocs:
   url: http://swagger.io
 servers:
   - url: http://127.0.0.1:5000/
-tags:
-  - name: Finco-NLP Endpoints
-    description: generated entity based model for unstructured text
-    externalDocs:
-      description: Find out more about our store
-      url: http://swagger.io
 paths:
   /nlp/predict:
     post:
       tags:
-        - Finco-NLP Endpoints
+        - Finco-NLP NER Endpoint
       summary: Send a string to process
       operationId: genString
       parameters:
@@ -38,4 +32,24 @@ paths:
           description: successful operation
         '405':
           description: Invalid input
+  paths:
+  /intent/predict:
+    post:
+      tags:
+        - Finco-NLP Intent Endpoint
+      summary: Send a string to process
+      operationId: genString
+      parameters:
+        - name: text
+          in: query
+          description: Text that need to be processed
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid input
+    
     
