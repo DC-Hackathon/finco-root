@@ -61,7 +61,7 @@ public class SonataServiceImpl implements SonataService {
                     (accountDetailsResponse.orElseThrow(() -> new TechnicalException("client response is null")));
             return JsonFlatner.getDataResponse(fincoResponse,flattenClientResponse);
         }
-        return null;
+        return FincoResponse.builder().build();
     }
 
     /* Utility methods  */

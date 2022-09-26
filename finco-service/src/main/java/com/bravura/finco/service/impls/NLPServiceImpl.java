@@ -54,7 +54,10 @@ public class NLPServiceImpl implements NLPService {
                 return fincoResponse;
             }
         } catch (Exception e) {
-            fincoResponse.setNlpResponse(null);
+            //fincoResponse.setNlpResponse(null);
+            if(Objects.isNull(fincoResponse.getQueryResponse()))  {
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("Sorry :disappointed_relieved: we couldn't find data you are asking."));
+            }
             return fincoResponse;
         }
         /* Getting response from service */
@@ -100,9 +103,9 @@ public class NLPServiceImpl implements NLPService {
         }
         if(fincoResponse.getNlpResponse().getIntent().equals("greet_gev")) {
             if (isAlexa) {
-                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon"));
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good evening"));
             } else {
-                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good afternoon :high_brightness:"));
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("good evening :high_brightness:"));
             }
             return true;
         }
