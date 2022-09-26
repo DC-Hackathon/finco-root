@@ -77,6 +77,10 @@
         }
     ],
     "training_data": "training_data.json",
+<<<<<<< Updated upstream
     "trained_at": "20220926-170200",
+=======
+    "trained_at": "20220926-023736",
+>>>>>>> Stashed changes
     "rasa_nlu_version": "0.15.1"
 }

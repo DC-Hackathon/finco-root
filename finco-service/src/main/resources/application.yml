@@ -11,7 +11,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/finco-db
     username: postgres
-    password: password # Write password as you want
+    password: d3kumar12 # Write password as you want
   # JPA properties
   jpa:
     hibernate:
@@ -50,5 +50,5 @@ nucleus:
   url: ${NUCLEUS_URL:http://localhost:8080/components/api}
 
 dist:
-  url: ${DSTR_URL:http://localhost:8080/distributions/api}
+  url: ${DSTR_URL:http://Gurlaptop644:8080/distributions/api}
   bearer_uri: ${BEARER_URI:http://localhost:8080/distributions/api/oidc/oauth2/token?username=p2gupta@bravurasolutions.com&password=dstr@12345&}

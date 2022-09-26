@@ -129,18 +129,39 @@
 - get default investment profile from sonata for account id N325291
 
 ## intent:status
+- hey, distributions fetch me account status
 - distributions fetch me account status
+- please find my distributions account
 - distributions get me account status for voucher  123456
+- please find my account status with voucher 2123 from distributions
+- my account status with voucher 2123 from distributions
 - get account status from distributions for voucher 101012
+- account status of distributions
 - account status
+- distribution account status
 - fetch account status 
+- can you tell me my distributions account status
+- find my distribution account status
+- from distribution get me acount status for voucher 226767
+- find my distrbution accont status
+- get my dstrbuton accn stat
+- distr
+- distr accn stat
+- distr account status
 
 ## intent:productIdentifier
 - distributions fetch me product identifer
 - distributions get me product identifier for voucher  34432432432
 - get product identifier from distributions for voucher 101012
 - product identifier
-- fetch product identifier 
+- fetch product identifier
+- hey, distributions fetch me product identifer
+- find my product identifier for voucjer 34321
+- find product identifier
+- distributions get me product identifer
+- my product identifer from distributions
+- get my product identifier from distributions for 23123123 voucher
+- my product identifier from distributions
 
 ## intent:totalUnit
 - distributions fetch me total units 
@@ -148,13 +169,47 @@
 - get product identifier from distributions voucher 101012
 - total unit
 - fetch total unit 
+- my distribution total units
+- get my total units from distribution
+- find my total units from distributions
+- distrbutions total units for vouchr 293272
+- total units of voucher no. 3222344 from distributions
 
 ## intent:grossDistributionAmount
 - distributions fetch me grosss distribution amount
 - distributions get me gross distribution amount for voucher 34432432432
 - get gross distribution amount from distributions voucher 101012
 - gross distribution amount
-- fetch gross distribution amount 
+- fetch gross distribution amount
+- can i have my grosss distribution amount
+- find my grosss distribution amount
+- can i have my grosss distribution amount for voucher 222331
+- find my grosss distribution amount for voucher 4433232
+- my grosss distribution amount
+- fetch grosss distribution
+- fetch grosss distribution
+- get grosss distribution
+- get me my grosss distribution
+- get grosss distribution from distributions
+- please get me my grosss distribution
+- find my grosss distribution
+- find my grosss distribution
+- find my asset name for isin from distributions
+- find my grosss distribution from distributions
+- find my distributions grosss distribution
+- find my grosss distribution
+- please find my asset name for isin
+- please find my grosss distribution
+- please find my asset name for isin from distributions
+- please find my grosss distribution from distributions
+- please find my grosss distribution
+- please find my distributions grosss distribution
+- what is my asset name for isin
+- what is my grosss distribution
+- what is my asset name for isin from distributions
+- what is my grosss distribution from distributions
+- what is my grosss distribution
+- what is my distributions grosss distribution
 
 ## intent:equalizationAmount
 - distributions fetch me equalization amount
@@ -167,14 +222,60 @@
 - distributions get me tax amount for voucher 34432432432
 - get tax amount from distributions voucher 101012
 - tax amount amount
-- fetch tax amount 
+- fetch tax amount
+- get me my tax amout
+- get me my tax amount
+- get me my tax amout from distributions
+- please get me my tax amount
+- find my tax amout
+- find my tax amount
+- find my tax amout from distributions
+- find my tax amount from distributions
+- find my distributions tax amount for voucher 34432432432
+- find my tax amount
+- please find my tax amout
+- please find my tax amount
+- please find my tax amout from distributions
+- please find my tax amount from distributions
+- please find my tax amount
+- please find my distributions tax amount for voucher 34432432432
+- what is my tax amout
+- what is my tax amount
+- what is my tax amout from distributions
+- what is my tax amount from distributions
+- what is my tax amount
+- what is my distributions tax amount for voucher 34432432432
 
 ## intent:netDistributionAmount
 - distributions fetch me net distribution amount
 - distributions get me net distribution amount for voucher 34432432432
 - get net distribution amount from distributions voucher 101012
 - net distribution amount
-- fetch net distribution amount 
+- fetch net distribution amount
+- fetch net distribution amount
+- get me my net distribution amout
+- get me my net distribution amount
+- get me my net distribution amout from distributions
+- please get me my net distribution amount
+- find my net distribution amout
+- find my net distribution amount
+- find my net distribution amout from distributions
+- find my net distribution amount from distributions
+- find my distributions net distribution amount for voucher 34432432432
+- find my voucher 231131231 of net distribution from distributions
+- find my net distribution amount
+- please find my net distribution amout
+- please find my net distribution amount
+- please find my net distribution amout from distributions
+- please find my net distribution amount from distributions
+- please find my net distribution amount
+- please find my distributions net distribution amount for voucher 34432432432
+- what is my net distribution amout
+- what is my net distribution amount
+- what is my net distribution amout from distributions
+- what is my net distribution amount from distributions
+- what is my net distribution amount
+- what is my distributions net distribution amount for voucher 34432432432
 
 ## intent:name
 - distributions what is asset name for isin GB123455
@@ -182,6 +283,30 @@
 - distributions fetch asset name for isin GB123323123
 - distributions send asst name for isin 1321GHTY
 - distributions fetch name of asset given isin 12345GHY
+- fetch asset name for isin GB123455
+- fetch asset name for isin GB123455
+- get me my asset name for isin
+- get me my asset name for isin GB123455
+- get me my asset name for isin from distributions
+- please get me my asset name for isin GB123455
+- find my asset name for isin GB123455
+- find my asset name for isin GB123455
+- find my asset name for isin from distributions
+- find my asset name for isin GB123455 from distributions
+- find my distributions asset name for isin GB123455
+- find my asset name for isin GB123455
+- please find my asset name for isin
+- please find my asset name for isin GB123455
+- please find my asset name for isin from distributions
+- please find my asset name for isin GB123455 from distributions
+- please find my asset name for isin GB123455
+- please find my distributions asset name for isin GB123455
+- what is my asset name for isin
+- what is my asset name for isin GB123455
+- what is my asset name for isin from distributions
+- what is my asset name for isin GB123455 from distributions
+- what is my asset name for isin GB123455
+- what is my distributions asset name for isin GB123455
 
 ## intent:lastExecutedDate
 - distributions what is last distribution date for isin GB123455
@@ -189,6 +314,30 @@
 - distributions fetch asset last distribution date for isin GB123323123
 - distributions send asst last distribution date for isin 1321GHTY
 - distributions fetch last distribution date of asset given isin 12345GHY
+- fetch asset name for isin GB123455
+- fetch asset name for isin GB123455
+- get me last distribution date for isin
+- get me last distribution date for isin GB123455
+- get me last distribution date for isin from distributions
+- please get me last distribution date for isin GB123455
+- find last distribution date for isin GB123455
+- find last distribution date for isin GB123455
+- find last distribution date for isin from distributions
+- find last distribution date for isin GB123455 from distributions
+- find my distributions asset name for isin GB123455
+- find last distribution date for isin GB123455
+- please find last distribution date for isin
+- please find last distribution date for isin GB123455
+- please find last distribution date for isin from distributions
+- please find last distribution date for isin GB123455 from distributions
+- please find last distribution date for isin GB123455
+- please find my distributions asset name for isin GB123455
+- what is last distribution date for isin
+- what is last distribution date for isin GB123455
+- what is last distribution date for isin from distributions
+- what is last distribution date for isin GB123455 from distributions
+- what is last distribution date for isin GB123455
+- what is my distributions asset name for isin GB123455
 
 ## intent:incomeStream
 - distributions what is asset income stream for isin GB123455

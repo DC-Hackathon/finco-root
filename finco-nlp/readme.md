@@ -34,7 +34,7 @@ python -m spacy download en_core_web_md
 ```
 pip install rasa_nlu
 ```
-#### Creating a Config File For Spacy
+#### Creating a Config File For Spacy (Part of NER(Named Entity Rego))
 ```
 python3 -m spacy init config config.cfg --lang en --pipeline ner --optimize efficiency
 ```

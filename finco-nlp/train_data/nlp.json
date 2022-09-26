@@ -3457,6 +3457,291 @@
                     ]
                 ]
             }
+        ],
+        [
+            "distributions get me gross distribution amount for voucher 10001\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        51,
+                        58,
+                        "SER"
+                    ],
+                    [
+                        59,
+                        64,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "find my gross distribution amount from distributions for voucher 10002",
+            {
+                "entities": [
+                    [
+                        14,
+                        26,
+                        "PROD"
+                    ],
+                    [
+                        57,
+                        64,
+                        "SER"
+                    ],
+                    [
+                        65,
+                        70,
+                        "ID"
+                    ]
+                ]
+            }
+        ],[
+            "my net distribution amount from distribution voucher 10002\r",
+            {
+                "entities": [
+                    [
+                        7,
+                        19,
+                        "PROD"
+                    ],
+                    [
+                        45,
+                        52,
+                        "SER"
+                    ],
+                    [
+                        53,
+                        58,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from distribution voucher 10001 foind my net distribution amount\r",
+            {
+                "entities": [
+                    [
+                        18,
+                        25,
+                        "SER"
+                    ],
+                    [
+                        26,
+                        31,
+                        "ID"
+                    ],
+                    [
+                        45,
+                        57,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "voucher 10001 find net distribution amount\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "SER"
+                    ],
+                    [
+                        8,
+                        13,
+                        "ID"
+                    ],
+                    [
+                        23,
+                        35,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "voucher 10002 get net distribution amount\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "SER"
+                    ],
+                    [
+                        8,
+                        13,
+                        "ID"
+                    ],
+                    [
+                        22,
+                        34,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "net distribution amount of voucher 10001\r",
+            {
+                "entities": [
+                    [
+                        4,
+                        16,
+                        "PROD"
+                    ],
+                    [
+                        27,
+                        34,
+                        "SER"
+                    ],
+                    [
+                        35,
+                        40,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "net distribution amount from voucher 10001",
+            {
+                "entities": [
+                    [
+                        4,
+                        16,
+                        "PROD"
+                    ],
+                    [
+                        29,
+                        36,
+                        "SER"
+                    ],
+                    [
+                        37,
+                        42,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distribution get me total units for voucher  10001\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        12,
+                        "PROD"
+                    ],
+                    [
+                        36,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        45,
+                        50,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "total unit for voucher 10002 from distribution\r",
+            {
+                "entities": [
+                    [
+                        15,
+                        22,
+                        "SER"
+                    ],
+                    [
+                        23,
+                        28,
+                        "ID"
+                    ],
+                    [
+                        34,
+                        46,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distribution total unit for my voucher 10001\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        12,
+                        "PROD"
+                    ],
+                    [
+                        31,
+                        38,
+                        "SER"
+                    ],
+                    [
+                        39,
+                        44,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "voucher 10002 from distribution of total unit\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "SER"
+                    ],
+                    [
+                        8,
+                        13,
+                        "ID"
+                    ],
+                    [
+                        19,
+                        31,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from 10001 voucher find total unit from distribution",
+            {
+                "entities": [
+                    [
+                        5,
+                        10,
+                        "ID"
+                    ],
+                    [
+                        11,
+                        18,
+                        "SER"
+                    ],
+                    [
+                        40,
+                        52,
+                        "PROD"
+                    ]
+                ]
+            }
         ]
     ]
 }
