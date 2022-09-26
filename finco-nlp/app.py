@@ -1,4 +1,5 @@
 from re import M
+from textblob import TextBlob
 from flask import Flask, request, jsonify, render_template
 import spacy
 from spacy import displacy
@@ -22,9 +23,8 @@ def get_root():
 
 @app.route("/nlp/predict", methods=["POST"])
 def predict():
-    print("Predicting....")
     dict = {}  # Initializing empty dictionary
-    test_data = request.args.get("text")  # getting request string from Request
+    test_data = cleanData(request.args.get("text")) # getting request string from Request and cleaning
     print("Creating NER for :", test_data)
     intent_dict=predict_intent(test_data)
     nlp_ner = spacy.load("output/model-best") # loading trained model
@@ -36,8 +36,13 @@ def predict():
     dict["nlpResponseId"] = uuid.uuid1() #generating random uid
     dict["intent"]= intent_dict["intent"]
     dict["confidence"] = intent_dict["confidence"]
-    print("Here is what i generated", dict)
     return dict # returning dictionary
+
+def cleanData(data):
+    new_doc = TextBlob(data)
+    newd =str(new_doc.correct())
+    return newd;
+
 
 @app.route("/nlp/train") # one time for only training model
 def train_nlp_model():
@@ -65,7 +70,6 @@ def predict_intent(test_data):
     intent_dict = {}
     interpreter = Interpreter.load('models/current/nlu')
     intent_data=interpreter.parse(test_data)
-    print(intent_data)
     intent_dict["intent"] = intent_data.get('intent')['name']
     intent_dict["confidence"] = intent_data.get('intent')['confidence']
     return intent_dict
