@@ -3,6 +3,7 @@ package com.bravura.finco.utils;
 import com.bravura.finco.exception.TechnicalException;
 import com.bravura.finco.model.FincoResponse;
 import com.github.wnameless.json.flattener.JsonFlattener;
+import com.vdurmont.emoji.EmojiParser;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,9 +31,11 @@ public class JsonFlatner {
             String key = entry.getKey();
             Object value = entry.getValue();
             if (key.contains(fincoResponse.getNlpResponse().getIntent())) {
-                fincoResponse.setQueryResponse(value.toString());
+                String boldQueryRes = new String("<b>" + value.toString() + "</b>");
+                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode(boldQueryRes));
             }
         }
         return fincoResponse;
     }
 }
+

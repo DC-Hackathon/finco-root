@@ -37,6 +37,7 @@ export class ChatService {
   getBotMessage(question: string) {
     this.searchController.postFromFlask(question).subscribe(response => {
       this.fincoData = response.data;
+      console.log(response);
       if (response.nlpResponse?.intent === 'commencementDate'){
         var datePipe = new DatePipe('en-US');
         response.queryResponse = datePipe.transform(response.queryResponse, 'dd/MM/yyyy');
