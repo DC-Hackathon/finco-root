@@ -1,9 +1,10 @@
+import { DatePipe } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { SearchControllerService } from 'generated/api';
 import { Subject } from 'rxjs';
 
 export class Message {
-  constructor(public author: string, public content: string, public intent?: string, public id?: number) { }
+  constructor(public author: string, public content: string, public intent?: any, public id?: number) { }
 }
 
 @Injectable({
@@ -23,9 +24,27 @@ export class ChatService {
     this.getBotMessage(msg);
   }
 
+  setIntent(intent: any){
+    switch(intent){
+      case 'line1': return 'address';
+      case 'advisor.name': return 'advisor name';
+      case 'patternTemplate.name': return 'investment profile';
+      case 'account.statusCode': return 'status';
+      default : return null;
+    }
+  }
   getBotMessage(question: string) {
     this.searchController.postFromFlask(question).subscribe(response => {
-      const botMessage = new Message('bot', response.queryResponse, response.nlpResponse?.intent, response.nlpResponse?.ID);
+      console.log(response);
+      if (response.nlpResponse?.intent === 'commencementDate'){
+        var datePipe = new DatePipe('en-US');
+        response.queryResponse = datePipe.transform(response.queryResponse, 'dd/MM/yyyy');
+      }
+      var intent = this.setIntent(response.nlpResponse?.intent);
+      if (intent === null){
+        intent = response.nlpResponse?.intent.split(/(?=[A-Z])/).join(' ');
+      }
+      const botMessage = new Message('bot', response.queryResponse, intent, response.nlpResponse?.ID);
       this.conversation.next([botMessage]);
     });
   }
