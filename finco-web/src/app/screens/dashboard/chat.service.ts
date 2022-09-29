@@ -46,7 +46,11 @@ export class ChatService {
       if (intent === null){
         intent = response.nlpResponse?.intent.split(/(?=[A-Z])/).join(' ');
       }
-      const botMessage = new Message('bot', response.queryResponse, intent, response.nlpResponse?.ID);
+      var queryResponse: any = response.queryResponse;
+      if(response.data !== null){
+        queryResponse = "<b>" + response.queryResponse + "</b>";
+      }
+      const botMessage = new Message('bot', queryResponse, intent, response.nlpResponse?.ID);
       this.conversation.next([botMessage]);
     });
   }

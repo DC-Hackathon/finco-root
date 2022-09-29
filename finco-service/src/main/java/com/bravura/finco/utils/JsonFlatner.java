@@ -31,8 +31,7 @@ public class JsonFlatner {
             String key = entry.getKey();
             Object value = entry.getValue();
             if (key.contains(fincoResponse.getNlpResponse().getIntent())) {
-                String boldQueryRes = new String("<b>" + value.toString() + "</b>");
-                fincoResponse.setQueryResponse(EmojiParser.parseToUnicode(boldQueryRes));
+                fincoResponse.setQueryResponse(value.toString());
             }
         }
         return fincoResponse;
