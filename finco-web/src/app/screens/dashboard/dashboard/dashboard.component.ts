@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   messages: Message[] = [];
   messageBody = document.querySelector('#align');
   showLoading: boolean = false;
+  fincoData:any;
 
   constructor(
     private chatService: ChatService
@@ -29,6 +30,7 @@ export class DashboardComponent implements OnInit {
       if(val[0].author === 'bot'){
         this.showLoading = false;
       }
+      this.fincoData = this.chatService.fincoData;
       this.messages = this.messages.concat(val);
     });
   }
@@ -62,7 +64,6 @@ export class DashboardComponent implements OnInit {
       this.userSearch.patchValue('');
       this.showLoading= true;
       this.chatService.getBotAnswer(this.userQuery);
-
     }
   }
 
