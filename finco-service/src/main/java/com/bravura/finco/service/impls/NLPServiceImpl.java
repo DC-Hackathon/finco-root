@@ -69,7 +69,7 @@ public class NLPServiceImpl implements NLPService {
                     queryData.setQuery(searchString);
                     queryRepository.save(queryData);
                 }
-                  fincoResponse = this.productService.getProduct(fincoResponse);
+                  fincoResponse = this.productService.getProduct(fincoResponse, isAlexa);
                 if(Objects.isNull(fincoResponse.getQueryResponse()))  {
                     fincoResponse.setQueryResponse(EmojiParser.parseToUnicode("Sorry :disappointed_relieved: we couldn't find data you are asking."));
                 }

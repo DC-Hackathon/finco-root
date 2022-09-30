@@ -403,7 +403,15 @@
       },
       {
         "intent": "status",
+        "text": "hey, distributions fetch me account status"
+      },
+      {
+        "intent": "status",
         "text": "distributions fetch me account status"
+      },
+      {
+        "intent": "status",
+        "text": "please find my distributions account"
       },
       {
         "intent": "status",
@@ -411,7 +419,19 @@
       },
       {
         "intent": "status",
+        "text": "please find my account status with voucher 2123 from distributions"
+      },
+      {
+        "intent": "status",
+        "text": "my account status with voucher 2123 from distributions"
+      },
+      {
+        "intent": "status",
         "text": "get account status from distributions for voucher 101012"
+      },
+      {
+        "intent": "status",
+        "text": "account status of distributions"
       },
       {
         "intent": "status",
@@ -419,7 +439,43 @@
       },
       {
         "intent": "status",
+        "text": "distribution account status"
+      },
+      {
+        "intent": "status",
         "text": "fetch account status"
+      },
+      {
+        "intent": "status",
+        "text": "can you tell me my distributions account status"
+      },
+      {
+        "intent": "status",
+        "text": "find my distribution account status"
+      },
+      {
+        "intent": "status",
+        "text": "from distribution get me acount status for voucher 226767"
+      },
+      {
+        "intent": "status",
+        "text": "find my distrbution accont status"
+      },
+      {
+        "intent": "status",
+        "text": "get my dstrbuton accn stat"
+      },
+      {
+        "intent": "status",
+        "text": "distr"
+      },
+      {
+        "intent": "status",
+        "text": "distr accn stat"
+      },
+      {
+        "intent": "status",
+        "text": "distr account status"
       },
       {
         "intent": "productIdentifier",
@@ -442,6 +498,34 @@
         "text": "fetch product identifier"
       },
       {
+        "intent": "productIdentifier",
+        "text": "hey, distributions fetch me product identifer"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "find my product identifier for voucjer 34321"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "find product identifier"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "distributions get me product identifer"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "my product identifer from distributions"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "get my product identifier from distributions for 23123123 voucher"
+      },
+      {
+        "intent": "productIdentifier",
+        "text": "my product identifier from distributions"
+      },
+      {
         "intent": "totalUnit",
         "text": "distributions fetch me total units"
       },
@@ -462,6 +546,26 @@
         "text": "fetch total unit"
       },
       {
+        "intent": "totalUnit",
+        "text": "my distribution total units"
+      },
+      {
+        "intent": "totalUnit",
+        "text": "get my total units from distribution"
+      },
+      {
+        "intent": "totalUnit",
+        "text": "find my total units from distributions"
+      },
+      {
+        "intent": "totalUnit",
+        "text": "distrbutions total units for vouchr 293272"
+      },
+      {
+        "intent": "totalUnit",
+        "text": "total units of voucher no. 3222344 from distributions"
+      },
+      {
         "intent": "grossDistributionAmount",
         "text": "distributions fetch me grosss distribution amount"
       },
@@ -480,6 +584,122 @@
       {
         "intent": "grossDistributionAmount",
         "text": "fetch gross distribution amount"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "can i have my grosss distribution amount"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "find my grosss distribution amount"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "can i have my grosss distribution amount for voucher 222331"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "find my grosss distribution amount for voucher 4433232"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "my grosss distribution amount"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "fetch grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "fetch grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "get grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "get me my grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "get grosss distribution from distributions"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "please get me my grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "find my grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "find my grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "find my asset name for isin from distributions"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "find my grosss distribution from distributions"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "find my distributions grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "find my grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "please find my asset name for isin"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "please find my grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "please find my asset name for isin from distributions"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "please find my grosss distribution from distributions"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "please find my grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "please find my distributions grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "what is my asset name for isin"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "what is my grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "what is my asset name for isin from distributions"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "what is my grosss distribution from distributions"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "what is my grosss distribution"
+      },
+      {
+        "intent": "grossDistributionAmount",
+        "text": "what is my distributions grosss distribution"
       },
       {
         "intent": "equalizationAmount",
@@ -522,6 +742,94 @@
         "text": "fetch tax amount"
       },
       {
+        "intent": "taxAmount",
+        "text": "get me my tax amout"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "get me my tax amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "get me my tax amout from distributions"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "please get me my tax amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "find my tax amout"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "find my tax amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "find my tax amout from distributions"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "find my tax amount from distributions"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "find my distributions tax amount for voucher 34432432432"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "find my tax amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "please find my tax amout"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "please find my tax amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "please find my tax amout from distributions"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "please find my tax amount from distributions"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "please find my tax amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "please find my distributions tax amount for voucher 34432432432"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "what is my tax amout"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "what is my tax amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "what is my tax amout from distributions"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "what is my tax amount from distributions"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "what is my tax amount"
+      },
+      {
+        "intent": "taxAmount",
+        "text": "what is my distributions tax amount for voucher 34432432432"
+      },
+      {
         "intent": "netDistributionAmount",
         "text": "distributions fetch me net distribution amount"
       },
@@ -540,6 +848,102 @@
       {
         "intent": "netDistributionAmount",
         "text": "fetch net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "fetch net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "get me my net distribution amout"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "get me my net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "get me my net distribution amout from distributions"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "please get me my net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "find my net distribution amout"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "find my net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "find my net distribution amout from distributions"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "find my net distribution amount from distributions"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "find my distributions net distribution amount for voucher 34432432432"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "find my voucher 231131231 of net distribution from distributions"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "find my net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "please find my net distribution amout"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "please find my net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "please find my net distribution amout from distributions"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "please find my net distribution amount from distributions"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "please find my net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "please find my distributions net distribution amount for voucher 34432432432"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "what is my net distribution amout"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "what is my net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "what is my net distribution amout from distributions"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "what is my net distribution amount from distributions"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "what is my net distribution amount"
+      },
+      {
+        "intent": "netDistributionAmount",
+        "text": "what is my distributions net distribution amount for voucher 34432432432"
       },
       {
         "intent": "name",
@@ -562,6 +966,102 @@
         "text": "distributions fetch name of asset given isin 12345GHY"
       },
       {
+        "intent": "name",
+        "text": "fetch asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "fetch asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "get me my asset name for isin"
+      },
+      {
+        "intent": "name",
+        "text": "get me my asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "get me my asset name for isin from distributions"
+      },
+      {
+        "intent": "name",
+        "text": "please get me my asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "find my asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "find my asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "find my asset name for isin from distributions"
+      },
+      {
+        "intent": "name",
+        "text": "find my asset name for isin GB123455 from distributions"
+      },
+      {
+        "intent": "name",
+        "text": "find my distributions asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "find my asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "please find my asset name for isin"
+      },
+      {
+        "intent": "name",
+        "text": "please find my asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "please find my asset name for isin from distributions"
+      },
+      {
+        "intent": "name",
+        "text": "please find my asset name for isin GB123455 from distributions"
+      },
+      {
+        "intent": "name",
+        "text": "please find my asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "please find my distributions asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "what is my asset name for isin"
+      },
+      {
+        "intent": "name",
+        "text": "what is my asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "what is my asset name for isin from distributions"
+      },
+      {
+        "intent": "name",
+        "text": "what is my asset name for isin GB123455 from distributions"
+      },
+      {
+        "intent": "name",
+        "text": "what is my asset name for isin GB123455"
+      },
+      {
+        "intent": "name",
+        "text": "what is my distributions asset name for isin GB123455"
+      },
+      {
         "intent": "lastExecutedDate",
         "text": "distributions what is last distribution date for isin GB123455"
       },
@@ -580,6 +1080,102 @@
       {
         "intent": "lastExecutedDate",
         "text": "distributions fetch last distribution date of asset given isin 12345GHY"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "fetch asset name for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "fetch asset name for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "get me last distribution date for isin"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "get me last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "get me last distribution date for isin from distributions"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "please get me last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "find last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "find last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "find last distribution date for isin from distributions"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "find last distribution date for isin GB123455 from distributions"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "find my distributions asset name for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "find last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "please find last distribution date for isin"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "please find last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "please find last distribution date for isin from distributions"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "please find last distribution date for isin GB123455 from distributions"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "please find last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "please find my distributions asset name for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "what is last distribution date for isin"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "what is last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "what is last distribution date for isin from distributions"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "what is last distribution date for isin GB123455 from distributions"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "what is last distribution date for isin GB123455"
+      },
+      {
+        "intent": "lastExecutedDate",
+        "text": "what is my distributions asset name for isin GB123455"
       },
       {
         "intent": "incomeStream",

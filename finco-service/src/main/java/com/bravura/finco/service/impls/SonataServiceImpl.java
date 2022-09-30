@@ -31,7 +31,7 @@ public class SonataServiceImpl implements SonataService {
     }
 
     @Override
-    public FincoResponse callSonataProduct(FincoResponse fincoResponse) {
+    public FincoResponse callSonataProduct(FincoResponse fincoResponse, Boolean isAlexa) {
         /*  calling distribution details service */
         if (fincoResponse.getNlpResponse().getSER().equals(SonataServiceType.CLIENT.getCode())) {
             val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"client\": { \"id\": " + fincoResponse.getNlpResponse().getID() + " }, \"includeClientDetails\": true, \"includeAddress\": true, \"includeBankAccount\": true}";
@@ -45,7 +45,7 @@ public class SonataServiceImpl implements SonataService {
                     .block());
             Map<String, Object> flattenClientResponse = getStringObjectMap
                     (clientResponse.orElseThrow(() -> new TechnicalException("client response is null")));
-            return JsonFlatner.getDataResponse(fincoResponse,flattenClientResponse);
+            return JsonFlatner.getDataResponse(fincoResponse,flattenClientResponse, isAlexa);
         }
         if (fincoResponse.getNlpResponse().getSER().equals(SonataServiceType.ACCOUNT.getCode())) {
             val body = "{ \"callerDetails\": { \"username\": \"admin\", \"country\": \"IN\", \"language\": \"EN\" }, \"accountDetails\": [ { \"account\": { \"accountNumber\": { \"accountNo\":" + "\""  + fincoResponse.getNlpResponse().getID() + "\""  + "} } } ], \"includeAccountDetail\": true, \"includeProduct\": true, \"includeInvestmentProfile\": true, \"includeAdvisorGroup\": true, \"includeEmploymentDetails\": true, \"includeBalance\": true}";
@@ -59,7 +59,7 @@ public class SonataServiceImpl implements SonataService {
                     .block());
             Map<String, Object> flattenClientResponse = getStringObjectMap
                     (accountDetailsResponse.orElseThrow(() -> new TechnicalException("client response is null")));
-            return JsonFlatner.getDataResponse(fincoResponse,flattenClientResponse);
+            return JsonFlatner.getDataResponse(fincoResponse,flattenClientResponse, isAlexa);
         }
         return FincoResponse.builder().build();
     }

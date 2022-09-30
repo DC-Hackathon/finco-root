@@ -45,7 +45,7 @@ public class DistributionServiceImpl implements DistributionService {
     }
 
     @Override
-    public FincoResponse callDistributionProduct(FincoResponse fincoResponse) {
+    public FincoResponse callDistributionProduct(FincoResponse fincoResponse, Boolean isAlexa) {
 
         /*  generating a token if not present in cache */
         if (systemCache.getIfPresent(DSTR_ACCESS_TOKEN) == null) {
@@ -63,11 +63,11 @@ public class DistributionServiceImpl implements DistributionService {
 
         /*  calling distribution details service with voucher id */
         if (fincoResponse.getNlpResponse().getSER().equalsIgnoreCase(DistributionServiceType.DISTRIBUTION_DATA_WITH_ID.getCode())) {
-             Object data  = getResponseFromDstr("voucher/" + fincoResponse.getNlpResponse().getID() + "/entitlement-details?loadNomineeDetails=true&loadAccountDetails=true");
+             Object data  = getResponseFromDstr("/voucher/" + fincoResponse.getNlpResponse().getID() + "/entitlement-details?loadNomineeDetails=true&loadAccountDetails=true");
             Map<String, Object> flatenResponse = JsonFlatner.mapToFlat(ConvertObjectToJson
                     .convertToJson(data==null?new TechnicalException("Distribution sends an empty response"):data));
 
-            return JsonFlatner.getDataResponse(fincoResponse, flatenResponse);
+            return JsonFlatner.getDataResponse(fincoResponse, flatenResponse, isAlexa);
         }
 
 
@@ -78,7 +78,7 @@ public class DistributionServiceImpl implements DistributionService {
             Map<String, Object> flatenResponse = JsonFlatner.mapToFlat(ConvertObjectToJson
                     .convertToJson(data==null?new TechnicalException("Distribution sends an empty response"):data));
 
-            return JsonFlatner.getDataResponse(fincoResponse, flatenResponse);
+            return JsonFlatner.getDataResponse(fincoResponse, flatenResponse, isAlexa);
         }
 
 
@@ -88,7 +88,7 @@ public class DistributionServiceImpl implements DistributionService {
             Map<String, Object> flatenResponse = JsonFlatner.mapToFlat(ConvertObjectToJson
                     .convertToJson(data==null?new TechnicalException("Distribution sends an empty response"):data));
 
-            return JsonFlatner.getDataResponse(fincoResponse, flatenResponse);
+            return JsonFlatner.getDataResponse(fincoResponse, flatenResponse, isAlexa);
         }
 
         /*  calling asset details service with id */
@@ -99,7 +99,7 @@ public class DistributionServiceImpl implements DistributionService {
             Map<String, Object> flatenResponse = JsonFlatner.mapToFlat(ConvertObjectToJson
                     .convertToJson(data));
 
-            return JsonFlatner.getDataResponse(fincoResponse, flatenResponse);
+            return JsonFlatner.getDataResponse(fincoResponse, flatenResponse,isAlexa);
         }
 
         return null;

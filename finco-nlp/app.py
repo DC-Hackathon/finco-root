@@ -12,9 +12,11 @@ from rasa_nlu.config import RasaNLUModelConfig
 from rasa_nlu.model import Trainer
 from rasa_nlu import config
 from rasa_nlu.model import Metadata, Interpreter
+import locale
+import warnings
+
 
 app = Flask(__name__)
-
 
 @app.route("/")
 def get_root():
@@ -31,7 +33,12 @@ def predict():
     dockBin = DocBin()  # create a object of dockbin
     dockBin = nlp_ner(test_data) # predicting...
     for ent in dockBin.ents: # storing result in dictionary
-        dict[str(ent.label_)] = ent.text
+        if(ent.text.__contains__(',')):
+                locale.setlocale( locale.LC_ALL, 'en_US.UTF-8' )
+                dict[str(ent.label_)]=locale.atoi(ent.text)
+        else:
+            dict[str(ent.label_)] = ent.text
+       
     dict["span"] = displacy.render(dockBin, style="ent") # creating a html span
     dict["nlpResponseId"] = uuid.uuid1() #generating random uid
     dict["intent"]= intent_dict["intent"]
@@ -86,4 +93,5 @@ def train_intent_data():
     trainer.persist('output')
     return "<h1>Trained Model</h1>"
 
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 app.run(use_reloader=True, debug=False)

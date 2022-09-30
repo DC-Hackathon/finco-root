@@ -20,12 +20,12 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private NucleusService nucleusService;
     @Override
-    public FincoResponse getProduct(FincoResponse fincoResponse) {
+    public FincoResponse getProduct(FincoResponse fincoResponse, Boolean isAlexa) {
         if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.DISTRIBUTIONS.getCode())) {
-           return distributionService.callDistributionProduct(fincoResponse);
+           return distributionService.callDistributionProduct(fincoResponse, isAlexa);
         }
         if(fincoResponse.getNlpResponse().getPROD().equalsIgnoreCase(ProductType.SONATA.getCode())) {
-            return sbsService.callSonataProduct(fincoResponse);
+            return sbsService.callSonataProduct(fincoResponse, isAlexa);
         }
 
         return FincoResponse.builder().build();

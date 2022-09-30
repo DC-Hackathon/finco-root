@@ -15,7 +15,7 @@
 				</mat-card-header>
 				<mat-card-content #scrollContainer [scrollTop]="scrollContainer.scrollHeight">
 					<div *ngFor="let message of messages">
-						<div [innerHTML]="(message.author === 'bot' && fincoData !== null) ? message.intent + ' for ' + message.id + ' is ' + message.content : message.content"
+						<div [innerHTML]="message.content"
 							[ngClass]="{ 'fromBot': message.author === 'bot','toBot': message.author === 'user' }">
 						</div>
 					</div>

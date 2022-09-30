@@ -38,19 +38,8 @@ export class ChatService {
     this.searchController.postFromFlask(question).subscribe(response => {
       this.fincoData = response.data;
       console.log(response);
-      if (response.nlpResponse?.intent === 'commencementDate'){
-        var datePipe = new DatePipe('en-US');
-        response.queryResponse = datePipe.transform(response.queryResponse, 'dd/MM/yyyy');
-      }
       var intent = this.setIntent(response.nlpResponse?.intent);
-      if (intent === null){
-        intent = response.nlpResponse?.intent.split(/(?=[A-Z])/).join(' ');
-      }
-      var queryResponse: any = response.queryResponse;
-      if(response.data !== null){
-        queryResponse = "<b>" + response.queryResponse + "</b>";
-      }
-      const botMessage = new Message('bot', queryResponse, intent, response.nlpResponse?.ID);
+      const botMessage = new Message('bot', response.queryResponse, intent, response.nlpResponse?.ID);
       this.conversation.next([botMessage]);
     });
   }

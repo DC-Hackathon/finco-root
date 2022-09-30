@@ -2,7 +2,7 @@ package com.bravura.finco.constant;
 
 public enum ProductType  {
     SONATA("sonata",1),
-    DISTRIBUTIONS("distributions",2),
+    DISTRIBUTIONS("distribution",2),
 
     NUCLEUS("nucleus", 3);
 

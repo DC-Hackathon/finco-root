@@ -2800,115 +2800,6 @@
             }
         ],
         [
-            "distributions get me name of asset for isin GB123323123\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        13,
-                        "PROD"
-                    ],
-                    [
-                        39,
-                        43,
-                        "SER"
-                    ],
-                    [
-                        44,
-                        55,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "distributions fetch asset name for isin GB123323123\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        13,
-                        "PROD"
-                    ],
-                    [
-                        35,
-                        39,
-                        "SER"
-                    ],
-                    [
-                        40,
-                        51,
-                        "ID"
-                    ]
-                ]
-            }
-        ],  [
-            "distributions what is asset name for isin GB123455\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        13,
-                        "PROD"
-                    ],
-                    [
-                        37,
-                        41,
-                        "SER"
-                    ],
-                    [
-                        42,
-                        50,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "distributions send asst name for isin 1321GHTY\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        13,
-                        "PROD"
-                    ],
-                    [
-                        33,
-                        37,
-                        "SER"
-                    ],
-                    [
-                        38,
-                        46,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
-            "distributions fetch name of asset given isin 12345GHY\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        13,
-                        "PROD"
-                    ],
-                    [
-                        40,
-                        44,
-                        "SER"
-                    ],
-                    [
-                        45,
-                        53,
-                        "ID"
-                    ]
-                ]
-            }
-        ],
-        [
             "distributions what is last distribution date for isin GB123455\r",
             {
                 "entities": [
@@ -3453,6 +3344,666 @@
                     [
                         52,
                         57,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "my net distribution amount from distribution voucher 10002\r",
+            {
+                "entities": [
+                    [
+                        7,
+                        19,
+                        "PROD"
+                    ],
+                    [
+                        45,
+                        52,
+                        "SER"
+                    ],
+                    [
+                        53,
+                        58,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from distribution voucher 10001 foind my net distribution amount\r",
+            {
+                "entities": [
+                    [
+                        18,
+                        25,
+                        "SER"
+                    ],
+                    [
+                        26,
+                        31,
+                        "ID"
+                    ],
+                    [
+                        45,
+                        57,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "voucher 10001 find net distribution amount\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "SER"
+                    ],
+                    [
+                        8,
+                        13,
+                        "ID"
+                    ],
+                    [
+                        23,
+                        35,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "voucher 10002 get net distribution amount\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "SER"
+                    ],
+                    [
+                        8,
+                        13,
+                        "ID"
+                    ],
+                    [
+                        22,
+                        34,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "net distribution amount of voucher 10001\r",
+            {
+                "entities": [
+                    [
+                        4,
+                        16,
+                        "PROD"
+                    ],
+                    [
+                        27,
+                        34,
+                        "SER"
+                    ],
+                    [
+                        35,
+                        40,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "net distribution amount from voucher 10001",
+            {
+                "entities": [
+                    [
+                        4,
+                        16,
+                        "PROD"
+                    ],
+                    [
+                        29,
+                        36,
+                        "SER"
+                    ],
+                    [
+                        37,
+                        42,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distribution get me total units for voucher  10001\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        12,
+                        "PROD"
+                    ],
+                    [
+                        36,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        45,
+                        50,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "total unit for voucher 10002 from distribution\r",
+            {
+                "entities": [
+                    [
+                        15,
+                        22,
+                        "SER"
+                    ],
+                    [
+                        23,
+                        28,
+                        "ID"
+                    ],
+                    [
+                        34,
+                        46,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distribution total unit for my voucher 10001\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        12,
+                        "PROD"
+                    ],
+                    [
+                        31,
+                        38,
+                        "SER"
+                    ],
+                    [
+                        39,
+                        44,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "voucher 10002 from distribution of total unit\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "SER"
+                    ],
+                    [
+                        8,
+                        13,
+                        "ID"
+                    ],
+                    [
+                        19,
+                        31,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from 10001 voucher find total unit from distribution",
+            {
+                "entities": [
+                    [
+                        5,
+                        10,
+                        "ID"
+                    ],
+                    [
+                        11,
+                        18,
+                        "SER"
+                    ],
+                    [
+                        40,
+                        52,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get me net distribution amount for voucher 10002 from distributions\r",
+            {
+                "entities": [
+                    [
+                        35,
+                        42,
+                        "SER"
+                    ],
+                    [
+                        43,
+                        48,
+                        "ID"
+                    ],
+                    [
+                        54,
+                        67,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "fetch net distribution amount from distributions for voucher 10001\r",
+            {
+                "entities": [
+                    [
+                        35,
+                        48,
+                        "PROD"
+                    ],
+                    [
+                        53,
+                        60,
+                        "SER"
+                    ],
+                    [
+                        61,
+                        66,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get me account status for voucher 10001 from distributions\r",
+            {
+                "entities": [
+                    [
+                        26,
+                        33,
+                        "SER"
+                    ],
+                    [
+                        34,
+                        39,
+                        "ID"
+                    ],
+                    [
+                        45,
+                        58,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get account status from distributions for voucher 10001\r",
+            {
+                "entities": [
+                    [
+                        24,
+                        37,
+                        "PROD"
+                    ],
+                    [
+                        42,
+                        49,
+                        "SER"
+                    ],
+                    [
+                        50,
+                        55,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get total unit for my voucher 10001 from distributions\r",
+            {
+                "entities": [
+                    [
+                        22,
+                        29,
+                        "SER"
+                    ],
+                    [
+                        30,
+                        35,
+                        "ID"
+                    ],
+                    [
+                        41,
+                        54,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "fetch nominee external reference for nominee 101 from distributions\r",
+            {
+                "entities": [
+                    [
+                        6,
+                        13,
+                        "SER"
+                    ],
+                    [
+                        45,
+                        48,
+                        "ID"
+                    ],
+                    [
+                        54,
+                        67,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get nominee external reference from distributions for nominee 101\r",
+            {
+                "entities": [
+                    [
+                        4,
+                        11,
+                        "SER"
+                    ],
+                    [
+                        36,
+                        49,
+                        "PROD"
+                    ],
+                    [
+                        62,
+                        65,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions what is asset name for isin GB00BP8Y4W80\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        22,
+                        27,
+                        "SER"
+                    ],
+                    [
+                        42,
+                        54,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get me asset name for isin GB00BP8Y4W80 from distributions\r",
+            {
+                "entities": [
+                    [
+                        7,
+                        12,
+                        "SER"
+                    ],
+                    [
+                        27,
+                        39,
+                        "ID"
+                    ],
+                    [
+                        45,
+                        58,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get asset name from distributions for isin GB00BP8Y4W80\r",
+            {
+                "entities": [
+                    [
+                        4,
+                        9,
+                        "SER"
+                    ],
+                    [
+                        20,
+                        33,
+                        "PROD"
+                    ],
+                    [
+                        43,
+                        55,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch asset name for isin GB00BP8Y4W80\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        20,
+                        25,
+                        "SER"
+                    ],
+                    [
+                        40,
+                        52,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "fetch asset name for isin GB00BP8Y4W80 from distributions\r",
+            {
+                "entities": [
+                    [
+                        6,
+                        11,
+                        "SER"
+                    ],
+                    [
+                        26,
+                        38,
+                        "ID"
+                    ],
+                    [
+                        44,
+                        57,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "fetch asset name from distributions for isin GB00BP8Y4W80\r",
+            {
+                "entities": [
+                    [
+                        6,
+                        11,
+                        "SER"
+                    ],
+                    [
+                        22,
+                        35,
+                        "PROD"
+                    ],
+                    [
+                        45,
+                        57,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions send asset name for isin GB00BP8Y4W80\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        19,
+                        24,
+                        "SER"
+                    ],
+                    [
+                        39,
+                        51,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "send asset name for isin GB00BP8Y4W80 from distributions\r",
+            {
+                "entities": [
+                    [
+                        5,
+                        10,
+                        "SER"
+                    ],
+                    [
+                        25,
+                        37,
+                        "ID"
+                    ],
+                    [
+                        43,
+                        56,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "send asset name from distributions for isin GB00BP8Y4W80\r",
+            {
+                "entities": [
+                    [
+                        5,
+                        10,
+                        "SER"
+                    ],
+                    [
+                        21,
+                        34,
+                        "PROD"
+                    ],
+                    [
+                        44,
+                        56,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "distributions fetch name of asset given isin GB00BP8Y4W80\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        13,
+                        "PROD"
+                    ],
+                    [
+                        28,
+                        33,
+                        "SER"
+                    ],
+                    [
+                        45,
+                        57,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "fetch name of asset given isin GB00BP8Y4W80 from distributions\r",
+            {
+                "entities": [
+                    [
+                        14,
+                        19,
+                        "SER"
+                    ],
+                    [
+                        31,
+                        43,
+                        "ID"
+                    ],
+                    [
+                        49,
+                        62,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "fetch name of asset from distributions given isin GB00BP8Y4W80\r",
+            {
+                "entities": [
+                    [
+                        14,
+                        19,
+                        "SER"
+                    ],
+                    [
+                        25,
+                        38,
+                        "PROD"
+                    ],
+                    [
+                        50,
+                        62,
                         "ID"
                     ]
                 ]
