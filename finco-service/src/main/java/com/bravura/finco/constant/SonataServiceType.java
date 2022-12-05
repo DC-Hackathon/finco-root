@@ -3,7 +3,8 @@ package com.bravura.finco.constant;
 public enum SonataServiceType {
 
     CLIENT("client", 1),
-    ACCOUNT("account", 2);
+    ACCOUNT("account", 2),
+    ACCOUNTNUMBER("account number", 3 );
 
     private String code;
     private int value;

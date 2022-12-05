@@ -9,7 +9,7 @@ spring:
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/finco-db
+    url: jdbc:postgresql://localhost:5431/finco-db
     username: postgres
     password: password # Write password as you want
   # JPA properties

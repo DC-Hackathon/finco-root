@@ -4008,6 +4008,248 @@
                     ]
                 ]
             }
+        ],
+        [
+            "sonata get me account number for client tanvi gulati.",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        14,
+                        28,
+                        "SER"
+                    ],
+                    [
+                        40,
+                        52,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get me account number for john fowler.\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        14,
+                        28,
+                        "SER"
+                    ],
+                    [
+                        33,
+                        44,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get me account number for libby roy.\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        14,
+                        28,
+                        "SER"
+                    ],
+                    [
+                        33,
+                        42,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get me account number for michael scott.\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        14,
+                        28,
+                        "SER"
+                    ],
+                    [
+                        33,
+                        46,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get me account number for monika gellar.\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        14,
+                        28,
+                        "SER"
+                    ],
+                    [
+                        33,
+                        46,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get me account number for sam harris.",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        14,
+                        28,
+                        "SER"
+                    ],
+                    [
+                        33,
+                        43,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata get account balance for account number T. 2032\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        31,
+                        38,
+                        "SER"
+                    ],
+                    [
+                        46,
+                        53,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch account balance for my account T. 2032\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        36,
+                        43,
+                        "SER"
+                    ],
+                    [
+                        44,
+                        51,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "sonata fetch account balance for account T. 2032\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "PROD"
+                    ],
+                    [
+                        33,
+                        40,
+                        "SER"
+                    ],
+                    [
+                        41,
+                        48,
+                        "ID"
+                    ]
+                ]
+            }
+        ],
+        [
+            "get account balance for account T. 2032 from sonata\r",
+            {
+                "entities": [
+                    [
+                        24,
+                        31,
+                        "SER"
+                    ],
+                    [
+                        32,
+                        39,
+                        "ID"
+                    ],
+                    [
+                        45,
+                        51,
+                        "PROD"
+                    ]
+                ]
+            }
+        ],
+        [
+            "from sonata get me account balance for account T. 2032",
+            {
+                "entities": [
+                    [
+                        5,
+                        11,
+                        "PROD"
+                    ],
+                    [
+                        39,
+                        46,
+                        "SER"
+                    ],
+                    [
+                        47,
+                        54,
+                        "ID"
+                    ]
+                ]
+            }
         ]
     ]
 }

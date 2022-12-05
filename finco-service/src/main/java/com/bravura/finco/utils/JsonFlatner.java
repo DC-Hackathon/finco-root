@@ -50,6 +50,7 @@ public class JsonFlatner {
             case "advisor.name": return "advisor name";
             case "patternTemplate.name": return "investment profile";
             case "account.statusCode": return "status";
+            case "accountNumber.accountNo": return "account number";
             default : return intent;
         }
     }

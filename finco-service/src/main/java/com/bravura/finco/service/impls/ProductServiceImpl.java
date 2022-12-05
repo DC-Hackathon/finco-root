@@ -8,10 +8,12 @@ import com.bravura.finco.service.DistributionService;
 import com.bravura.finco.service.NucleusService;
 import com.bravura.finco.service.ProductService;
 import com.bravura.finco.service.SonataService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class ProductServiceImpl implements ProductService {
     @Autowired
     private DistributionService distributionService;

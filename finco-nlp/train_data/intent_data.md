@@ -1,3 +1,10 @@
+## intent:accountNumber.accountNo
+- sonata get me account number for client tanvi gulati.
+- sonata get me account number for john fowler.
+- sonata get me account number for libby roy.
+- sonata get me account number for michael scott.
+- sonata get me account number for monika gellar.
+- sonata get me account number for sam harris.
 ## intent:investorType
 - get investor type
 - sonata get me account investor type in client for id 10000001
